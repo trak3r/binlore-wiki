@@ -1,8 +1,12 @@
-# binlore.wiki (public companion)
+# BIN Lore (public site)
 
-Deploy-only repo for **[binlore.wiki](https://binlore.wiki/)**.
+**Live:** [binlore.wiki](https://binlore.wiki/)
 
-- **Source of truth (private):** [`trak3r/binlore`](https://github.com/trak3r/binlore)
-- **This repo:** Quartz build output (GitHub Pages) + `media-assets` release CDN
+Deploy-only companion for the Barely Informed News fan wiki.
 
-Do not edit wiki content here — push to the private source repo; CI publishes the static site.
+| | |
+|---|---|
+| **This repo** | Quartz build output (GitHub Pages on `gh-pages`) + `media-assets` release CDN |
+| **Source** | Private [`trak3r/binlore`](https://github.com/trak3r/binlore) — markdown canon, transcripts, ingest/extract tooling |
+
+Do not edit wiki content here. Push to the private source repo; CI publishes the static site.
