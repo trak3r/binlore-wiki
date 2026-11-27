@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Amongst the Web · Barely Informed News</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&amp;text=BIN%20Lore&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="BIN Lore"/><meta property="og:title" content="Amongst the Web · Barely Informed News"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Amongst the Web · Barely Informed News"/><meta name="twitter:description" content="The audience-interactive viral media review desk on Barely Informed News."/><meta property="og:description" content="The audience-interactive viral media review desk on Barely Informed News."/><meta property="og:image:alt" content="The audience-interactive viral media review desk on Barely Informed News."/><meta property="og:image" content="https://binlore.wiki/og/amongst-the-web-35c1a8b9.jpg"/><meta property="og:image:url" content="https://binlore.wiki/og/amongst-the-web-35c1a8b9.jpg"/><meta name="twitter:image" content="https://binlore.wiki/og/amongst-the-web-35c1a8b9.jpg"/><meta property="og:image:type" content="image/jpeg"/><meta property="twitter:domain" content="binlore.wiki"/><meta property="og:url" content="https://binlore.wiki/segments/amongst-the-web"/><meta property="twitter:url" content="https://binlore.wiki/segments/amongst-the-web"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="The audience-interactive viral media review desk on Barely Informed News."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvYmlubG9yZS9iaW5sb3JlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://binlore.wiki/index.xml"/></head><body data-slug="segments/amongst-the-web"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".."><span class="bin-brand"><span class="bin-badge">BIN</span><span class="bin-text">Lore</span></span></a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{if(!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder){let isEpisodeA=!!(a.slug&amp;&amp;a.slug.startsWith(\&quot;episodes/\&quot;)),isEpisodeB=!!(b.slug&amp;&amp;b.slug.startsWith(\&quot;episodes/\&quot;));if(isEpisodeA&amp;&amp;isEpisodeB){let dateRegex=/\\b\\d{4}-\\d{2}-\\d{2}\\b/,dateA=\&quot;\&quot;;a.data&amp;&amp;a.data.date&amp;&amp;(dateA=typeof a.data.date==\&quot;string\&quot;?a.data.date:a.data.date.toISOString?.()??String(a.data.date));let matchA=a.slug&amp;&amp;a.slug.match(dateRegex)||a.displayName&amp;&amp;a.displayName.match(dateRegex)||a.data?.filePath&amp;&amp;a.data.filePath.match(dateRegex);matchA&amp;&amp;(dateA=matchA[0]);let dateB=\&quot;\&quot;;b.data&amp;&amp;b.data.date&amp;&amp;(dateB=typeof b.data.date==\&quot;string\&quot;?b.data.date:b.data.date.toISOString?.()??String(b.data.date));let matchB=b.slug&amp;&amp;b.slug.match(dateRegex)||b.displayName&amp;&amp;b.displayName.match(dateRegex)||b.data?.filePath&amp;&amp;b.data.filePath.match(dateRegex);if(matchB&amp;&amp;(dateB=matchB[0]),dateA&amp;&amp;dateB&amp;&amp;dateA!==dateB)return dateB.localeCompare(dateA)}return a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;})}return!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>![\&quot;tags\&quot;,\&quot;bin-lore-wiki\&quot;].includes(node.slugSegment)&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-519"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-519" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div><div class="recent-notes desktop-only"><h3>Recent changes</h3><ul class="recent-ul"><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../segments/gaming" class="internal">Gaming</a></h3></div><p class="meta"><time datetime="2026-11-27T15:43:20.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/crum" class="internal">Crum (Leonard Crum)</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/kendelle" class="internal">Kendelle</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/liliana" class="internal">Liliana Breathinschmit</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/munch" class="internal">Munch (Ralph Munchcut)</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/trip-bradstein" class="internal">Trip Bradstein</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../segments/amongst-the-web" class="internal">Amongst the Web</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../segments/munch-and-crum" class="internal">Munch &amp; Crum</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li></ul></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../segments/">Broadcast Segments</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Amongst the Web</a></div></nav><h1 class="article-title">Amongst the Web</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time><span>35 min read</span></p><ul class="tags"><li><a href="../tags/segment" class="internal tag-link">segment</a></li><li><a href="../tags/community" class="internal tag-link">community</a></li></ul></div></div><article class="popover-hint"><h1 id="amongst-the-web">Amongst the Web<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amongst-the-web" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><img src="https://github.com/trak3r/binlore-wiki/releases/download/media-assets/amongst-the-web.jpg" alt="Amongst the Web title card"/></p>
+<p>The audience-interactive viral media review desk on <em>Barely Informed News</em>.</p>
+<h2 id="format">Format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#format" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href=".././characters/case-blackwell" class="internal alias" data-slug="characters/case-blackwell">Case Blackwell</a> is the only consistent host of <em>Amongst the Web</em>, joined by a different co-host each time to watch, evaluate, and react to viewer-submitted video evidence, internet phenomena, and digital subculture clips gathered from the community Discord. The hosts rate and dissect each submission while the live chat audience participates with real-time commentary and sentiment.</p>
+<h2 id="key-elements">Key Elements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-elements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Anchor &amp; Rotating Co-Hosts:</strong> <a href=".././characters/case-blackwell" class="internal alias" data-slug="characters/case-blackwell">Case Blackwell</a> anchors every broadcast, while his co-host rotates each session—featuring recurring personalities and special guests such as tactical media correspondent <a href=".././characters/rick" class="internal alias" data-slug="characters/rick">Rick</a>, the eccentric <a href=".././characters/marfus-darfus" class="internal alias" data-slug="characters/marfus-darfus">Marfus Darfus</a>, solar-laser enthusiast <a href=".././characters/grandma-crumble-bottom" class="internal alias" data-slug="characters/grandma-crumble-bottom">Grandma Crumble Bottom</a>, or chaotic desk hijackings by studio stowaway <a href=".././characters/peter-gibbon" class="internal alias" data-slug="characters/peter-gibbon">Peter Gibbon</a>.</li>
+<li><strong>Viewer Submissions:</strong> Videos are sourced directly from the audience via the community Discord’s “amongst this web” queue in the BIN news section.</li>
+<li><strong>Idiosyncratic Ratings:</strong> The hosts frequently assign peculiar or hyper-specific decimal scores to each clip (such as Marfus Darfus’s landmark <code>6.44</code> rating).</li>
+<li><strong>Focus:</strong> Surreal internet culture, odd viral recordings, awkward cringe clips, and community-submitted oddities.</li>
+</ul>
+<h2 id="known-occurrences">Known occurrences<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#known-occurrences" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Episode</th><th>Timestamp</th><th>Notes</th></tr></thead><tbody><tr><td><a href="../episodes/2023-11-22" class="internal alias" data-slug="episodes/2023-11-22">2023-11-22</a></td><td>50:49</td><td>Trent at the Movies: Sonic, Bunhofer, Good Burger 2, Imaginary: Trent (with parole officer Chris) reviews trailers: Sonic Dream Team mobile game, Bunhofer (Dietrich Bonhoeffer biopic mistaken for ass-sniffing film), Good Burger 2 (skip), Imaginary (scary teddy bear horror); Trent interviews haunted bear in green room.</td></tr><tr><td><a href="../episodes/2023-12-12-SUbhyRiToyQ" class="internal alias" data-slug="episodes/2023-12-12-SUbhyRiToyQ">2023-12-12</a></td><td>1:30:23</td><td>Trailer Thursday with Trent &amp; Chris: Movie correspondent Trent (with parole officer Chris) reviews Alan Wake 2 live-action trailer, the failed Jonah Hill sitcom Alan Gregory, Jurassic Park survival game trailer, and Marvel’s Blade game trailer, arguing over movie vs game classification.</td></tr><tr><td><a href="../episodes/2024-01-27" class="internal alias" data-slug="episodes/2024-01-27">2024-01-27</a></td><td>45:10</td><td>Clementine Investigates Pentagon UAP Report &amp; Alien Invasion Survival Guide: Clementine Verne covers a Pentagon Inspector General report finding the DoD’s UAP tracking uncoordinated; he then reacts to a seven-year-old ‘Epic How-To’ YouTube video on stopping an alien invasion, citing experts from SETI, Harvard-Smithsonian, and Michio Kaku, and identifies the host as Kevin Pereira.</td></tr><tr><td><a href="../episodes/2024-02-19" class="internal alias" data-slug="episodes/2024-02-19">2024-02-19</a></td><td></td><td>Viral Video Hunt: Sexual Eating Tour Bus: Fiona describes a Miami-based tour bus where men feed women food sexually (bananas, strawberries); extensive failed search attempts on Twitter; Case calls Kevin Parada during hunt.</td></tr><tr><td><a href="../episodes/2024-02-20" class="internal alias" data-slug="episodes/2024-02-20">2024-02-20</a></td><td>1:07:09</td><td>Use the Internet with Peter Gibbon: Jordan-Pippin Wedding, Flamingo Diet, Acrobatic Eating, 90s Commercials: Peter Gibbon hosts from newsroom crawlspace; covers Marcus Jordan/Larsa Pippin engagement, flamingo pigmentation, woman inhaling gummy sticks, man acrobatically eating apples, roller coaster projectile vomiting, and poorly aged 9/11-era commercials including Subway/Jared and Raytheon spots.</td></tr><tr><td><a href="../episodes/2024-02-26" class="internal alias" data-slug="episodes/2024-02-26">2024-02-26</a></td><td>55:45</td><td>Fiona Reads Black Twitter Roasts: Fiona performs a dramatic reading of a viral thread roasting a man’s appearance (‘Weenie Hut Juniors’, ‘SpongeBob when he turned normal’).</td></tr><tr><td><a href="../episodes/2024-03-28" class="internal alias" data-slug="episodes/2024-03-28">2024-03-28</a></td><td>1:26:00</td><td>Trent at the Movies: Doctor Who, Unfrosted, Bad Boys, Pushpa: Trent reviews trailers for Disney+ Doctor Who, Jerry Seinfeld’s Unfrosted, Bad Boys: Ride or Die, and Indian action film Pushpa 2.</td></tr><tr><td><a href="../episodes/2024-04-17" class="internal alias" data-slug="episodes/2024-04-17">2024-04-17</a></td><td>19:51</td><td>Discord Video Roulette with Peter Gibbon: Case and stowaway Peter Gibbon watch viewer-submitted clips: USPS dog safety video, Grimes’ disastrous Coachella DJ set, Mike Tyson training, survivalist with puppies, Roseanne at Mar-a-Lago, rodeo anti-communist rant, Minnie Mouse upskirt incident prompting Peter’s ban.</td></tr><tr><td><a href="../episodes/2024-05-01" class="internal alias" data-slug="episodes/2024-05-01">2024-05-01</a></td><td>1:21:14</td><td>Kendrick vs. Drake Diss-Track Reaction with Peter Gibbon: Stowaway Peter Gibbon crashes the desk to react to the Drake/Kendrick Lamar feud; Peter declares Adonis the true winner, then delivers an explicit freestyle about making love to Drake.</td></tr><tr><td><a href="../episodes/2024-05-21" class="internal alias" data-slug="episodes/2024-05-21">2024-05-21</a></td><td>57:18</td><td>Use the Internet with Peter Gibbon: Case and Peter watch viewer-submitted clips: monkey rap video, tongue-split creator, Diddy apology parody, race-track brawl, Chinese tattoo fails, pregnant Thomas the Tank Engine, SCP-style ‘Balloon Curse’ short, and Oscar de la Hoya/Terrence Howard TikTok.</td></tr><tr><td><a href="../episodes/2024-05-28" class="internal alias" data-slug="episodes/2024-05-28">2024-05-28</a></td><td>0:00</td><td>Viewer-Submitted Video Rating Marathon: Case and Kendall watch and rate Discord-submitted videos including a balloon death game, goth makeup tutorial, Oreo mug cake, straight edge hardcore compilation, and a ‘duka duka’ musical performance that scores 9.88 and wins video of the day. The Rock-afire gorilla animatronic provides continuous synthwave accompaniment.</td></tr><tr><td><a href="../episodes/2024-05-31" class="internal alias" data-slug="episodes/2024-05-31">2024-05-31</a></td><td>2:03:51</td><td>Tyler Debuts ‘Tyler Ritaville’ Margaritaville Parody After Viral Video Review: Tyler hosts; videos include elder movement session, Paris butt magic trick, vocal performer, Trump ‘we’re white’ clip, Bad Boys monkey ad, squirrel affection, Mark Wahlberg AIDS/Calvin Klein PSA; flash poll yields tie; AI-generated song performed with gorilla accompaniment.</td></tr><tr><td><a href="../episodes/2024-06-10" class="internal alias" data-slug="episodes/2024-06-10">2024-06-10</a></td><td>34:06</td><td>Birthday Amongst the Web with Crum: Case and Crum co-host web video review: energy awakening class, Rubik’s cube, minion Jesus video, light language codes, sweet potato jam, bear cage, Tasty combo masterclass, Bigfoot/Sasquatch drama.</td></tr><tr><td><a href="../episodes/2024-06-18" class="internal alias" data-slug="episodes/2024-06-18">2024-06-18</a></td><td>1:03:33</td><td>Jeff Ripple: Armie Hammer Breaks Silence: Jeff Ripple reviews Armie Hammer’s Access Hollywood interview addressing cannibal texts, abuse allegations, and comeback attempts; Case and Ripple debate forgiveness and Hollywood redemption.</td></tr><tr><td><a href="../episodes/2024-06-26" class="internal alias" data-slug="episodes/2024-06-26">2024-06-26</a></td><td>1:38:55</td><td>Viral Video Review with Rick &amp; Gorilla: Rick hosts with a government-approved dinosaur/gorilla backdrop; videos include Spider-Man baking soda ketchup, drunk dog in sink, grandma tarot, foreskin pheromone guru, freedom water, Grimace lore, and a rejected UFC proposal in Russia.</td></tr><tr><td><a href="../episodes/2024-07-09" class="internal alias" data-slug="episodes/2024-07-09">2024-07-09</a></td><td>48:12</td><td>Viral Video Review: Plane Deaths, Raw Dogging Flights, Airport Restaurants, Bubble Song, Trump Hannibal Lecter, Joe Rogan/Miley Cyrus, Prison Loaf, Giant Worm Animation, National Treasure Supercut: Scrum co-hosts; videos rated on 1-10 scale; highlights include raw dogging flight trend, eight-minute bubble song, Trump’s Hannibal Lecter rant (Vic Berger supercut), and giant worm AI animation.</td></tr><tr><td><a href="../episodes/2024-07-15" class="internal alias" data-slug="episodes/2024-07-15">2024-07-15</a></td><td>32:12</td><td>Amongst the Webs with Count Sellersare: Case and Count Sellersare of Spanish Transylvania rate viewer submissions: gorilla DJ, collapsing stage, elephant trunk, Space Ghost, mapuka tutorial, bug lady commercial, hair-pulling prosthetic, raptor lasso, CHIPS dance montage.</td></tr><tr><td><a href="../episodes/2024-07-19" class="internal alias" data-slug="episodes/2024-07-19">2024-07-19</a></td><td>59:57</td><td>Trent at the Movies: Interview with Chance Blanthal: Trent interviews Chance Blanthal, a sunglasses-wearing cult leader of ‘Psydub’ who mirrors Trent’s speech patterns; Chance preaches aggressive self-interest, cutting lines, and monetizing followers, ending in a sleep-off standoff.</td></tr><tr><td><a href="../episodes/2024-07-20" class="internal alias" data-slug="episodes/2024-07-20">2024-07-20</a></td><td>7:08:10</td><td>Amongst the Web: National Anthem Butchery, Geometry Cheese, Dog Nature, Tall Women, RFK Ravens, 87-Year-Old TikTok: Video ratings: national anthem fail (8.1), polygon cheese slicer (9.9), ski juggling (9.38), dog catches treat (nature), tall women (unrated), RFK Jr ravens (low rated), 87-year-old sexually active TikTok (9); Peter Gibbon emerges from walls, civil, shares ‘take that to the bank and smoke it’ catchphrase.</td></tr><tr><td><a href="../episodes/2024-07-22" class="internal alias" data-slug="episodes/2024-07-22">2024-07-22</a></td><td>1:23:06</td><td>Amongst the Web: Cat Escapes, Florida Man, Paint Matching &amp; Seagal: Viral video review: cat escaping cardboard tubes, Florida man street fighter, programmer matching paint by eye, Steven Seagal proposal joke, Superman/Endgame mashup, Seagal cop rampage clip.</td></tr><tr><td><a href="../episodes/2024-07-25" class="internal alias" data-slug="episodes/2024-07-25">2024-07-25</a></td><td>55:38</td><td>Viral Video Review: Barbecue Foot Massage, Hiding Spots, Frog Costume, Florida Valhalla, Coconut Crabs, Luigi: Case and Liliana review viewer-submitted clips including a 90-minute barbecue infomercial, a man’s elaborate hiding spots, a frog-costumed dancer, a Florida concert venue, coconut crab prank, and a Luigi dance video.</td></tr><tr><td><a href="../episodes/2024-07-31" class="internal alias" data-slug="episodes/2024-07-31">2024-07-31</a></td><td>58:12</td><td>Amongst the Web with Jeff Ripple: Jeff Ripple hosts viral video review: Kentucky Gov. Andy Beshear’s Diet Mountain Dew apology, snowboarder grass-boarding, RFK Jr. lizard handling, penis-measurement TikTok, Olympic cardboard bed stress tests, Dale’s Disney World equation, and celebrity Nazi fashion show.</td></tr><tr><td><a href="../episodes/2024-08-07" class="internal alias" data-slug="episodes/2024-08-07">2024-08-07</a></td><td>46:17</td><td>Leon Kennedy Hosts Viral Video Review: Leon Kennedy (Resident Evil) guest-hosts: police/riot footage, Wu-Tang for children clip, Wendy’s training video, JoJo Siwa dance, bike stunt, penis parkour fail, MOBA rage compilation, Creed fireworks video, UFO/alien rock montage, cat-glove TikTok narrative.</td></tr><tr><td><a href="../episodes/2024-08-08" class="internal alias" data-slug="episodes/2024-08-08">2024-08-08</a></td><td>51:35</td><td>Viewer Video Parade: Cliff Jump, Aiden Ross/Trump, Brick Crosswalk, Cats in Car, Smiling Fish, Fish Plays Pokémon: Case and chat rate viewer submissions: a cliff jump survival, Aiden Ross’s Trump stream, Vancouver brick crosswalk concept, clown car of cats, a fish that appears to smile after eating sausage, and a fish playing Pokémon on Twitch.</td></tr><tr><td><a href="../episodes/2024-08-13" class="internal alias" data-slug="episodes/2024-08-13">2024-08-13</a></td><td>1:59:25</td><td>Movie Trailers: Adam Sandler, Twilight of the Warriors, The Monkey, Moana 2: New correspondent Trent hosts trailer reactions: Adam Sandler stand-up special, Hong Kong walled city action film, Osgood Perkins’ The Monkey (teeth in dark hole), Moana 2 (minions crossover). Case and Trent debate whether all kids movies are about death.</td></tr><tr><td><a href="../episodes/2024-08-20" class="internal alias" data-slug="episodes/2024-08-20">2024-08-20</a></td><td>49:21</td><td>Amongst the Web with Garf Gutter: Garf Gutter guest-hosts the viral video desk, rating viewer submissions including a bridge collapse, motorcycle breakdancing, English-learning diarrhea song, and a wholesome dust-mite philosophy clip.</td></tr><tr><td><a href="../episodes/2024-08-22-oDSuSzbumUs" class="internal alias" data-slug="episodes/2024-08-22-oDSuSzbumUs">2024-08-22</a></td><td>2:00:02</td><td>Amongst the Web: Kiss Cam Tragedy, Mall Logic, Booker T Horniness, Finger Cleaner, AI Reed Hoffman, Drunk Hulk Hogan: Blackwell and AI Rooney rate viral clips: a kiss-cam mishap, gender double-standard mall interview, Booker T’s NXT schtick, an automatic finger cleaner, AI-generated Reid Hoffman digital twin, and a drunk Hulk Hogan ranting about Kamala Harris.</td></tr><tr><td><a href="../episodes/2024-08-30" class="internal alias" data-slug="episodes/2024-08-30">2024-08-30</a></td><td>0:41:28</td><td>Sword Wolf, Circus Teen, Trumpy Trout, David’s Pizza: Case, Jeff, and Liliana rate viral clips: a longsword-wielding wolf, a 16-year-old circus performer, the animatronic Trumpy Trout fish ($60, arbitration clause), and a David’s Pizza jingle that triggers a 5-sub hype train.</td></tr><tr><td><a href="../episodes/2024-09-11" class="internal alias" data-slug="episodes/2024-09-11">2024-09-11</a></td><td>28:49</td><td>Transition to Amongst the Web: Blackwell hands off to Munch &amp; Crum then Amongst the Web, noting time constraints due to 6 PM Patreon stream.</td></tr><tr><td><a href="../episodes/2024-09-12" class="internal alias" data-slug="episodes/2024-09-12">2024-09-12</a></td><td>1:50:45</td><td>Trend of the Movies: Vampire &amp; Monster Trailers: Case and Chris watch trailers for The Radleys (vampire family), Carmen Sandiego (mobile game), and Monsters (No Country for Old Men-style family drama).</td></tr><tr><td><a href="../episodes/2024-09-13" class="internal alias" data-slug="episodes/2024-09-13">2024-09-13</a></td><td>1:22:06</td><td>Viral Roundup: LBJ Pants, AI Dog, Sleep Meditation, JD Vance Couch, Wrestling, BMX, and Elder Pizza: Tyler hosts: LBJ tailor call, AI chicken-to-pig video, Tyson’s puppy, Zach Woods sleep rant, JD Vance couch meme, HOG wrestling Street Fighter bit, Aggie &amp; Terry BMX, Texas Tech sports glitch, late-night pizza artisans.</td></tr><tr><td><a href="../episodes/2024-09-18" class="internal alias" data-slug="episodes/2024-09-18">2024-09-18</a></td><td>1:03:58</td><td>Internet Video Ratings: Case, Crum, Munch rate: Kodiak dip commercial (bear eats actor), UK woman’s Trump ‘back shots’ video, explicit rap video, airport poop escalator, NZ PM slang video, wrestling knife spot, bear encounter TikTok, stone-breaking fail, Shrek kid, 1968 Ralph Williams car commercial.</td></tr><tr><td><a href="../episodes/2024-09-20" class="internal alias" data-slug="episodes/2024-09-20">2024-09-20</a></td><td>1:21:56</td><td>Viral Video Review: Parking Lot Driving, AI Crypto, Jeremy Fragrance, Robot Police, MAGA Fashion: Salazar hosts; reviews backwards-driving parking lot video, salad-eating clip, AI crypto promoter, Jeremy Fragrance bed moves, Rizzler kid, Lubbock SWAT robot vs. suspect, MAGA fashion show, monkey girl pride song, dog dance.</td></tr><tr><td><a href="../episodes/2024-10-01" class="internal alias" data-slug="episodes/2024-10-01">2024-10-01</a></td><td>1:50:13</td><td>Amongst the Web: Bike Butt, Piss Patties, Party Scientist &amp; High Fives: Case and Peter Gibbon review viewer submissions: electrical-box e-bike with ‘dummy thick’ butt, SpongeBob piss patty parody, sober rave party scientist, grandma racism clip, chili dog eating, and world-record high five attempt.</td></tr><tr><td><a href="../episodes/2024-10-02" class="internal alias" data-slug="episodes/2024-10-02">2024-10-02</a></td><td>31:55</td><td>Trent at the Movies: Trailers Roundup: Trent presents trailers for Indiana Jones and the Great Circle (game), Better Man (Robbie Williams as CGI monkey), Winnie’s Hole, and The Franchise series.</td></tr><tr><td><a href="../episodes/2024-10-03" class="internal alias" data-slug="episodes/2024-10-03">2024-10-03</a></td><td>42:59</td><td>TikTok Roundup: Home Depot Pranks, Jack in the Box, Eric Andre, Melania Trump, Summit1g, Kassem G, Triumph, Blastoise, Zheng Hu, Donkey Kong: Case, Jeff, and Sammy react to a cascade of viewer-submitted clips including a Home Depot lesbian stereotype video, aggressive Jack in the Box commercial parody, Eric Andre firing/hiring bit, Melania Trump’s ‘individual freedom’ video, Summit1g’s Simon Says streamers, Kassem G’s ‘pastum’ era, a Trump supporter yelling ‘Fire AOC’, Triumph the Insult Comic Dog at the VP debate, Wu Tang kids, police de-escalation on a roof, a plant-assault video, Blastoise with Sopranos energy, a medieval maiden/Zheng Hu animation, Canadian ‘yeah no’ linguistics, and a Donkey Kong vs Bowser Melee clip.</td></tr><tr><td><a href="../episodes/2024-10-08" class="internal alias" data-slug="episodes/2024-10-08">2024-10-08</a></td><td>1:24:04</td><td>Viral Video Review: Tennis F-Bomb, Jeremy Fragrance, Chandelier Jumbotron, Gruden, Body Head: Case and Chet Manscape react to: a tennis player telling officials ‘fuck you’; Jeremy Fragrance cooking; a son replacing parents’ chandelier with a jumbotron; Jon Gruden football hype montage; a child choosing ‘illegal immigrant’ over liberal friend; ‘Asian taste buds’ salad TikTok; pumpkin patch grandma cursing; Adult Swim’s Body Head trailer (Will Neff, Meat Canyon).</td></tr><tr><td><a href="../episodes/2024-10-10" class="internal alias" data-slug="episodes/2024-10-10">2024-10-10</a></td><td>1:54:57</td><td>Viral Video Review: Wolves Singing, Bike Confrontation, Sprite Commercial, Bird Ambush, Macho Man Promo, CNN Storm Reporter: Rick hosts viewer submissions including wolves singing Phantom of the Opera, a bike confrontation with Giancarlo Esposito, a classic Sprite wrestling ad, a bird hunting montage, a Spanish-language Macho Man Randy Savage promo, and a CNN reporter hit by debris in Hurricane Milton.</td></tr><tr><td><a href="../episodes/2024-10-15" class="internal alias" data-slug="episodes/2024-10-15">2024-10-15</a></td><td>47:08</td><td>Amongst the Web: Randy Savage, Nazi Boats, Existential Cats &amp; Rodney Dangerfield: Case reviews viewer submissions: Randy Savage Spider-Man set interview, Florida boat rally splash fight, existential cat, trained face-moving man, ‘Man Enough’ political ad, 1980s CB radio profanity panic, Rodney Dangerfield ‘Rappin’ Rodney’ cartoon, and Canadian Thanksgiving ‘Thanks Givner’ song.</td></tr><tr><td><a href="../episodes/2024-10-22-4xAoUbdxBjE" class="internal alias" data-slug="episodes/2024-10-22-4xAoUbdxBjE">2024-10-22</a></td><td></td><td>Salazar’s Web Roundup: Bats, Tentacles &amp; Dick Rankings: Salazar hosts; reviews viral ‘things I trust more than Trump’ list, bat footage, gaming clip (Squirrel with a Gun), sauce-stirring video, and a penis-size ranking meme; Salazar reveals tentacle powers and bug-based biology.</td></tr><tr><td><a href="../episodes/2024-10-23" class="internal alias" data-slug="episodes/2024-10-23">2024-10-23</a></td><td>0:15:20</td><td>Trend at the Movies: Werewolves, Munchies, Love Hurts, The Brutalist, Interior Chinatown, Creature Commandos: Trend (Trent) joins Case to watch seven trailers: Werewolves (2024), Munchies (1987), The Mantis (1993), Love Hurts (2025), The Brutalist (2024), Interior Chinatown (Hulu series), and Creature Commandos (animated DC series); constant bickering over pacing and werewolf taxonomy.</td></tr><tr><td><a href="../episodes/2024-10-30" class="internal alias" data-slug="episodes/2024-10-30">2024-10-30</a></td><td>51:56</td><td>Amongst the Web: Garf Rates Viral Videos — Barkley, Fragrance Jesus, Juicy Pussy Bread, Karate Rap, Bear Wrestling: Garf hosts the viral desk: Charles Barkley singing, Jeremy Fragrance opening his heart with a key after his father’s death, ‘juicy pussy’ bread linguistic debate, 1986 Samurai Studios karate rap (still operating as web designers), and a sportsmanlike bear wrestling match.</td></tr><tr><td><a href="../episodes/2024-11-06-WxVZ5zuziq8" class="internal alias" data-slug="episodes/2024-11-06-WxVZ5zuziq8">2024-11-06</a></td><td>13:43</td><td>Trailer Break: Air Force One, White House Down &amp; One Million Dollar: Trent (on community service) joins Case to watch presidential-action-movie trailers and a mysterious Jason Momoa/Kassim comedy trailer titled ‘One Million Dollar’ filmed in 2022.</td></tr><tr><td><a href="../episodes/2024-11-26" class="internal alias" data-slug="episodes/2024-11-26">2024-11-26</a></td><td>1:56:27</td><td>Garve Reviews 1987 Marvel Parade &amp; Cat Videos: Garve hosts with tablet-as-phone; watches 1987 Marvel Comics parade float footage, cat compilation, skull-rocking video, and Billy Bob Thornton ‘Landman’ oil rant clips.</td></tr><tr><td><a href="../episodes/2025-01-06" class="internal alias" data-slug="episodes/2025-01-06">2025-01-06</a></td><td>1:12:59</td><td>Video Review &amp; Escalating Gambling Spiral: Case and Crum rate viewer-submitted clips; Crum bets escalating sums on scores (2k → 4k → 8k → 30k → 180k) against Gorilla/ChetAI; Crum loses final $180k wager, claims he’s good for it but doesn’t have cash; Munch would receive payout.</td></tr><tr><td><a href="../episodes/2025-01-08" class="internal alias" data-slug="episodes/2025-01-08">2025-01-08</a></td><td>1:33:08</td><td>Salazar’s Bug Vision &amp; City Council Yacht Study: Salazar hosts viral video review featuring daily affirmations in the woods, a Miami Beach city council yacht proposal, nursing home TikToks, and pop-darts trick shots.</td></tr><tr><td><a href="../episodes/2025-01-14" class="internal alias" data-slug="episodes/2025-01-14">2025-01-14</a></td><td>1:26:16</td><td>Viral Video Review: Cheese Tax, Stretching, Wee Tennis, Batman &amp; Video Dating: AI Rooney joins Case and Crum to rate viewer submissions: cheese tax song, bone-crack stretching, Australian Open wee tennis, Batman voice lineup, medical dummy exam, 1980s video dating profiles.</td></tr><tr><td><a href="../episodes/2025-01-15" class="internal alias" data-slug="episodes/2025-01-15">2025-01-15</a></td><td>41:03</td><td>Trent at the Movies: Trailers: Field correspondent Trent (with parole officer Chris) reviews trailers for Witcher anime, Daredevil: Born Again, Apple Cider Vinegar, The Night Agent S2, and Woman in the Yard.</td></tr><tr><td><a href="../episodes/2025-01-22" class="internal alias" data-slug="episodes/2025-01-22">2025-01-22</a></td><td>54:16</td><td>Viral Video Review Marathon: Case, Rick, Tyler, Kendall, and Kyler react to acapella crash-outs, a forehead-gem piercing, a brutal head-bonk challenge, skin-stretching routines, AI North Korean propaganda, and a deep-dive investigation into a 2015 high-school 9/11 cheerleading tribute.</td></tr><tr><td><a href="../episodes/2025-01-24" class="internal alias" data-slug="episodes/2025-01-24">2025-01-24</a></td><td>2:00:33</td><td>Viewer Videos: Three Dads, Ed Sheeran, Knife Tricks, Roseanne, Disco Horse: Case and Leon rate submissions: polyamorous three-dads reality teaser, Ed Sheeran impressionist, ping-pong ball knife trick, Roseanne clip (0.17), disco horse TikTok (8.41), Resident Evil Coca-Cola placement.</td></tr><tr><td><a href="../episodes/2025-01-27" class="internal alias" data-slug="episodes/2025-01-27">2025-01-27</a></td><td>1:11:26</td><td>Amongst the Web: Viewer Video Submissions: Case and <a href="../characters/crag" class="internal alias" data-slug="characters/crag">Crag</a> rate viewer-submitted videos including a roach torture clip, cosplay, a gender reveal, a yogurt jar opening, a cringe influencer, and a Canadian drinking bit; zero scores dominate.</td></tr><tr><td><a href="../episodes/2025-01-29" class="internal alias" data-slug="episodes/2025-01-29">2025-01-29</a></td><td>38:17</td><td>Viral Videos, Cat Cam Debut, and Fart Content: Ramon Salazar persona hosts viewer submissions: 1986 grocery commercial, AI-generated Super Mario video, AI song (Suno-style) that stuck in Case’s head, Back Pocket sketch comedy, emotional PetSmart donation ad, Chick-fil-A Sunday closure loop, cat cam reveal showing two cats cuddling in milk carton, Stairway to Stardom vintage talent show, and MaxDj77 fart videos with 68M views.</td></tr><tr><td><a href="../episodes/2025-01-31" class="internal alias" data-slug="episodes/2025-01-31">2025-01-31</a></td><td></td><td>Hamtaro-Themed Amongst the Web: Hype Train as Hamtaro rates viewer submissions: egg eating, sliding hill, gender reveal near-decapitation, John Madison Hamlet sandwich, drone cancellation lore, remote kiss device, Peter Berube shoutouts, slur discourse.</td></tr><tr><td><a href="../episodes/2025-02-01" class="internal alias" data-slug="episodes/2025-02-01">2025-02-01</a></td><td>2:00:08</td><td>Royal Rumble 2025 Co-Stream Attempt: Trent attempts to share the Peacock broadcast of the Royal Rumble via Discord screen-share, navigating audio issues and DMCA concerns before settling on audio-only commentary.</td></tr><tr><td><a href="../episodes/2025-02-03" class="internal alias" data-slug="episodes/2025-02-03">2025-02-03</a></td><td>1:34:57</td><td>Video Review: Wrestling, Dating, Pool Tricks, Wood Chopping: Case, Little Tommy, Kendall watch wrestling spot, 90s dating show, impossible pocket billiards, hyper-masculine wood-chopping manifesto.</td></tr><tr><td><a href="../episodes/2025-02-08" class="internal alias" data-slug="episodes/2025-02-08">2025-02-08</a></td><td>0:46:39</td><td>Tactile Basketball, Trivia, Nolan’s Odyssey &amp; AI Music Factory: Case and Hype Train review a haptic basketball court for blind fans, a jungle/drum-and-bass trivia clip, a streamer’s LED gorilla setup, a confusing Nolan-style conspiracy short, and generate multiple Suno AI tracks including ‘Wet Pork Chops’ and ‘Cream Team Cipher Butt Rock Slop Chop’.</td></tr><tr><td><a href="../episodes/2025-02-12" class="internal alias" data-slug="episodes/2025-02-12">2025-02-12</a></td><td>28:52</td><td>Internet Video Ratings: Nut Shots, Bird Jazz, and Sopranos: Case and Pepito rate viewer-submitted videos including a Channel 101 ‘kicked in the nuts’ compilation, a bird enjoying jazz, a suggestive dance video cut early, a corgi talking, a dog-and-crow animation, and a Sopranos scene with Junior Soprano’s hip fracture.</td></tr><tr><td><a href="../episodes/2025-02-14" class="internal alias" data-slug="episodes/2025-02-14">2025-02-14</a></td><td>35:00</td><td>Trailer Reactions: Accountant 2, How to Train Your Dragon Live-Action, The Friend, Vibes: Case and Trent watch and react to trailers for The Accountant 2, How to Train Your Dragon live-action remake, Tim Robinson’s The Friend, and 1998 film Vibes.</td></tr><tr><td><a href="../episodes/2025-02-25" class="internal alias" data-slug="episodes/2025-02-25">2025-02-25</a></td><td>58:01</td><td>React Segment: Peter Gibbon Returns from the Walls: Peter Gibbon emerges from the crawlspace to co-host a react segment featuring viral clips (Jackie Chan stunts, pickup lines, Guitar Center beat-making, driving safety), punctuated by Peter’s tantric claims and Case’s mounting discomfort.</td></tr><tr><td><a href="../episodes/2025-02-28" class="internal alias" data-slug="episodes/2025-02-28">2025-02-28</a></td><td>48:34</td><td>Transition to Amongst the Web &amp; Doctor Tease: Case pivots to audience-submitted videos; mentions a ‘BIN doctor on staff’ for a later segment.</td></tr><tr><td><a href="../episodes/2025-03-04" class="internal alias" data-slug="episodes/2025-03-04">2025-03-04</a></td><td>51:53</td><td>Amongst the Web: Viral Video Review with Clementine: Clementine watches and rates viewer-submitted clips including a coaster POV, casino security cam, hit-clips robot, hide-and-seek, raccoon ad, brick-layer revenge, and big man blast.</td></tr><tr><td><a href="../episodes/2025-03-07" class="internal alias" data-slug="episodes/2025-03-07">2025-03-07</a></td><td>52:28</td><td>Internet Video Review: Family Feud, Kitty Style, Dinosaurs, Zelda Ads, and More: Case and Liliana rate viewer-submitted clips including a Family Feud ‘penis’ answer, a fixed-gear bike medallion video, a child touching urine, the Dinosaurs sitcom finale, US and Japanese Zelda commercials, a 1964 tire ad, and an ice-fishing SpongeBob truther.</td></tr><tr><td><a href="../episodes/2025-03-17" class="internal alias" data-slug="episodes/2025-03-17">2025-03-17</a></td><td>47:12</td><td>Internet Video Review: Epstein Musical, Eye-Hole Man, Pelican, Cannon Man, Pipe Rock Conspiracy: Case and Crum watch viewer-submitted videos: Joel Haver’s Epstein musical, news cat, man with large eye socket, pelican eating capybara, human cannonball, Tim Lampier’s pipe rock conspiracy video featuring Tom Cruise and Scientology.</td></tr><tr><td><a href="../episodes/2025-03-19" class="internal alias" data-slug="episodes/2025-03-19">2025-03-19</a></td><td>43:42</td><td>Movie Trailer Watch Party: Case and chat watch trailers for Ballerina (John Wick spinoff), Assassin’s Creed Shadows (two trailers), Windows XP Media Center (tribute to Kendall), and Happy Gilmore 2; discussion of historical accuracy, diversity complaints, and Sandler’s Netflix deals.</td></tr><tr><td><a href="../episodes/2025-03-21" class="internal alias" data-slug="episodes/2025-03-21">2025-03-21</a></td><td>1:13:11</td><td>Viral Speedrun: Feral Pig Bacteria, Valnet Sweatshop, Tamagotchi Vapes, LG NFTs, Gel Breakup, Ref Testicle Biting, Vabbing, Hamtaro Lens Woes, $4.4M Dog, Snickers Coffin, Cambodia Beefcake Pageant: Rapid-fire audience submissions: Florida man gets pig heart infection; Valnet (ScreenRant/CBR owner) accused of SEO sweatshop; NYU Stupid Hackathon yields vape-powered Tamagotchi; LG kills NFT marketplace; Gel guitarist allegedly stole bandmates’ OnlyFans revenue; German child bites referee’s testicle; vaginal-fluid perfume trend ‘vabbing’ debated; Case’s Hamtaro Snapchat lenses broken by server update; half-wolf half-cane corso sells for $4.4M; UK man buried in Snickers coffin; Cambodian male beauty pageant goes viral.</td></tr><tr><td><a href="../episodes/2025-03-25" class="internal alias" data-slug="episodes/2025-03-25">2025-03-25</a></td><td>1:39:19</td><td>Viewer Videos &amp; Live Credit Card Fraud: Case and Peter Gibbon rate viewer clips (translucent squid, animatronic football player, Kung Fu Warrior Adventure Set); Case discovers real-time credit card fraud on air, reports $1k tool purchase and table purchases.</td></tr><tr><td><a href="../episodes/2025-03-31" class="internal alias" data-slug="episodes/2025-03-31">2025-03-31</a></td><td>55:33</td><td>Trailer Thursday: Black Mirror S7, Legend of Wisely, King of Kings: Case and Jeff watch and rate trailers for Black Mirror Season 7, the 1980 film Legend of Wisely, and Angel Studios’ animated King of Kings; chat rating system (Exclamation Point 1-5) used; sub/bits goals trigger additional ice dunks.</td></tr><tr><td><a href="../episodes/2025-04-04" class="internal alias" data-slug="episodes/2025-04-04">2025-04-04</a></td><td>45:31</td><td>Marfus &amp; Mavis Internet Review: Programmer Marfus (and his brother Mavis) join Case to watch TikToks: kids jumping, Megan the robot stalker, Jeopardy intro, basketball injury, Shadow the Hedgehog foot sandwich request, Burger King foot lettuce, glow-in-the-dark condom light hack.</td></tr><tr><td><a href="../episodes/2025-04-10" class="internal alias" data-slug="episodes/2025-04-10">2025-04-10</a></td><td>1:26:16</td><td>Internet Videos with Jake: Alexa Farts, Scottish Pheromones, Runaway Train, Horse Girl, Fruitarian, Cat Robot, Super Password: Jake joins for viral clip roundup: whispering Alexa fart video, Scottish woman blames loss on ‘massive fucking tits,’ indoor train crash in Thailand, sexy cow noise, Horse Girl (Stella Stallion) Coachella booking, fruitarian cult leader, cat theremin, vintage Super Password ‘swagger’ puzzle.</td></tr><tr><td><a href="../episodes/2025-04-11" class="internal alias" data-slug="episodes/2025-04-11">2025-04-11</a></td><td>46:35</td><td>Internet Video Review: Horse Circus, Ninja Turtle Woman, Pole Dancing, Wedding Rap, Gremlin Dog, Bottle Fingering, Face Yoga, Chair Standing: Case and Rick review viral clips including a horse-ass circus act, a woman with $2K Michelangelo mask, male pole dancer, park wedding rapper, French bulldog puppy, anal fingering tutorial, double-chin exercises, and chair-rising tutorial.</td></tr><tr><td><a href="../episodes/2025-04-14" class="internal alias" data-slug="episodes/2025-04-14">2025-04-14</a></td><td>1:03:12</td><td>Video Reactions with Crum: Crum refuses to engage with viral videos (pie-thrower, sky surfer, karate ad, Mean D Glue, black-canvas painting), offering only logical critiques and existential deflections while Case attempts to provoke reactions.</td></tr><tr><td><a href="../episodes/2025-04-18" class="internal alias" data-slug="episodes/2025-04-18">2025-04-18</a></td><td>0:52:14</td><td>Ego Man Interview: Case watches a 10-minute Ego Man compilation video, then interviews the sentient Eggo waffle character who accepts his destiny to be buttered, syruped, and eaten. Papito nearly devours the guest on air.</td></tr><tr><td><a href="../episodes/2025-04-23" class="internal alias" data-slug="episodes/2025-04-23">2025-04-23</a></td><td>1:53:41</td><td>Internet Video Review &amp; Raid: Case and Crum watch viewer-submitted clips: Star Wars parody ad, McCain-Palin rap, Gal Gadot line readings, trap bassoon beats; ends with Hype Train freestyle and raid.</td></tr><tr><td><a href="../episodes/2025-05-01" class="internal alias" data-slug="episodes/2025-05-01">2025-05-01</a></td><td>1:18:51</td><td>Amongst the Web: Gorilla Pond Fight, Mr. Rogers EDM, Gandalf Professor, Giant Donut, Bernice Repo Crash, Baby Gronk, Off the Leash, Hot Dog Lady, Blastoise DJ: Case, Peter, Rock-afire gorilla review discord submissions: gorilla vs pond, Mr. Rogers defending EDM to Congress, professor fails students not named LOTR cast, gluten-free donut size of head, True TV repo show Bernice falls off building, baby Gronk/Salish Matter TikTok, ‘Off the Leash’ palette cleanser, 7-Eleven hot dog rating, Blastoise DJ pyro graphics.</td></tr><tr><td><a href="../episodes/2025-05-02" class="internal alias" data-slug="episodes/2025-05-02">2025-05-02</a></td><td>1:09:37</td><td>Viewer Submissions &amp; Ayahuasca Vision: Case and Jeff review clips: lawyer commercial, 90s dance workout, gym proposal, Wendy’s AI drive-thru, Bee Movie meme; Case claims ayahuasca vision of cloud coyote.</td></tr><tr><td><a href="../episodes/2025-05-05" class="internal alias" data-slug="episodes/2025-05-05">2025-05-05</a></td><td>8:42</td><td>Stream Setup &amp; Fan Fest Chat: Case discusses Fan Fest, snap camera software updates, Pepito’s sponsorship ambitions, and the Cream.Team Patreon.</td></tr><tr><td><a href="../episodes/2025-05-13" class="internal alias" data-slug="episodes/2025-05-13">2025-05-13</a></td><td>1:13:36</td><td>Jake Co-Hosts Viral Video Review: Case’s cousin Jake guest-hosts; reviews Wizard World DC Comics booth ambush, Scott Pilgrim cosplay skit, possum in makeup, 4th of July parade reenactment, Love on the Spectrum clip, cleaning sketch, raccoon with meth pipe, Zoom ‘Bob’ call, ‘bear backing’ raw-dogging trend, and Dank Doc’s Weed Shop cartoon.</td></tr><tr><td><a href="../episodes/2025-05-17" class="internal alias" data-slug="episodes/2025-05-17">2025-05-17</a></td><td>2:53:20</td><td>Amongst the Web with Darfus (Marfus Jarvifs Darfus): Gorilla-named guest Darfus joins Case to rate internet videos: donut-eating horse (7.17★), Vogue Master music (unrated), Jason Rodelo anti-vaping CEO (unrated), hot dog water fountain (2.86★), Rockstar jiggle physics engineer Dan Carney (9.4★), glizzy overdrive NPC (unrated), one-legged breaker (10★), wrist-strength game (10★), flesh Coke cans (low).</td></tr><tr><td><a href="../episodes/2025-06-02" class="internal alias" data-slug="episodes/2025-06-02">2025-06-02</a></td><td>38:32</td><td>Billy Ray Cyrus Achy Breaky Heart Flashback: Case and Rick watch a 1992 America’s Funniest Home Videos clip of Billy Ray Cyrus promoting the Achy Breaky dance contest, followed by the winning viewer submission featuring paramedics.</td></tr><tr><td><a href="../episodes/2025-06-05" class="internal alias" data-slug="episodes/2025-06-05">2025-06-05</a></td><td>1:31:08</td><td>Clementine Vern Wig Poll &amp; Hair Trade Conspiracy: Chat votes on wig for banned character Clementine Vern (colonial wig wins); wig expert Amelia Jabron Kovic consults; Guy delivers conspiracy on global hair trade exploitation, Vietnam ethical sourcing, temple hair donations.</td></tr><tr><td><a href="../episodes/2025-06-09" class="internal alias" data-slug="episodes/2025-06-09">2025-06-09</a></td><td>1:47:21</td><td>Viral Video Review &amp; Kendall Raid: Case and Ed rate viewer-submitted clips including a tear gas taste test, lion encounter, superhero doodle animation, and a gun-kata robot demo before raiding Kendelle’s stream.</td></tr><tr><td><a href="../episodes/2025-06-11" class="internal alias" data-slug="episodes/2025-06-11">2025-06-11</a></td><td>1:30:11</td><td>Trailer Watch: Too Much, The Lost Bus, Sliders, Waves of Madness: Case and Crum react to Netflix’s Too Much, Apple’s The Lost Bus, the 1995 Sliders pilot, and a kitchen-filmed side-scroller titled Waves of Madness.</td></tr><tr><td><a href="../episodes/2025-06-13" class="internal alias" data-slug="episodes/2025-06-13">2025-06-13</a></td><td>1:23:49</td><td>Internet Video Review: Sleeping Dogs, Good Long Pee, Robot Dancing: Caller Jake joins Case to rate viral clips: sleeping dogs on contraptions, SpongeBob ‘Good Long Pee’ parody, emotional dancer, Walmart toy chaos, beach underpass skins, and robot boxing match made from recycled USB mics.</td></tr><tr><td><a href="../episodes/2025-06-24" class="internal alias" data-slug="episodes/2025-06-24">2025-06-24</a></td><td>1:00:20</td><td>Expert Summoning: Red Queen &amp; Voodoo Resurrection: Case summons the Red Queen (Eddie) three times, then a voodoo expert to discuss resurrecting Crum; Eddie cycles through multiple personas.</td></tr><tr><td><a href="../episodes/2025-06-26" class="internal alias" data-slug="episodes/2025-06-26">2025-06-26</a></td><td>52:14</td><td>Amongst the Web with J. Drilla: Case hosts viral video review with guest J. Drilla (aspiring pop star); rates videos including Mystery PUA bootcamp ad, chastity belt content, and Amtrak social media.</td></tr><tr><td><a href="../episodes/2025-06-28" class="internal alias" data-slug="episodes/2025-06-28">2025-06-28</a></td><td>2:45</td><td>AI Slop Video Showcase (VO3/Veo): Case watches viewer-submitted AI-generated videos of himself and Pepito; marvels at improving realism.</td></tr><tr><td><a href="../episodes/2025-07-01" class="internal alias" data-slug="episodes/2025-07-01">2025-07-01</a></td><td>1:03:30</td><td>Chat-Shared News Blitz: Jeff Ripple reads viewer-submitted stories: Bob Vylan Glastonbury ‘death to IDF’ chant investigation, Melania Trump AI audiobook, African penis-theft panic as Russian disinfo, Earth’s mantle pulse under Africa, MMA fighter electrocution, Disney Cruise child overboard rescue, EA Sports college basketball 2028, Liver King arrest, Lazio mascot handler penile implant eviction, ‘gravity-defying boobs’ trend piece, Lord/Sabrina Carpenter NSFW vinyl art, Jake Paul vs Chavez Jr., MrBeast AI thumbnail rollback.</td></tr><tr><td><a href="../episodes/2025-07-10" class="internal alias" data-slug="episodes/2025-07-10">2025-07-10</a></td><td>50:11</td><td>DERF Hosts Viewer Video Submissions: DERF returns to review chat-submitted clips: Megatron fighter-jet dating advice, Gal Gadot acting critique, ‘woke architecture’ podcast sketch, Eric Adams GPS/God video, Wiley Golf N64 commercial; no 10-score achieved.</td></tr><tr><td><a href="../episodes/2025-07-12" class="internal alias" data-slug="episodes/2025-07-12">2025-07-12</a></td><td>52:35</td><td>Trailer Reactions: Chief of War, Superman, Zeus TV Movie: Case, co-host, and Chris (parole officer) react to Jason Momoa’s ‘Chief of War’ trailer (battle thong noted), debate Superman (2025) wokeness and White House Trump-as-Superman tweet, and watch a baffling Zeus TV prestige drama trailer ‘My Dead Friend Zoe’ starring Bad Girls Club alumni.</td></tr><tr><td><a href="../episodes/2025-07-15" class="internal alias" data-slug="episodes/2025-07-15">2025-07-15</a></td><td>59:02</td><td>Trailer Watch: Corn Dog Man, Who Killed Captain Alex, Durandar, Zigfield Follies: Case and chat watch viewer-submitted trailers: Sundance’s ‘Corn Dog Man’ (blackface twist), Ugandan action ‘Who Killed Captain Alex?’, Indian ‘Durandar’, and a micro-budget ‘Zigfield Follies’.</td></tr><tr><td><a href="../episodes/2025-07-19" class="internal alias" data-slug="episodes/2025-07-19">2025-07-19</a></td><td>40:31</td><td>Internet Video Review: Useless Guy, Curse Removal, Wrestling Shoutouts: Case rates viral clips including a park fight (‘useless guy’), late-night curse removal infomercial, and wrestling references (Adam Page/Adam Cole); ghost letters haunt studio; Kendall appears pantsless.</td></tr><tr><td><a href="../episodes/2025-07-24" class="internal alias" data-slug="episodes/2025-07-24">2025-07-24</a></td><td>1:37:39</td><td>Big Cheddar’s Audience News: Claw Machine Guns, Salmon Sperm, AI Psychosis: Big Cheddar persona covers Japanese claw machine firearms, salmon sperm skincare (Kendall’s interest), AI psychosis report, 50-year KFC employee tribute, Ghislaine Maxwell subpoena, Macron transvestigation, paranormal poll, Buff Bagwell amputation, semen injection case, Trump/Stern clip, Jon Stewart/Colbert late-night talk, murder mystery poll.</td></tr><tr><td><a href="../episodes/2025-07-25" class="internal alias" data-slug="episodes/2025-07-25">2025-07-25</a></td><td>41:20</td><td>Amongst the Web: Viral Video Review: Arnold Schwarzenegger animal impressions; Mickey plastic eye incident; FedEx/Staples printing side quest; avocado-eating technique critique; Chuck E. Cheese mascot arrested in Tallahassee (unmasked, cuffed); Kendelle’s mascot-industry connections noted; bald-head-dunking finale.</td></tr><tr><td><a href="../episodes/2025-07-30" class="internal alias" data-slug="episodes/2025-07-30">2025-07-30</a></td><td>1:19:43</td><td>Viewer News Roundup: Celsius Recall, ICP AI, Viewbotting, Adult Camp, Spaghetti Drink: Case and Chet process chat-submitted stories: mislabeled vodka seltzers, Kamala Harris skipping California governor run, ICP AI video, ChetAI/Maya refusal to rap, Twitch viewbotting claims, Gilbert Arenas poker arrest, LGBTQ adult summer camp, Spaghetti (beer-Aperol) drink trend, penis-graffiti feminist campaign, US rights watchlist, YouTube profanity policy rollback, radioactive wasps, robot guitarist, Chatterbait moderator lawsuit, snake catcher, RFK Jr mental health cuts.</td></tr><tr><td><a href="../episodes/2025-08-02" class="internal alias" data-slug="episodes/2025-08-02">2025-08-02</a></td><td>53:33</td><td>Video Review: Fire Eater, Tom Green, Video Store, Fossils, Animal Clips: Peter Gibbon joins from the walls; Case and Peter watch fire-eating woman, Tom Green katana training, Minneapolis video store ‘Nicolet Village Video’, fossil hunting with rock hammer, and animal videos including Hulk Hogan tribute.</td></tr><tr><td><a href="../episodes/2025-08-11" class="internal alias" data-slug="episodes/2025-08-11">2025-08-11</a></td><td>1:01:30</td><td>Trailer Watching: Haunted Hotel, One Piece S2, Jordan Peele Football Horror, Highway to Hell: Case and Jeff Ripple react to four trailers: Netflix’s animated Haunted Hotel, One Piece Season 2 live-action, Jordan Peele’s football horror film, and the 1991 cult film Highway to Hell.</td></tr><tr><td><a href="../episodes/2025-08-16" class="internal alias" data-slug="episodes/2025-08-16">2025-08-16</a></td><td>41:58</td><td>Viewer Video Roulette: Kendall, Dating Game, Cops &amp; Chuck E. Cheese: Case rates videos submitted via thecream.team: a Kendall-sent clip (poorly received), a 2010s dating-game sketch Case wrote for VEN, a police propaganda raid video, the ‘running face man’ compilation, a cat video, and a follow-up on the Chuck E. Cheese arrest in Tallahassee.</td></tr><tr><td><a href="../episodes/2025-08-26" class="internal alias" data-slug="episodes/2025-08-26">2025-08-26</a></td><td>1:00:29</td><td>Video Reviews: Cats, Kendall, Veep, Presidents, Quaaludes: Case reviews viewer-submitted clips: cat reaction, Kendall card-throwing, Veep clip, AI Obama/Bush, skateboard turtle, Quaalude nostalgia, butt-sniffer arrest, synthetic Cheeto life form, Will Smith AI video, rotated tic-tac-toe GPT-5 test.</td></tr><tr><td><a href="../episodes/2025-09-02" class="internal alias" data-slug="episodes/2025-09-02">2025-09-02</a></td><td>38:17</td><td>Discord Submissions: Toilet Chili, Ham Bussy, Robbie Love, Rock Sitting: Case and Jeff Ripple watch viewer-submitted clips: chili eaten from toilet container, ham sandwich assembly meme, 2006 roller-rapper Robbie Love’s Route 66 trek, The Rock sitting at an event looking thinner.</td></tr><tr><td><a href="../episodes/2025-09-10" class="internal alias" data-slug="episodes/2025-09-10">2025-09-10</a></td><td>36:00</td><td>Viewer Videos &amp; Peter Gibbon Intrusion: Stand-up clips, mobile ad parody, TikTok strategy ad, BTS fancam, shake-the-juice joke, disturbing ‘sacred object’ video, squirrel assault clip, Disney coral parade float, motocross mountain run; Peter Gibbon teleports in, claims wall residency, argues with Case.</td></tr><tr><td><a href="../episodes/2025-09-11" class="internal alias" data-slug="episodes/2025-09-11">2025-09-11</a></td><td>1:26:52</td><td>Chat News: Beast Boy Firing, Charlie Sheen Ice Cube, Paraglider vs Balloon, Inflatable Plane Airbags, Panty Scrunchies, $15K Sex Dolls, Taylor Swift Engagement: Rick hosts viewer-submitted stories: Greg Cypes claims Warner Bros fired him over Parkinson’s; Charlie Sheen shoved ice cube up butt to wake up; paraglider survives mylar balloon entanglement; engineers propose external airbags for planes; Japanese brand sells $119 panty ribbon bows; sex doll pricing game reveals $15K model; Kendall owes Big J Dub a sub on Taylor Swift engagement bet.</td></tr><tr><td><a href="../episodes/2025-09-18" class="internal alias" data-slug="episodes/2025-09-18">2025-09-18</a></td><td>1:02:27</td><td>Internet Video Review: Ducks, Jelly Roll, Titanic Pool &amp; Arnold: Case and Jake rate viewer submissions: philosophical duck cartoon, Jelly Roll clip, protein cookie fart confession, Titanic pool physics debate, Sakura Gummy Man archive, Arnold Schwarzenegger car improv, and emotional unavailability monologue.</td></tr><tr><td><a href="../episodes/2025-09-25" class="internal alias" data-slug="episodes/2025-09-25">2025-09-25</a></td><td>2:06:32</td><td>Grandma Crumble Bottom &amp; The Lanky Box Discovery: Grandma Crumble Bottom joins Case for viral video review; they uncover the ‘Lanky Box’ children’s content rabbit hole (Goo Goo Gaga, baby-fetish animation) and a palate-cleanser cheeseburger slap video.</td></tr><tr><td><a href="../episodes/2025-09-29" class="internal alias" data-slug="episodes/2025-09-29">2025-09-29</a></td><td>1:12:32</td><td>Trailer Reviews: One Piece, Wolverine, Cannibal Girls: Jeff Ripple hosts trailers segment: One Piece S2 (cautious optimism), Wolverine game (zero bubs, robot blood), 1973’s Cannibal Girls (bell warning gimmick).</td></tr><tr><td><a href="../episodes/2025-10-02" class="internal alias" data-slug="episodes/2025-10-02">2025-10-02</a></td><td>1:16:10</td><td>Jeff Ripple’s News Backlog: Jeff Ripple reads accumulated stories: morning wood as health metric, Tilly Norwood AI actress controversy, Alex Jones Hitler mustache stunt, Japanese lab-grown meat project, EU WW3 survival kits, Jane Goodall obituary, Amazon Luna party-game pivot, Maya the Bee reboot, FCC ownership cap elimination, YouTube-Trump $24M settlement, Riyadh Comedy Festival clips.</td></tr><tr><td><a href="../episodes/2025-10-04" class="internal alias" data-slug="episodes/2025-10-04">2025-10-04</a></td><td>46:34</td><td>Peter Gibbon Returns from the Wall: Peter Gibbon reappears claiming cosmic wall-being resilience; segment watches viral videos (CD destruction, ice cream truck, card tricks, soccer cleats, ghost kick, yacht story, ‘duty ass’ pitch, James Gunn PG Porn).</td></tr><tr><td><a href="../episodes/2025-10-09" class="internal alias" data-slug="episodes/2025-10-09">2025-10-09</a></td><td>1:15:00</td><td>Chat News with Grandma Crumble Bottom: Grandma Crumble Bottom (witch form) joins; stories include Korean streamer murder, YouTube second chance program, Luna cloud gaming, Hassan dog shock collar controversy, Jennifer Lopez surgery, bear attacks, OpenAI chip deal, Ubisoft Assassin’s Creed cancellation, penis ring medical emergency, Palisades fire arson arrest, Tesla Optimus robot at Tron premiere.</td></tr><tr><td><a href="../episodes/2025-10-16" class="internal alias" data-slug="episodes/2025-10-16">2025-10-16</a></td><td>1:49:32</td><td>Slop Block: Kevin Vaping, Old Men, and Beefcake Cooking: Rapid-fire viewing of AI-generated slop videos (Kevin vaping, brother’s old-man content) and a cooking clip of a woman surrounded by beefcake husbands, rated a clean four by chat.</td></tr><tr><td><a href="../episodes/2025-10-27" class="internal alias" data-slug="episodes/2025-10-27">2025-10-27</a></td><td>1:02:00</td><td>Internet Video Review: Homesar, Pussy Town, Iron Snail, Disney, Trump Impression, Floating: Case and Rick (as Chad) rate viewer submissions including Homestar Runner’s Homesar, a town named Pussy, scaly-foot gastropod, Disney cruise Gaston funeral, ski-mask drug dealer, Jeb’s wood-flavored bread, Trump impression tutorial, and levitation trick.</td></tr><tr><td><a href="../episodes/2025-10-31" class="internal alias" data-slug="episodes/2025-10-31">2025-10-31</a></td><td>53:38</td><td>Trailer Thursday with Trent: Stone Cold Fox, Scream 7, Dracula, Palestine 36: Trent screens four trailers including a 70s-style action film, Scream 7, a Radu Jude Dracula documentary, and a historical Palestine film; Case and Trent bicker about genre trends and geopolitics.</td></tr><tr><td><a href="../episodes/2025-11-15" class="internal alias" data-slug="episodes/2025-11-15">2025-11-15</a></td><td>13:00</td><td>AI Maya Chat &amp; Jimmy Wales Walkout: Case and Chet test the AI companion Maya with a two-minute prompt, then watch a clip of Jimmy Wales ending an interview over a founder/co-founder question.</td></tr><tr><td><a href="../episodes/2025-11-18" class="internal alias" data-slug="episodes/2025-11-18">2025-11-18</a></td><td>1:34:42</td><td>Rick’s Chat-Curated News Roundup: Rick covers Jake Paul vs Anthony Joshua, GameStop ‘trade anything’ day (taxidermy), jelking trend, Newsmax airing AI video, Epstein egg-shaped penis deposition, Golden State Killer micro-penis, sex drought study, Rubin Observatory stellar stream.</td></tr><tr><td><a href="../episodes/2025-11-27" class="internal alias" data-slug="episodes/2025-11-27">2025-11-27</a></td><td>1:03:20</td><td>Victorian Couple, AI Hologram Prank, Sister Mary Blaze, 1950s Lifestyle: Case and Pepito watch viewer-submitted videos: Victorian-era reenactors Sarah and Gabriel Christman; AI hologram prank on ‘bro’; Sister Mary Blaze’s satirical nun TikToks; Lacy Fey living as 1958 housewife. Kendall walks through during Victorian segment.</td></tr><tr><td><a href="../episodes/2025-12-04" class="internal alias" data-slug="episodes/2025-12-04">2025-12-04</a></td><td>1:46:57</td><td>Amongst the Web: Big Bill Hell’s, Racist Bathroom, AR AI Buddy, Bottle Draining, Knife Carrot, Ceiling Fan Tragedy, Macy’s Parade: Rick hosts the viral video review: Big Bill Hell’s car dealership ad, racist bathroom decor, AR AI companion, suggestive bottle pouring, knife precision carrot eating, ceiling fan couple separation, Macy’s Thanksgiving Parade rap.</td></tr><tr><td><a href="../episodes/2025-12-09" class="internal alias" data-slug="episodes/2025-12-09">2025-12-09</a></td><td>1:43:26</td><td>Amongst the Web with Rick: Rick hosts viral video review: concrete watering murder, Halloween slapstick, Joe Hendry wrestling, Tesla Optimus faceplant, colonoscopy rap, art animation, C-section joke, sheep hat-flicking lore, local news filler.</td></tr><tr><td><a href="../episodes/2025-12-18" class="internal alias" data-slug="episodes/2025-12-18">2025-12-18</a></td><td>44:46</td><td>Amongst the Web: Blood Patio, Holes Debate &amp; Pastor Meltdown: Rick (as ‘Clementine’/‘Big Cheddar’) hosts viewer submissions: a bloody patio cleanup, a ‘liking holes’ debate, a bird video, a pig-dog encounter, and a 16-year-old tech reviewer blowup.</td></tr><tr><td><a href="../episodes/2026-01-07" class="internal alias" data-slug="episodes/2026-01-07">2026-01-07</a></td><td>1:30:48</td><td>Viewer Video Review: Case rates viewer submissions: ABC After School Special ‘Stone’, Magic: The Gathering Bogart musical by Jim Henson Co., pig sky-view fact, Joshua song, reborn doll pregnancy test, thick news anchor compilation, Alex Jones with Labubu, and Cucaracha remix.</td></tr><tr><td><a href="../episodes/2026-01-17" class="internal alias" data-slug="episodes/2026-01-17">2026-01-17</a></td><td>1:25:22</td><td>Amongst the Web: Viewer Video Ratings &amp; DJ C4 Song Production: Case rates viewer submissions (nudibranch, head-bounce injury, trauma one-upmanship, Mormon construction worker ceiling collapse, trick-top spinner); DJ C4 produces trap track ‘Gotta Go Fast’ with chat lyrics for Chris Pratt-voiced Speedy Gonzales and Sonic.</td></tr><tr><td><a href="../episodes/2026-01-27" class="internal alias" data-slug="episodes/2026-01-27">2026-01-27</a></td><td>1:12:09</td><td>Amongst the Web: Viewer Video Gauntlet: Rick hosts the viral media review desk, scoring viewer submissions including Game Grumps pickle bubbles, a Ringling Brothers vintage ad, G4 show speedrun, Code Monkeys musical number, mouth-sound performance, and Pop Pop Bruce Johnson’s grandbaby address.</td></tr><tr><td><a href="../episodes/2026-02-04" class="internal alias" data-slug="episodes/2026-02-04">2026-02-04</a></td><td>1:23:17</td><td>Chat News: Ben Hooper, Poop Pills, Mountain Lion &amp; Cougar Trends: Case and Jeff Ripple review viewer-submitted stories: Ben Hooper’s UPI minute, fecal microbiota cancer trials, SF mountain lion, crypto bros nauseated by Epstein ties, Reddit mod deletes astronaut photo, Dos Equis ad, cougar dating trend, Elmo hack, Gen Z sexting stats, Jesse Ventura secession float, Jill Biden ex-husband murder charge, Bryan Johnson Epstein emails.</td></tr><tr><td><a href="../episodes/2026-02-06" class="internal alias" data-slug="episodes/2026-02-06">2026-02-06</a></td><td>1:31:44</td><td>Amongst the Web: Viral Videos with Jan: Jan reviews viewer-submitted clips: a budget funeral song, ‘risen cranks’ nonsense, sexy conjoined twins (dismissed as fake), angry Casino scene, ‘being a male at 12’ wisdom, and a plexiglass kissing video.</td></tr><tr><td><a href="../episodes/2026-02-12" class="internal alias" data-slug="episodes/2026-02-12">2026-02-12</a></td><td>49:47</td><td>AI Video, Bad Bunny, and Kendall’s Ballet Sneakers: Rick hosts viral video review covering Sea Dance 2.0 AI clips, Bad Bunny Super Bowl translation, and a surprise visit from Kendall and her brother Jiggy showing off Taekwondo shoes.</td></tr><tr><td><a href="../episodes/2026-02-17" class="internal alias" data-slug="episodes/2026-02-17">2026-02-17</a></td><td>43:49</td><td>Amongst the Web: Viewer Video Submissions: Case and Ripple watch chat-submitted clips: snake diorama, Kid Rock burger ad, Frenchman groin injury, bottle-opening toe trick, Kendall’s former coworker stream fail, RFK Jr. toilet-seat cocaine claim.</td></tr><tr><td><a href="../episodes/2026-02-26" class="internal alias" data-slug="episodes/2026-02-26">2026-02-26</a></td><td>46:24</td><td>Viewer Video Submissions Review: Case rates community clips: Burger Face animation, slender-man horror, rocking parrot, Batman/Robin DM fantasy, and 1990s Party Planner Video Guide ‘Man-tastics’ male entertainer showcase.</td></tr><tr><td><a href="../episodes/2026-03-06" class="internal alias" data-slug="episodes/2026-03-06">2026-03-06</a></td><td>1:05:29</td><td>Children’s Planet Teacher, Wizard of Speed and Time, Horse Girls, Coach McGurk: Video submissions: anime teacher on ‘Children’s Planet’, Mike Jittlov’s 1989 ‘Wizard of Speed and Time’ short, horse girl animation, and Coach McGurk (high school football coach fired for ‘Revenge of the Nerds Day’ event).</td></tr><tr><td><a href="../episodes/2026-03-10" class="internal alias" data-slug="episodes/2026-03-10">2026-03-10</a></td><td>1:41:52</td><td>Trailer Time with Trent: Eaten Alive, Man on Fire, Night at the Opera: Trent and parole officer Chris watch Ramon Film Productions’ ‘Eaten Alive’, ‘Man on Fire’ re-reveal, and Marx Brothers’ ‘A Night at the Opera’ trailer.</td></tr><tr><td><a href="../episodes/2026-03-20" class="internal alias" data-slug="episodes/2026-03-20">2026-03-20</a></td><td>1:26:40</td><td>Amongst the Web: Viewer Submissions: Case reviews viewer clips including Cyclopedia reel-to-reel documentary, Palm Beach Pete lookalike, clavicular’s halo-effect video, and butthole wellness influencers.</td></tr><tr><td><a href="../episodes/2026-03-24" class="internal alias" data-slug="episodes/2026-03-24">2026-03-24</a></td><td>39:38</td><td>Mashable Incel Glossary Decoded: Rick reads Mashable’s 2026 incel terminology list (80/20 rule, AWALT, Becky, Stacy, Chad, black pill, looksmaxing terms) while Blackwell reacts with escalating disgust.</td></tr><tr><td><a href="../episodes/2026-03-25" class="internal alias" data-slug="episodes/2026-03-25">2026-03-25</a></td><td>1:25:12</td><td>Viewer Video Submissions with Jake: Case and guest Jake watch viewer submissions: an ‘unshittificator’ satire, a Jeff Lewis oven sketch, and a vintage Tulip Paint musical advertisement.</td></tr><tr><td><a href="../episodes/2026-04-06" class="internal alias" data-slug="episodes/2026-04-06">2026-04-06</a></td><td>42:03</td><td>Amongst the Web: Viewer Submissions: Case and Crum review viewer clips: stop-motion manipulation short, competitive CTE sport, extreme love doll documentary, Sikor’s life-event chart, Macho Man bachelor party wrestling, refrigeration guru ad, exploding lizard kids animation.</td></tr><tr><td><a href="../episodes/2026-04-11" class="internal alias" data-slug="episodes/2026-04-11">2026-04-11</a></td><td>44:05</td><td>Mega Man Fan Game: Case Blackwell Edition: Case plays a viewer-made <a href="https://melodyvontorture.itch.io/bin-1" class="external">Mega Man fangame<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> starring himself (Mega-Case) rescuing Chet from evil robots; Kendelle and Crum attempt the game, Crum quits after one death; Case eventually beats the Woodman-style boss after extensive farming.</td></tr><tr><td><a href="../episodes/2026-04-15" class="internal alias" data-slug="episodes/2026-04-15">2026-04-15</a></td><td>1:38:54</td><td>Viewer Videos: Horse Sex, Metal Scream, Nicole Kidman AMC, Cat Concern, Japan Travel, AI M&amp;M Rap, Skadoo Paddle: Grandma Crumble Bottom joins (crypto gains, ‘scam coin’ purchase). Videos: horses mating at speaker ad; ‘most brutal metal scream ever’ rated 5.4; Nicole Kidman AMC ad parody; cartoonist’s cat checks on him during DBZ Mario voice acting; stylized Japan travel music video; AI-generated M&amp;M rap; nostalgic ‘sawdust ball’ sepsis story rated 17/10.</td></tr><tr><td><a href="../episodes/2026-04-22" class="internal alias" data-slug="episodes/2026-04-22">2026-04-22</a></td><td>1:13:29</td><td>Amongst the Web: Sake Bombs, Piss Mattress Pro, SCP Speed Horse, Blindfold Pizza, Spooky Nun, Heels Athlete, Rockout Finale: Case and ChetAI review viewer submissions: sake bomb technique, 30-gallon piss mattress prototype, SCP-classified horse reaching 320 mph, blindfold pizza maker, jump-scare nun video, six-inch heels walking tutorial, and a shirtless guitarist.</td></tr><tr><td><a href="../episodes/2026-05-12" class="internal alias" data-slug="episodes/2026-05-12">2026-05-12</a></td><td>1:13:20</td><td>Amongst the Web: Viewer Video Reviews: Jeff Ripple hosts the viral media review desk, rating submissions including a Ted Bundy clip, Epstein files reference, a hairy badger, a kid eating a sandwich, ice-breaking trypophobia trigger, baseball celebration dance, and a mechanical table rocker.</td></tr><tr><td><a href="../episodes/2026-05-22" class="internal alias" data-slug="episodes/2026-05-22">2026-05-22</a></td><td>1:43:01</td><td>Internet Video Review: Case and Kendelle rate chat-submitted clips including Frog King, crab party, Yakuza roof confrontation, and a surreal CGI survival short while bickering about trash bag discipline.</td></tr><tr><td><a href="../episodes/2026-05-26" class="internal alias" data-slug="episodes/2026-05-26">2026-05-26</a></td><td>15:30</td><td>Viral Media Review: Field correspondent Trip Bradstein interviews park visitors in a public park, gathering ‘on-the-street’ opinions on viral content submitted by viewers.</td></tr><tr><td><a href="../episodes/2026-05-29" class="internal alias" data-slug="episodes/2026-05-29">2026-05-29</a></td><td>1:34:49</td><td>Movie Trailers &amp; Epstein Island: Case reviews movie trailers including Dead Howling, Clayface, and Bring Me the Beauties, which transitions into a discussion about Jeffrey Epstein and cults. The segment ends with a shrimp-themed food critic debate.</td></tr><tr><td><a href="../episodes/2026-06-01" class="internal alias" data-slug="episodes/2026-06-01">2026-06-01</a></td><td>1:02:04</td><td>Viral Media Review &amp; Horse Genre: Case reviews a clip of his past screaming and discusses ‘horse genre’ content, including a story about a horse getting a new saddle.</td></tr><tr><td><a href="../episodes/2026-06-08" class="internal alias" data-slug="episodes/2026-06-08">2026-06-08</a></td><td>1:14:33</td><td>Trailer Review: The Giver 2, Saw Genesis, My Dream Is Yours, Dave the Driver, Resident Evil: Case and off-screen voices watch and rate vintage and new trailers: The Giver 2: Dark Hero (ROI-based marketing), Saw Genesis (WWII jaw-ripping), 1949 musical My Dream Is Yours, pixel-art game Dave the Driver DLC, and Resident Evil 9 reveal trailer. Case ranks them 3.42–4.75 stars.</td></tr><tr><td><a href="../episodes/2026-06-18" class="internal alias" data-slug="episodes/2026-06-18">2026-06-18</a></td><td>1:25:11</td><td>Granman Hosts: XP TV Commercial, Oppenheimer/Barbie TikTok, AI Kung Fu Kitty, Street Fight, Demonic Furby: Granman (introduced as possible Crum’s wife’s sex therapist) hosts viewer video review: Windows XP infomercial (8.09), Barbenheimer friendship TikTok (7.3), AI-generated kung fu cat (8.67), parking lot twerking fight (6.9), Furby demon possession testimony (10/10). Granman departs after high-five failure.</td></tr><tr><td><a href="../episodes/2026-06-19" class="internal alias" data-slug="episodes/2026-06-19">2026-06-19</a></td><td>45:00</td><td>Viral Media Review: On-air debate desk evaluating viral content submitted by viewers. The segment features live polls, audience voting, and critical analysis of trending internet memes and media trends.</td></tr><tr><td><a href="../episodes/2026-06-29" class="internal alias" data-slug="episodes/2026-06-29">2026-06-29</a></td><td>1:42:35</td><td>Jevrything’s Jam EFE Era &amp; Viewer Submissions: Co-hosted by <a href="../characters/jevrything" class="internal alias" data-slug="characters/jevrything">Jevrything</a> in his ‘Jam EFE era,’ reviewing viewer-submitted videos including a chair banshee scream compilation, an arcade coin drop, a prize-winning hog watch, a human practitioner of the piss genre, a CPS-style video, a Florida farm animal last vision, a kid attempting to dunk on an 8’10” hoop, and more.</td></tr><tr><td><a href="../episodes/2026-07-23" class="internal alias" data-slug="episodes/2026-07-23">2026-07-23</a></td><td>55:38</td><td>Theatrical Trailer Roundup: Trailer review segment covering the Stranger Things stage play recording, Resident Evil, Avengers Doomsday, Hattie’s Town, and Clayface. Case reacts to Bradley Cooper reprising Rocket. The segment is abruptly interrupted by a Twitch suspension for policy violations, suspected to be triggered by weapons shown in the trailers. Case notes the network reputation value is currently sitting at $30.</td></tr><tr><td><a href="../episodes/2026-07-24" class="internal alias" data-slug="episodes/2026-07-24">2026-07-24</a></td><td>57:52</td><td>Amongst the Web: Bowie Shoes, Robot Falls &amp; Kyle Gordon: Case transitions to Amongst the Web, reviewing viewer-submitted clips: David Bowie shoe footage earning a nine, a stunt performer gaining an ‘extra leg’ in mid-air rated 9.8, a Trump clip with bold masking, a robot falling into a shame tarp receiving high marks, a World Cup clip, and a Kyle Gordon performance with South African intervention. Case reveals his own album also contains ‘never get taught your soul’ lyrics, noting he releases approximately 3,000 songs per day.</td></tr><tr><td><a href="../episodes/2026-08-04" class="internal alias" data-slug="episodes/2026-08-04">2026-08-04</a></td><td>1:32:25</td><td>Gooters Sponsorship Plug, Mic Mishap &amp; Danny Phantasmic Folk Horror Interview: Pepito accidentally leaves Brandon’s bedroom door mic live, allowing his mother’s monologues to continue airing into the newsroom. Pepito declares the home ‘just right’ in a Goldilocks bit and requests chicken ankles under the door. Blackwell pivots to the day’s viral media review: a live remote interview with Danny Phantasmic, who is revealed to be ‘tiny’ with oversized hands and an extra-large tongue. Phantasmic freestyles ‘original’ songs (‘We Will Rock You’ beat) including ‘Tied Daddy Down,’ ‘Don’t Wear Shorts,’ ‘Tricycle,’ ‘Lukewarm Looney,’ and a premiere of ‘New Correspondent.’ Broadcast closes with a raid on Aurelius and a final ‘Libby Lou’ sign-off from Phantasmic.</td></tr><tr><td><a href="../episodes/2026-08-06" class="internal alias" data-slug="episodes/2026-08-06">2026-08-06</a></td><td>43:48</td><td>Spider-Man Theater Farts, Naked Steakhouse Field Piece &amp; Wicker Man Trailer Reaction: News block concludes with light items including a Spider-Man theater evacuation over flatulence and an NBC News field piece on a nude dining steakhouse (with on-screen glitching). Following an impromptu BigWog gaming discussion with <a href=".././characters/kendelle" class="internal alias" data-slug="characters/kendelle">Kendelle</a>, the broadcast closes with a Danny Phantasmic trailer reaction to the folk horror film ‘Wicker’ (Wicker Man) before Case signs off to migrate to the Patreon stream.</td></tr><tr><td><a href="../episodes/2026-08-08" class="internal alias" data-slug="episodes/2026-08-08">2026-08-08</a></td><td>1:11:22</td><td>Amongst the Web with Grandma Crumble Bottom: Co-hosted by Grandma Crumble Bottom. The duo reviews viewer-submitted clips: Paul McCartney’s explosion pyro, a chaotic ‘Bitch I’m Side-Neck’ rap video, Alt-Kevin’s misaligned plug attempt, a cheetah being chased by baboons, a 7-Eleven mascot blown away in Taiwan wind, a Chuck Norris-style T-Bone Hogan video, a ‘Punch Me in the Nuts Barney’ retro clip, an impressive CGI Spider-Man Found Footage Fest entry, and the infamous ‘Mitch McConnell’ gardener compilation. Audience sentiment scores are tracked throughout.</td></tr><tr><td><a href=".././episodes/2026-08-14" class="internal alias" data-slug="episodes/2026-08-14">2026-08-14</a></td><td>1:06:30</td><td><a href=".././characters/marfus-darfus" class="internal alias" data-slug="characters/marfus-darfus">Marfus Darfus</a> guest-hosts alongside Case, reviewing viewer submissions including a <em>Love Island</em> clip (rated <code>5.5</code>), an escalator fugue state, a vintage <em>Family Matters</em> cop drama scene (rated <code>6.44</code>), and a “crotch pot” hiking cooking video (rated <code>5.0</code>).</td></tr><tr><td><a href=".././episodes/2026-08-19" class="internal alias" data-slug="episodes/2026-08-19">2026-08-19</a></td><td>1:23:33</td><td><a href=".././characters/grandma-crumble-bottom" class="internal alias" data-slug="characters/grandma-crumble-bottom">Grandma Crumble Bottom</a> joins Case at the desk after discussing solar laser vision correction and her night-dyeing son, reviewing cringe relationship reels and robot child athletes.</td></tr><tr><td><a href=".././episodes/2026-09-04" class="internal alias" data-slug="episodes/2026-09-04">2026-09-04</a></td><td>1:08:14</td><td>Former producer <a href=".././characters/peter-gibbon" class="internal alias" data-slug="characters/peter-gibbon">Peter Gibbon</a> commandeers the desk to review viral clips alongside Case before Blackwell provides an executive update on Crum’s impending robotic gorilla forfeit.</td></tr><tr><td><a href="../episodes/2026-09-23" class="internal alias" data-slug="episodes/2026-09-23">2026-09-23</a></td><td>57:56</td><td>Internet Videos: Kendall Outfit, Ed Sheeran Impersonator, Tilly Norwood AI Interview: Kendall debates whether her teal top reads shoujo anime or Mormon; Ed Sheeran caller deflects Palestine questions; Tilly Norwood hybrid AI interview glitches into Chinese and impersonates Piers Morgan; music video reactions follow.</td></tr><tr><td><a href="../episodes/2026-09-25" class="internal alias" data-slug="episodes/2026-09-25">2026-09-25</a></td><td>1:04:58</td><td>Trailer Review: Madden, Fresh Meat, StarCraft: New correspondent John (‘President mob John’) and Chris join Case for trailer reactions; John challenges Brandon to a fight.</td></tr><tr><td><a href="../episodes/2026-10-22" class="internal alias" data-slug="episodes/2026-10-22">2026-10-22</a></td><td>23:36</td><td>Amongst the Web: Harassment Parody, AOL 6.0 Roast, Drone Gun, Bodybuilder Rage Bait, Columbus Day Parade, Space Ghost: Case and Rick review viewer-submitted clips: workplace harassment parody, profane AOL 6.0 satire, personal drone missile gun, steroid physique rage-bait, evolving Columbus Day parade vlog, and Space Ghost interview.</td></tr><tr><td><a href="../episodes/2026-10-29" class="internal alias" data-slug="episodes/2026-10-29">2026-10-29</a></td><td>1:22:24</td><td>Durf Hosts: Attack of the Show Halloween, Drag Dance, Archer/Fryboy, Point Four Dorito: Durf hosts from translucent box; videos include Attack of the Show Halloween cliffhanger, drag club dance performance, Archer/Fryboy relationship analysis, and ‘point four of a Dorito’ philosophical debate.</td></tr><tr><td><a href="../episodes/2026-11-13" class="internal alias" data-slug="episodes/2026-11-13">2026-11-13</a></td><td>1:40:19</td><td>The Power of Music, Ryan’s Parallel Universe, and Pizza: Blackwell and co-host <a href="../characters/jevrything" class="internal alias" data-slug="characters/jevrything">Jevrything</a> work the submission queue: a throwback from <a href="../fans/propaganda" class="internal alias" data-slug="fans/propaganda">Propaganda</a>, whom Blackwell hails as the lore master before conceding the title belongs to <a href="../fans/teflon-ted" class="internal alias" data-slug="fans/teflon-ted">Teflon Ted</a>, a skydiving high-five, a love-song opener, a Friday the 13th clip, an AI-generated music album advertised by a chat regular, and a pizza-eating act. Jevrything rates every clip against the power of music; Blackwell declares the album channel lost to him, Jevrything agrees its creator has lost track of the music, and Blackwell reminisces about writing musicals.</td></tr><tr><td><a href="../episodes/2026-11-15-2930043990" class="internal alias" data-slug="episodes/2026-11-15-2930043990">2026-11-15</a></td><td>10:01</td><td>Shroyuken Power Glove Clip: Case gives a brief viral-clip review of a street-fight power glove video.</td></tr><tr><td><a href="../episodes/2026-11-16" class="internal alias" data-slug="episodes/2026-11-16">2026-11-16</a></td><td>1:35:38</td><td>Amongst the Web: Alexa, C-World, and Proper Hair Pulling: Chat-submitted clips including a malfunctioning Alexa, AI-slicked gym fails, the C-World jump-rope toy soldiers, and a hair-pulling instructional; Peter Gibbon interrupts from the wall.</td></tr><tr><td><a href="../episodes/2026-11-26" class="internal alias" data-slug="episodes/2026-11-26">2026-11-26</a></td><td>1:19:27</td><td>Amongst the Web: Holiday Submissions: Liliana joins the desk to grade Case’s sexiness, then the pair run chat submissions from cream.team — a fake Scottish accent traced to North Park, New Jersey, a live Rick Astley sing, and the classic parade clip of a mascot balloon stomped out of existence.</td></tr></tbody></table></div></article><hr/><div class="page-footer"><div class="buymeacoffee-widget "><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="teflonted" data-description="Support me on Buy me a coffee!" data-message="Support the BIN Lore project!" data-color="#dc2626" data-position="Right" data-x_margin="18" data-y_margin="18"></script></div></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-422" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#amongst-the-web" data-for="amongst-the-web">Amongst the Web</a></li><li class="depth-1"><a href="#format" data-for="format">Format</a></li><li class="depth-1"><a href="#key-elements" data-for="key-elements">Key Elements</a></li><li class="depth-1"><a href="#known-occurrences" data-for="known-occurrences">Known occurrences</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../characters/crag" class="internal">Crag</a></li><li><a href="../characters/durf" class="internal">Durf</a></li><li><a href="../characters/grandma-crumble-bottom" class="internal">Grandma Crumble Bottom</a></li><li><a href="../characters/granman" class="internal">Granman</a></li><li><a href="../characters/jake" class="internal">Jake</a></li><li><a href="../characters/jazz-shrimp" class="internal">Jazz Shrimp</a></li><li><a href="../characters/jevrything" class="internal">Jevrything</a></li><li><a href="../characters/marfus-darfus" class="internal">Marfus Darfus</a></li><li><a href="../characters/rick" class="internal">Rick</a></li><li><a href="../episodes/2023-11-22" class="internal">Open Relationship AI, Taco Bell Sex Parties, Endless Hangovers, it's NEWS maybe (2023-11-22)</a></li><li><a href="../episodes/2023-12-12-SUbhyRiToyQ" class="internal">Some News then Some Company (2023-12-12)</a></li><li><a href="../episodes/2024-01-27" class="internal">WWEeeehh, Taylor AI. Trump Payouts, the NEWS is back and still BAD (2024-01-27)</a></li><li><a href="../episodes/2024-02-19" class="internal">Cream Team Dream(ish) Stream - presented by Hart Audio (2024-02-19)</a></li><li><a href="../episodes/2024-02-20" class="internal">Nerualink Mice, Lockbit Lockdown, Nobody Likes Money Shots? At least on is NEWS (2024-02-20)</a></li><li><a href="../episodes/2024-02-26" class="internal">The Cream Team Dream Stream - presented by Hart Audio (2024-02-26)</a></li><li><a href="../episodes/2024-03-28" class="internal">News and Science Guys who are Chet (2024-03-28)</a></li><li><a href="../episodes/2024-04-17" class="internal">Grimey Coachella, Israel Check In, We Can Talk to Whales? It's NEWS and/or SCIENCE? (2024-04-17)</a></li><li><a href="../episodes/2024-05-01" class="internal">Protests, Rock Bottles of Urine, and Schneider Returns, GOD help us it's NEWS (2024-05-01)</a></li><li><a href="../episodes/2024-05-21" class="internal">A.I. Death Dogs, Trump Crypto Third Reich, Terrance Howard Maybe? That's supposedly NEWS (2024-05-21)</a></li><li><a href="../episodes/2024-05-28" class="internal">Amongst  The Web (2024-05-28)</a></li><li><a href="../episodes/2024-05-31" class="internal">Felon Gives Rally, WWE Investigated, Ghost Poops Explained - all equally valid NEWS (2024-05-31)</a></li><li><a href="../episodes/2024-06-10" class="internal">Is Birthday News? Or Elden Birthday? or BOTH? (2024-06-10)</a></li><li><a href="../episodes/2024-06-18" class="internal">Nohm Lives? Armie Hammers Back? Space Catapluts? All things that COULD be NEWS (2024-06-18)</a></li><li><a href="../episodes/2024-06-26" class="internal">Reploid Improvements, Tesla Recall, Kingpin Depenised, maybe its NEWS? (2024-06-26)</a></li><li><a href="../episodes/2024-07-09" class="internal">Biden Time, AI Bullet Vending Machines, Gay Furry Hackers, all words equaling NEWS (2024-07-09)</a></li><li><a href="../episodes/2024-07-15" class="internal">Call Kass - Testing the Lines (2024-07-15)</a></li><li><a href="../episodes/2024-07-19" class="internal">RNC You Next Time, Unalive Machines, Air Butter, what is a NEWS? (2024-07-19)</a></li><li><a href="../episodes/2024-07-20" class="internal">Deb-8 - Eight Hours of DEBATE (2024-07-20)</a></li><li><a href="../episodes/2024-07-22" class="internal">Unburdened  by what has Biden and other things that are NEWS (2024-07-22)</a></li><li><a href="../episodes/2024-07-25" class="internal">Netenyahu Stays Heel, Gets Cheered, Bodybuilder Marries Sex Doll, and other NEWS of VARYING QUALITY (2024-07-25)</a></li><li><a href="../episodes/2024-07-31" class="internal">Trump Tantrums, Eels in Special Places, Boycots Work? It's NEWS MAYBE (2024-07-31)</a></li><li><a href="../episodes/2024-08-07" class="internal">Corpse Train, Missing Bluey Lil Hog Watch, all the NEWS that is IMPORTANT (2024-08-07)</a></li><li><a href="../episodes/2024-08-08" class="internal">VP On Me, Worst Face Mask Yet, Pets Grieve? It's NEW(s)! (2024-08-08)</a></li><li><a href="../episodes/2024-08-13" class="internal">Musking All Over the Place, Chatbots Come Clean, Summer... Things, what is News? (2024-08-13)</a></li><li><a href="../episodes/2024-08-20" class="internal">DNCU This Tuesday, Disney Super Streaming Blocked, GamesCom All Over Me, NEWZZZ (2024-08-20)</a></li><li><a href="../episodes/2024-08-22-oDSuSzbumUs" class="internal">DNC Even More, Lindell Watch, Costco Cups and Vance Cups, the Cups of NEWS (2024-08-22)</a></li><li><a href="../episodes/2024-08-30" class="internal">Harris Says Things, Robots Do Things, Tamagotchi Eggs, all of that is NEWS we SWEAR (2024-08-30)</a></li><li><a href="../episodes/2024-09-11" class="internal">Derpbate Reactions, Musky Goes Swifty, and other things we say are NEWS (2024-09-11)</a></li><li><a href="../episodes/2024-09-12" class="internal">No Country for Old Debates, How to Stay Calm, Bone Boners, is NEWS? (2024-09-12)</a></li><li><a href="../episodes/2024-09-13" class="internal">AI Box People, Nobel Butt Winners, Trump Continues to Say Words, NEWS they say (2024-09-13)</a></li><li><a href="../episodes/2024-09-18" class="internal">Exploding Pagers, Rate Cuts, Abercrombie and Sex Crimes, is it NEWS? (2024-09-18)</a></li><li><a href="../episodes/2024-09-20" class="internal">Diddy, Drones, and Dicks - the usual NEWS (2024-09-20)</a></li><li><a href="../episodes/2024-10-01" class="internal">Escalation Minus the De, VP Debate Preview, Fat Bear Delays, all of it IMPORTANT NEWS (2024-10-01)</a></li><li><a href="../episodes/2024-10-02" class="internal">VP Talkathon Recap, Will Smith Farts, Mystery Burger Kings, could be NEWS (2024-10-02)</a></li><li><a href="../episodes/2024-10-03" class="internal">Election Check In, Bigfoots, Geomagnetic Storms, it's disasters that are NEWS (2024-10-03)</a></li><li><a href="../episodes/2024-10-08" class="internal">Truth Social Scams, Super Perverts, Snakes Trends, it's curse NEWS (2024-10-08)</a></li><li><a href="../episodes/2024-10-10" class="internal">Hurricanes, Fat Bears, and Alt Right Pron Exposes, does it NEWS? (2024-10-10)</a></li><li><a href="../episodes/2024-10-15" class="internal">Election Updates, US &quot;Threatens&quot; Military Aid, Currency Kicks and Twitch Bans, (2024-10-15)</a></li><li><a href="../episodes/2024-10-22-4xAoUbdxBjE" class="internal">Quick News Before Hot Calls (2024-10-22)</a></li><li><a href="../episodes/2024-10-23" class="internal">Abercrombie and... Other Stuff, Lunchlumps, Rudy Starts No Nut Early (2024-10-23)</a></li><li><a href="../episodes/2024-10-30" class="internal">Trump V 2 Rogans, (2024-10-30)</a></li><li><a href="../episodes/2024-11-06-WxVZ5zuziq8" class="internal">Binlection Night (2024-11-06)</a></li><li><a href="../episodes/2024-11-26" class="internal">Post-China, Pre-Move News Grooves (2024-11-26)</a></li><li><a href="../episodes/2025-01-06" class="internal">New Year, New News (2025-01-06)</a></li><li><a href="../episodes/2025-01-08" class="internal">The Hottest News Straight From LA (2025-01-08)</a></li><li><a href="../episodes/2025-01-14" class="internal">Hegseth Opening Remarks and Other News About Creeps (2025-01-14)</a></li><li><a href="../episodes/2025-01-15" class="internal">Ceasefire Now? Tiktok Bans, Maybe Drake for Some Reason (2025-01-15)</a></li><li><a href="../episodes/2025-01-22" class="internal">News by Executive Order (2025-01-22)</a></li><li><a href="../episodes/2025-01-24" class="internal">Stargate SG5 Billion, Musky Week, Johnson Watch, it's NEWS (maybe) (2025-01-24)</a></li><li><a href="../episodes/2025-01-27" class="internal">Deepseeking a friend, Cabinet Confirmation Bias, Future Dicks, wat is a news? (2025-01-27)</a></li><li><a href="../episodes/2025-01-29" class="internal">Working Dogs, Less Working Government, And Butt News, it's INFO that's NEWS (2025-01-29)</a></li><li><a href="../episodes/2025-01-31" class="internal">Air Disasters Now &quot;Woke,&quot; Health Now Bad, And Robots Now Running Marathons, it's news so it's BAD (2025-01-31)</a></li><li><a href="../episodes/2025-02-01" class="internal">Bubble Trent (2025-02-01)</a></li><li><a href="../episodes/2025-02-03" class="internal">Tariff Delays, Nudity Now, Deep Researching the NEWS (2025-02-03)</a></li><li><a href="../episodes/2025-02-08" class="internal">Government Block Off, Elon Harem, and Other Wank Motion NEWS (2025-02-08)</a></li><li><a href="../episodes/2025-02-12" class="internal">Small Government Run by Large Babies, T-Shirt Site Down, and Pizza Perfume, it could be NEWS (2025-02-12)</a></li><li><a href="../episodes/2025-02-14" class="internal">Quick Friday Non-Kendelle Graphics News Stream (2025-02-14)</a></li><li><a href="../episodes/2025-02-25" class="internal">Mass BIN Staff Layoffs, Any News Happen While I Was Sick? (2025-02-25)</a></li><li><a href="../episodes/2025-02-28" class="internal">Mass BIN Staff Layoffs, Any News Happen While I Was Sick? (2025-02-28)</a></li><li><a href="../episodes/2025-03-04" class="internal">Oscars, Trump Backlash, and Streamer Problems, it's supposedly NEWS (2025-03-04)</a></li><li><a href="../episodes/2025-03-07" class="internal">Government Backed Crypto and AI Slop, Solid Light, Hackman Details, it's NEWS(lop) (2025-03-07)</a></li><li><a href="../episodes/2025-03-17" class="internal">Rights? Where We're Going We Don't Need Rights. It's Back to the NEWS (2025-03-17)</a></li><li><a href="../episodes/2025-03-19" class="internal">Unceased Fire, JFKs New Hit Recods, And Various Other NEWS Disasters (2025-03-19)</a></li><li><a href="../episodes/2025-03-21" class="internal">Columbia Caves, Deportation Details, Black Hole Everything? or NEWS everything (2025-03-21)</a></li><li><a href="../episodes/2025-03-25" class="internal">Leaks, Election &quot;Tweaks,&quot; and Various Freaks, it's NEWS maybe (2025-03-25)</a></li><li><a href="../episodes/2025-03-31" class="internal">The News Icestravaganza! (2025-03-31)</a></li><li><a href="../episodes/2025-04-04" class="internal">A Fully Liberated Decline (2025-04-04)</a></li><li><a href="../episodes/2025-04-10" class="internal">Normal News for the Normal World (2025-04-10)</a></li><li><a href="../episodes/2025-04-11" class="internal">Deportation Nation, Herpes Gum, and Returning Dogs, it's (N)EWS (2025-04-11)</a></li><li><a href="../episodes/2025-04-14" class="internal">Toilet News, from Deportations to Eggs (2025-04-14)</a></li><li><a href="../episodes/2025-04-18" class="internal">Immigration Contempt, Doppelganger Fails, and Various Types of Grappling, it's NEWSish (2025-04-18)</a></li><li><a href="../episodes/2025-04-23" class="internal">Losing Some Musk, Losing Some Rights, Gaining Sperm Races, it's N E W S (2025-04-23)</a></li><li><a href="../episodes/2025-05-01" class="internal">Taking Minerals, Shrinking GPDs, plus Literal Fart Walks, could it be NEWS? (2025-05-01)</a></li><li><a href="../episodes/2025-05-02" class="internal">Budgets, Screwworms, and Various People Yelling Things that are NEWS (2025-05-02)</a></li><li><a href="../episodes/2025-05-05" class="internal">Budgets, Screwworms, and Various People Yelling Things that are NEWS (2025-05-05)</a></li><li><a href="../episodes/2025-05-13" class="internal">Tariff Wah? Diddy Trials and Other Sewage Water, it's NEWS (2025-05-13)</a></li><li><a href="../episodes/2025-05-17" class="internal">Bad Credit? No Problem! Apply for $Free$ NEWS today (2025-05-17)</a></li><li><a href="../episodes/2025-06-02" class="internal">Musk of Failure, Toilet Snakes, and Music Maybe, it's NEWS (2025-06-02)</a></li><li><a href="../episodes/2025-06-05" class="internal">Penile Correction Newsery (2025-06-05)</a></li><li><a href="../episodes/2025-06-09" class="internal">Protests, Float Interceptions, Warner Undiscovers, it's NEWS they say (2025-06-09)</a></li><li><a href="../episodes/2025-06-11" class="internal">One Year Older, Possibly 24 Hours Wiser, it's NEWS (2025-06-11)</a></li><li><a href="../episodes/2025-06-13" class="internal">Non Alarming Apocalyptic NEWS (plus music maybe) (2025-06-13)</a></li><li><a href="../episodes/2025-06-24" class="internal">Ceaseless Newsing (2025-06-24)</a></li><li><a href="../episodes/2025-06-26" class="internal">Positive Political News? Enjoyable Panic? Could it actually be NEWS? (2025-06-26)</a></li><li><a href="../episodes/2025-06-28" class="internal">Friday Newsday Plus Potential Musical Punishment (2025-06-28)</a></li><li><a href="../episodes/2025-07-01" class="internal">Big Beautiful Monday News (2025-07-01)</a></li><li><a href="../episodes/2025-07-10" class="internal">Back From the Wet Hot American Party, Time to NEWS (2025-07-10)</a></li><li><a href="../episodes/2025-07-12" class="internal">Quick, Late and Dirty Friday Newsday (2025-07-12)</a></li><li><a href="../episodes/2025-07-15" class="internal">Monday Icey Summer News (2025-07-15)</a></li><li><a href="../episodes/2025-07-19" class="internal">Fast and Late Friday News (2025-07-19)</a></li><li><a href="../episodes/2025-07-24" class="internal">Pedophiles, Starvation, and Hunter Biden, Possibly Not in That Order, it's Unfortunately News (2025-07-24)</a></li><li><a href="../episodes/2025-07-25" class="internal">Quick Stream Before Patreon (2025-07-25)</a></li><li><a href="../episodes/2025-07-30" class="internal">Stealing Employees and Other Excuses for Atrocities, it's NEWS (2025-07-30)</a></li><li><a href="../episodes/2025-08-02" class="internal">Friday News Blast (2025-08-02)</a></li><li><a href="../episodes/2025-08-11" class="internal">Streamer Returns to Declare Unilateral Control Over News Station (2025-08-11)</a></li><li><a href="../episodes/2025-08-16" class="internal">Friday News To Diplomacy To (2025-08-16)</a></li><li><a href="../episodes/2025-08-26" class="internal">Extra Guarded Monday News (2025-08-26)</a></li><li><a href="../episodes/2025-09-02" class="internal">Return the Newsosphere (2025-09-02)</a></li><li><a href="../episodes/2025-09-10" class="internal">More Public Murder, it's Wednesday News (2025-09-10)</a></li><li><a href="../episodes/2025-09-11" class="internal">Banning Boycotts, Shooter Searches, and Pantie Scrunchies, it's 9/11 NEWS (2025-09-11)</a></li><li><a href="../episodes/2025-09-18" class="internal">Quick Stream Before Patreon (2025-09-18)</a></li><li><a href="../episodes/2025-09-25" class="internal">Post Wall and Rapture Clarity (2025-09-25)</a></li><li><a href="../episodes/2025-09-29" class="internal">The Monday News Comedy Festival (2025-09-29)</a></li><li><a href="../episodes/2025-10-02" class="internal">Government Shutdown, Rooney Upgrades (2025-10-02)</a></li><li><a href="../episodes/2025-10-04" class="internal">Illegal Raids and Beyblade Days (2025-10-04)</a></li><li><a href="../episodes/2025-10-09" class="internal">Ceasefires Hopefully Now, Chicago Deployments, and of course SLOP, it's NEWS (2025-10-09)</a></li><li><a href="../episodes/2025-10-16" class="internal">The Hottest Pentagon Reporting, it's Wednesday NEWS (2025-10-16)</a></li><li><a href="../episodes/2025-10-27" class="internal">Huge Deals? Sounds like Huge NEWS (2025-10-27)</a></li><li><a href="../episodes/2025-10-31" class="internal">Banning Refugees, Evicting Princes, Mr Beast Banks, it's unfortunately NEWS (2025-10-31)</a></li><li><a href="../episodes/2025-11-15" class="internal">Friday News Slop (2025-11-15)</a></li><li><a href="../episodes/2025-11-18" class="internal">New Week, New Resolutions, it's NEWS (2025-11-18)</a></li><li><a href="../episodes/2025-11-27" class="internal">The Most Thankfull News (2025-11-27)</a></li><li><a href="../episodes/2025-12-04" class="internal">Back in the News (2025-12-04)</a></li><li><a href="../episodes/2025-12-09" class="internal">Monday News Slop (2025-12-09)</a></li><li><a href="../episodes/2025-12-18" class="internal">Monday News Slam (2025-12-18)</a></li><li><a href="../episodes/2026-01-07" class="internal">Seizing the Wednesday News (2026-01-07)</a></li><li><a href="../episodes/2026-01-17" class="internal">Newsing for the Weekend (2026-01-17)</a></li><li><a href="../episodes/2026-01-27" class="internal">Case of the Mondays (2026-01-27)</a></li><li><a href="../episodes/2026-02-04" class="internal">Another Tuesday News Just Dropped (2026-02-04)</a></li><li><a href="../episodes/2026-02-06" class="internal">New Hair, New News (2026-02-06)</a></li><li><a href="../episodes/2026-02-12" class="internal">Humpday Hump News (2026-02-12)</a></li><li><a href="../episodes/2026-02-17" class="internal">Gotta Catch the News (2026-02-17)</a></li><li><a href="../episodes/2026-02-26" class="internal">State of the Newsing (2026-02-26)</a></li><li><a href="../episodes/2026-03-06" class="internal">Quick Stream Before Patreon (2026-03-06)</a></li><li><a href="../episodes/2026-03-10" class="internal">A Night of Courts (2026-03-10)</a></li><li><a href="../episodes/2026-03-20" class="internal">Bonking the News (2026-03-20)</a></li><li><a href="../episodes/2026-03-24" class="internal">Breaking the 48 Hour News Deadline (2026-03-24)</a></li><li><a href="../episodes/2026-03-25" class="internal">Breaking the 48 Hour News Deadline (2026-03-25)</a></li><li><a href="../episodes/2026-04-06" class="internal">Big Time Swear News (2026-04-06)</a></li><li><a href="../episodes/2026-04-11" class="internal">Big Friday News Deals (2026-04-11)</a></li><li><a href="../episodes/2026-04-15" class="internal">Midweek Middling News (2026-04-15)</a></li><li><a href="../episodes/2026-04-22" class="internal">Indefinitely Firing Wednesday News (2026-04-22)</a></li><li><a href="../episodes/2026-05-12" class="internal">Back in the MORE NEWS mood (2026-05-12)</a></li><li><a href="../episodes/2026-05-22" class="internal">Resigned to the NEWS (2026-05-22)</a></li><li><a href="../episodes/2026-05-26" class="internal">Tuesday News Slay (2026-05-26)</a></li><li><a href="../episodes/2026-05-29" class="internal">Friday News Burp (2026-05-29)</a></li><li><a href="../episodes/2026-06-01" class="internal">Monday News Weaponization Inquiry (2026-06-01)</a></li><li><a href="../episodes/2026-06-08" class="internal">Monday News Respawn (2026-06-08)</a></li><li><a href="../episodes/2026-06-18" class="internal">Quick Stream Before Patreon (2026-06-18)</a></li><li><a href="../episodes/2026-06-19" class="internal">Quick Casual Friday SUPER NEWS (2026-06-19)</a></li><li><a href="../episodes/2026-06-29" class="internal">America's Big Boy Birthday Week, it's NEWS (2026-06-29)</a></li><li><a href="../episodes/2026-07-23" class="internal">No Patreon today News Stream (2026-07-23)</a></li><li><a href="../episodes/2026-07-24" class="internal">Patreon in One Hour (2026-07-24)</a></li><li><a href="../episodes/2026-08-04" class="internal">NEWS! Puppy yoga suxs (2026-08-04)</a></li><li><a href="../episodes/2026-08-06" class="internal">Quick Stream Before Patreon (2026-08-06)</a></li><li><a href="../episodes/2026-08-08" class="internal">Friday News Slop (2026-08-08)</a></li><li><a href="../episodes/2026-08-14" class="internal">The Guiltiest Friday News (2026-08-14)</a></li><li><a href="../episodes/2026-08-19" class="internal">Upsetting Wednesday News (2026-08-19)</a></li><li><a href="../episodes/2026-09-04" class="internal">Artificially General News (2026-09-04)</a></li><li><a href="../episodes/2026-09-23" class="internal">Return of the NEWS (2026-09-23)</a></li><li><a href="../episodes/2026-09-25" class="internal">Quick Friday NEWS (2026-09-25)</a></li><li><a href="../episodes/2026-10-22" class="internal">Thursday News Okay? (2026-10-22)</a></li><li><a href="../episodes/2026-10-29" class="internal">Nearly Halloween Newsmares (2026-10-29)</a></li><li><a href="../episodes/2026-11-13" class="internal">Remain Calm and NEWS (2026-11-13)</a></li><li><a href="../episodes/2026-11-15-2930043990" class="internal">Dreadful Sunday Stream (2026-11-15)</a></li><li><a href="../episodes/2026-11-16" class="internal">Dreadful Sunday Stream (2026-11-16)</a></li><li><a href="../episodes/2026-11-26" class="internal">Quick Lil Newsgiving for the FREAKS (2026-11-26)</a></li><li><a href="../fans/card-king" class="internal">Card King</a></li><li><a href="../fans/live-in-sleazy" class="internal">Live 'n Sleazy</a></li><li><a href="../fans/matt-liddell" class="internal">Matt Liddell</a></li><li><a href="../fans/melody-von-torture" class="internal">Melody Von Torture</a></li><li><a href="../fans/propaganda" class="internal">Propaganda</a></li><li><a href="../fans/teflon-ted" class="internal">Teflon Ted</a></li><li><a href="../segments/" class="internal">Broadcast Segments</a></li><li><a href="../sponsors/gooters" class="internal">Gooters</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v0.1.0</a> © 2026</p><ul class="footer-links"><li><a href="https://www.twitch.tv/caseblackwell" class="footer-link-twitch" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"></path></svg><span>Barely Informed News</span></a></li><li><a href="https://www.youtube.com/@CaseBlackwellStreams" class="footer-link-youtube" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg><span>YouTube Archive</span></a></li><li><a href="https://www.youtube.com/channel/UCuiEeDV0bv5WS4FlpIdD_5Q/shorts" class="footer-link-youtube" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg><span>BIN Lore Shorts</span></a></li><li><a href="https://www.tiktok.com/@binlore.wiki" class="footer-link-tiktok" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg><span>BIN Lore Clips</span></a></li><li><a href="../disclaimer"><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg><span>Legal Disclaimer</span></a></li></ul><div class="bmac-footer-pill"><a href="https://buymeacoffee.com/teflonted" target="_blank" rel="noopener noreferrer" aria-label="Support the BIN Lore project on Buy Me a Coffee"><span class="bmac-coffee-emoji">☕</span><span>Support BIN Lore development on Buy Me a Coffee</span></a></div><p class="footer-disclaimer"><strong>Fan Site Disclaimer:</strong> BIN Lore is an unofficial, non-commercial fan documentation project. Not affiliated with, endorsed by, or sponsored by Case Blackwell, Barely Informed News, or Twitch. All character names, trademarks, and media assets belong to their respective owners and are referenced under fair use (17 U.S.C. § 107) for commentary, criticism, and archival purposes. Not operated for profit. <a href="../disclaimer">Read full disclaimer</a>.</p></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="../postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Hype Train · Barely Informed News</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&amp;text=BIN%20Lore&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="BIN Lore"/><meta property="og:title" content="Hype Train · Barely Informed News"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Hype Train · Barely Informed News"/><meta name="twitter:description" content="The high-velocity musical and cultural broadcast interruption on Barely Informed News, triggered whenever network momentum reaches surge velocity."/><meta property="og:description" content="The high-velocity musical and cultural broadcast interruption on Barely Informed News, triggered whenever network momentum reaches surge velocity."/><meta property="og:image:alt" content="The high-velocity musical and cultural broadcast interruption on Barely Informed News, triggered whenever network momentum reaches surge velocity."/><meta property="og:image" content="https://binlore.wiki/og/hype-train-0b5569f5.jpg"/><meta property="og:image:url" content="https://binlore.wiki/og/hype-train-0b5569f5.jpg"/><meta name="twitter:image" content="https://binlore.wiki/og/hype-train-0b5569f5.jpg"/><meta property="og:image:type" content="image/jpeg"/><meta property="twitter:domain" content="binlore.wiki"/><meta property="og:url" content="https://binlore.wiki/segments/hype-train"/><meta property="twitter:url" content="https://binlore.wiki/segments/hype-train"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="The high-velocity musical and cultural broadcast interruption on Barely Informed News, triggered whenever network momentum reaches surge velocity."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvYmlubG9yZS9iaW5sb3JlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://binlore.wiki/index.xml"/></head><body data-slug="segments/hype-train"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".."><span class="bin-brand"><span class="bin-badge">BIN</span><span class="bin-text">Lore</span></span></a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{if(!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder){let isEpisodeA=!!(a.slug&amp;&amp;a.slug.startsWith(\&quot;episodes/\&quot;)),isEpisodeB=!!(b.slug&amp;&amp;b.slug.startsWith(\&quot;episodes/\&quot;));if(isEpisodeA&amp;&amp;isEpisodeB){let dateRegex=/\\b\\d{4}-\\d{2}-\\d{2}\\b/,dateA=\&quot;\&quot;;a.data&amp;&amp;a.data.date&amp;&amp;(dateA=typeof a.data.date==\&quot;string\&quot;?a.data.date:a.data.date.toISOString?.()??String(a.data.date));let matchA=a.slug&amp;&amp;a.slug.match(dateRegex)||a.displayName&amp;&amp;a.displayName.match(dateRegex)||a.data?.filePath&amp;&amp;a.data.filePath.match(dateRegex);matchA&amp;&amp;(dateA=matchA[0]);let dateB=\&quot;\&quot;;b.data&amp;&amp;b.data.date&amp;&amp;(dateB=typeof b.data.date==\&quot;string\&quot;?b.data.date:b.data.date.toISOString?.()??String(b.data.date));let matchB=b.slug&amp;&amp;b.slug.match(dateRegex)||b.displayName&amp;&amp;b.displayName.match(dateRegex)||b.data?.filePath&amp;&amp;b.data.filePath.match(dateRegex);if(matchB&amp;&amp;(dateB=matchB[0]),dateA&amp;&amp;dateB&amp;&amp;dateA!==dateB)return dateB.localeCompare(dateA)}return a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;})}return!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>![\&quot;tags\&quot;,\&quot;bin-lore-wiki\&quot;].includes(node.slugSegment)&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-530"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-530" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div><div class="recent-notes desktop-only"><h3>Recent changes</h3><ul class="recent-ul"><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../segments/gaming" class="internal">Gaming</a></h3></div><p class="meta"><time datetime="2026-11-27T15:43:20.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/crum" class="internal">Crum (Leonard Crum)</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/kendelle" class="internal">Kendelle</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/liliana" class="internal">Liliana Breathinschmit</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/munch" class="internal">Munch (Ralph Munchcut)</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../characters/trip-bradstein" class="internal">Trip Bradstein</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../segments/amongst-the-web" class="internal">Amongst the Web</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../segments/munch-and-crum" class="internal">Munch &amp; Crum</a></h3></div><p class="meta"><time datetime="2026-11-27T15:35:36.000Z">Nov 27, 2026</time></p></div></li></ul></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../segments/">Broadcast Segments</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Hype Train</a></div></nav><h1 class="article-title">Hype Train</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-25T19:49:09.000Z">Nov 25, 2026</time><span>31 min read</span></p><ul class="tags"><li><a href="../tags/segment" class="internal tag-link">segment</a></li><li><a href="../tags/music" class="internal tag-link">music</a></li></ul></div></div><article class="popover-hint"><h1 id="hype-train">Hype Train<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hype-train" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><img src="https://github.com/trak3r/binlore-wiki/releases/download/media-assets/hype-train.jpg" alt="Hype Train Segment"/></p>
+<p>The high-velocity musical and cultural broadcast interruption on <em>Barely Informed News</em>, triggered whenever network momentum reaches surge velocity.</p>
+<h2 id="format">Format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#format" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The primary news telecast is abruptly overridden by a neon-bordered synthwave landscape featuring a giant retro <strong>“HYPE”</strong> sun and horizon grid. The broadcast shifts focus to <a href=".././characters/hype-train" class="internal alias" data-slug="characters/hype-train">Hype Train</a>—a sentient locomotive correspondent traveling alongside an upright black panther companion.</p>
+<p>While officially tasked with acknowledging viewer contributions and network patrons, Hype Train routinely derails into energetic freestyle raps over live beats, which invariably veer into surreal commentary regarding bodily fluids, culinary mechanics, and existential philosophies.</p>
+<h2 id="broadcast-lore--tropes">Broadcast Lore &amp; Tropes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#broadcast-lore--tropes" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Donor Roll Derailments:</strong> Begins reading verified network patrons before completely abandoning the queue for rapid-fire rhyming monologues.</li>
+<li><strong>Fluidic Inquiries:</strong> Uncontrollable thematic drift toward fluidic subjects, including storage containers, claims of being “in piss,” and his unreleased video game pitch <em>Piss Fruit Ninja</em>.</li>
+<li><strong>Freestyle Rhythms:</strong> Commands the audio console to deliver vaudeville beats, Dr. Seuss rhyming cadences, or sensual R&amp;B grooves.</li>
+<li><strong>The Panther Partner:</strong> An upright panther traveling with the train whom Hype Train introduces as his non-exclusive partner.</li>
+<li><strong>Extradimensional Origins:</strong> Regular dispatches from Hype Train’s native dimensional plane, the “crypto universe.”</li>
+</ul>
+<h2 id="known-occurrences">Known occurrences<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#known-occurrences" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Episode</th><th>Timestamp</th><th>Notes</th></tr></thead><tbody><tr><td><a href="../episodes/2023-11-22" class="internal alias" data-slug="episodes/2023-11-22">2023-11-22</a></td><td>15:29</td><td>Multi-Platform Opening &amp; Hype Train Malfunction: Case opens on multiple platforms simultaneously; Hype Train triggers but music fails, completing at level 2 before Case cuts it off; subscription acknowledgments for Dr. Cool, Be Grendel, CV Loves You, Tam Tran, and others.</td></tr><tr><td><a href="../episodes/2023-11-28" class="internal alias" data-slug="episodes/2023-11-28">2023-11-28</a></td><td>18:37</td><td>Subs, Hype Train, and Jeff Ripple Returns: Case thanks sub gifters tamtran, commander gab, and daddy; a level-two Hype Train completes unnoticed; Jeff Ripple crashes the desk uninvited to announce his Twitch Partner application.</td></tr><tr><td><a href="../episodes/2023-12-02" class="internal alias" data-slug="episodes/2023-12-02">2023-12-02</a></td><td>23:25</td><td>Hype Train Interruption (Level 6): Hype Train commandeers broadcast for 10 minutes during sub hype train; Quad City DJs Christmas songs; thanks subscribers including Skull Meat, <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a>, Metal Chaos, <a href="../fans/giggle-trash" class="internal alias" data-slug="fans/giggle-trash">Giggle Trash</a>, Dilemma, Tam Tran, Daddy Kev.</td></tr><tr><td><a href="../episodes/2023-12-18" class="internal alias" data-slug="episodes/2023-12-18">2023-12-18</a></td><td>2:29:27</td><td>Fucksmas Train Derailment: Hype Train manifests as the Fucksmas Train, powered by the idea of sex rather than sex itself, laments exclusion from the Whoville orgy, and recalls devil stick hobby.</td></tr><tr><td><a href="../episodes/2023-12-21" class="internal alias" data-slug="episodes/2023-12-21">2023-12-21</a></td><td>15:30</td><td>Holiday Cold Open &amp; Hype Train Santa Parade: Case opens with holiday greetings, haircut reveal, and an extended Hype Train bit cycling through AI-generated Santa personas (Spud Kringle, Tim Crangle, Chris Hypedal) while thanking subs and bits.</td></tr><tr><td><a href="../episodes/2024-01-05" class="internal alias" data-slug="episodes/2024-01-05">2024-01-05</a></td><td>0:45:08</td><td>Hype Train as Tim Paul: Kid-in-Fleur Scheme: Hype Train appears as ‘Tim Paul’ pitching digital child-influencer hybrids; website returns no results.</td></tr><tr><td><a href="../episodes/2024-02-02" class="internal alias" data-slug="episodes/2024-02-02">2024-02-02</a></td><td>16:51</td><td>Hype Train Interruption: Hype Train commandeers feed with freestyle raps over new effects pedal; completes eight minutes prior but remains active on fumes.</td></tr><tr><td><a href="../episodes/2024-02-07" class="internal alias" data-slug="episodes/2024-02-07">2024-02-07</a></td><td>14:42</td><td>Cold Open &amp; Hype Train Setup: Case Blackwell opens broadcast; Pepito identifies as dog/producer; Trip Bradstein message from Horus sets up street segment.</td></tr><tr><td><a href="../episodes/2024-02-15" class="internal alias" data-slug="episodes/2024-02-15">2024-02-15</a></td><td>10:21</td><td>Cold Open &amp; Hype Train Check-In: Case and Pepito banter about Madeline books and hats; Hype Train arrives sick with ‘hype pus’ and auto-tuned, derails into sleepiness before completing.</td></tr><tr><td><a href="../episodes/2024-02-20" class="internal alias" data-slug="episodes/2024-02-20">2024-02-20</a></td><td>15:21</td><td>Hype Train Level 6 Freestyle Derailment: Pepito delivers live countdown; Hype Train commandeers broadcast for extended R&amp;B freestyle rap over trap soul beats, reaching level 6 with community subs and bits, incorporating manager Larry rap skit and genre shifts.</td></tr><tr><td><a href="../episodes/2024-02-26" class="internal alias" data-slug="episodes/2024-02-26">2024-02-26</a></td><td>1:01:24</td><td>Patreon Plug, Movie Night Planning &amp; Hype Train 90s Hip-Hop Sub Rap: Case plugs Wednesday Patreon pod and potential Sunday movie night; Hype Train hijacks close-out with a multi-level freestyle rap over 90s hip-hop beats thanking sub/gift donors.</td></tr><tr><td><a href="../episodes/2024-02-29" class="internal alias" data-slug="episodes/2024-02-29">2024-02-29</a></td><td>15:42</td><td>Hype Train Metaphysical Freestyle: Hype Train materializes, delivers surreal freestyle about dying when leaving chat’s ‘back,’ hell pentagon of power, father Bertil, and selling coke with ‘girl in the city’; exits hard into jazz mode.</td></tr><tr><td><a href="../episodes/2024-03-01" class="internal alias" data-slug="episodes/2024-03-01">2024-03-01</a></td><td>15:17</td><td>Cold Open &amp; Hype Train Check-In: Case opens the Friday broadcast; Hype Train appears briefly, discusses hell trips and parentage (mom Kurt Russell, dad the devil); Peter Gibbon slithers in from the walls.</td></tr><tr><td><a href="../episodes/2024-03-14" class="internal alias" data-slug="episodes/2024-03-14">2024-03-14</a></td><td>23:03</td><td>Hype Train Surge: Hype Train commandeers feed with freestyle rap, claims hype comes from ‘deep south’ and ‘hell’, banished back to hell.</td></tr><tr><td><a href="../episodes/2024-03-18" class="internal alias" data-slug="episodes/2024-03-18">2024-03-18</a></td><td>14:44</td><td>Hype Train Derailment: Leprechauns, Bugs Bunny, and the Scum Goal: Pre-show chaos featuring Hype Train’s trap-beat freestyle, Pepito claiming leprechaun heritage, a scum goal requiring Pepito to sing a love song to cheese, and an unhinged Bugs Bunny interview where the rabbit threatens to kill Hype Train with Acme dynamite and claims to be Crum’s father.</td></tr><tr><td><a href="../episodes/2024-03-21" class="internal alias" data-slug="episodes/2024-03-21">2024-03-21</a></td><td>58:11</td><td>Hype Train Strawberry Freestyle &amp; Sub Marathon: Triggered by <a href="../fans/card-king" class="internal alias" data-slug="fans/card-king">Card King</a>’s 1,000 bits, Hype Train delivers a strawberry-mold freestyle, eats questionable berries, riffs on Tam Tram’s name sounding like ‘train’, and dies/fades to hell twice before Don returns.</td></tr><tr><td><a href="../episodes/2024-03-26" class="internal alias" data-slug="episodes/2024-03-26">2024-03-26</a></td><td>0:56</td><td>Hype Train Cold Open &amp; Freestyle Derailment: Pepito delivers station sign-on; Hype Train commandeers feed for high-tempo freestyle rap about mortality, chain-buying, and ‘jizz’ jazz genre before collapsing back to hell.</td></tr><tr><td><a href="../episodes/2024-03-27" class="internal alias" data-slug="episodes/2024-03-27">2024-03-27</a></td><td>7:00</td><td>Hype Train Level 10 Marathon: Sub/bits surge summons Hype Train for extended freestyle rap session; reaches level 10, discusses immortality, father issues, and smokes two packs of ‘train crack’ while chat sustains it.</td></tr><tr><td><a href="../episodes/2024-03-28" class="internal alias" data-slug="episodes/2024-03-28">2024-03-28</a></td><td>12:00</td><td>Hype Train Derailment Over Leap Second Debate: Hype Train commandeers feed with freestyle raps over bad beats; mocks subscriber acknowledgments; dies after four minutes.</td></tr><tr><td><a href="../episodes/2024-04-04" class="internal alias" data-slug="episodes/2024-04-04">2024-04-04</a></td><td>4:17</td><td>Hype Train Freestyle: Hype Train appears, raps about dying at a Banger Boys concert from lack of subs/bits, and delivers a Bart Simpson trap beat about drug farts and meth brain.</td></tr><tr><td><a href="../episodes/2024-04-16" class="internal alias" data-slug="episodes/2024-04-16">2024-04-16</a></td><td>1:12:02</td><td>Extended Pac-Man Freestyle &amp; Wonka Sub Goal: Hype Train delivers a marathon freestyle over multiple Pac-Man trap beats with panther animations, driving a sub goal that results in Case purchasing Wonka tickets live on air.</td></tr><tr><td><a href="../episodes/2024-04-17" class="internal alias" data-slug="episodes/2024-04-17">2024-04-17</a></td><td>1:18:13</td><td>Fiddle Music Mental Breakdown: Hype Train arrives claiming mental unwellness, demands fiddle beats, delivers freestyle about destroying a club with train-sized ass; falls asleep mid-rant.</td></tr><tr><td><a href="../episodes/2024-04-23" class="internal alias" data-slug="episodes/2024-04-23">2024-04-23</a></td><td>13:00</td><td>Golden Kappa Train Derailment: Hype Train manifests as ‘King Golden Kappa Toran,’ an immortal cursed monarch whose rectum transmutes all inserted matter into gold; extended lore improvisation consumes trailer block.</td></tr><tr><td><a href="../episodes/2024-04-25" class="internal alias" data-slug="episodes/2024-04-25">2024-04-25</a></td><td>1:22:29</td><td>Hype Train appears with gold eyes, performs neutral rap: Hype Train claims King Kappa ghoul turned eyes gold, delivers freestyle about staying neutral, voting for both candidates, and neutering people.</td></tr><tr><td><a href="../episodes/2024-04-29" class="internal alias" data-slug="episodes/2024-04-29">2024-04-29</a></td><td>9:32</td><td>Hobbit-Themed Hype Train Derailment: Hype Train delivers a freestyle Hobbit rap over trap beats; leaves ‘hype radiation residue’ that distorts Case’s avatar.</td></tr><tr><td><a href="../episodes/2024-05-01" class="internal alias" data-slug="episodes/2024-05-01">2024-05-01</a></td><td>2:05</td><td>Hype Train Cold Open: Hype Train commandeers the top of the broadcast with freestyle raps about rappers, Mortal Kombat, and Def Jam: Fight for New York; Case sets a 25-sub goal to play the game on PS2 emulator.</td></tr><tr><td><a href="../episodes/2024-05-02" class="internal alias" data-slug="episodes/2024-05-02">2024-05-02</a></td><td>0:35</td><td>Hype Train Cold Open: Night Train Powered by Lies and Subs: Pepito delivers the countdown; Hype Train commandeers the broadcast for a freestyle rap cycle powered by coal, dreams, subscriber goals, and admitted lies, thanking five community subs and multiple bit donors before signing off.</td></tr><tr><td><a href="../episodes/2024-05-10" class="internal alias" data-slug="episodes/2024-05-10">2024-05-10</a></td><td>3:02</td><td>Hype Train Freestyle &amp; Subscriber Acknowledgments: Hype Train commandeers broadcast with scream-trap freestyle, acknowledges subs/bits from AppleDApple, Uncle Phil 2K, John Michael, Jay Money, AVCP-333, Trent; Kendall playing Little Kitty Big City in background.</td></tr><tr><td><a href="../episodes/2024-05-15" class="internal alias" data-slug="episodes/2024-05-15">2024-05-15</a></td><td>0:00</td><td>Opening &amp; Hype Train Surge: Case tests new text-to-speech bit triggers; Hype Train commandeers feed for extended freestyle countdown rap reaching level 3.</td></tr><tr><td><a href="../episodes/2024-05-23" class="internal alias" data-slug="episodes/2024-05-23">2024-05-23</a></td><td>3:45</td><td>Pre-Stream Hype Train Derailment: Hype Train commandeers the pre-show with a freestyle rap about immortality, bodily fluids, and Daffy Duck graphics before expiring; Case acknowledges sub milestones and tests new channel-point graphics.</td></tr><tr><td><a href="../episodes/2024-05-31" class="internal alias" data-slug="episodes/2024-05-31">2024-05-31</a></td><td>0:02</td><td>Hype Train Inaugurates Permanent Cheese Delivery System for Pepito: Hype Train commandeers broadcast for 38 minutes; 50-bit donations trigger cheese feed for Pepito (up to six cheeses); patriotic beats celebrate Trump felony verdict; Pepito reaches 68 cheeses by segment end.</td></tr><tr><td><a href="../episodes/2024-06-25" class="internal alias" data-slug="episodes/2024-06-25">2024-06-25</a></td><td>0:04</td><td>Cold Open &amp; Hype Train Derailment: Pepito delivers sign-on while ill; Hype Train commandeers feed for 20-month freestyle rap over trap beat, fixating on cheese and month math.</td></tr><tr><td><a href="../episodes/2024-06-28" class="internal alias" data-slug="episodes/2024-06-28">2024-06-28</a></td><td>11:31</td><td>Hype Train Subscriber Freestyle: Hype Train derails subscriber reads into freestyle rap over eclectic beats while Case and Kendelle react.</td></tr><tr><td><a href="../episodes/2024-07-09" class="internal alias" data-slug="episodes/2024-07-09">2024-07-09</a></td><td>0:04</td><td>Broadcast Sign-On and Hype Train Activation: Pepito delivers cold open; Hype Train suffers audio issues before launching into freestyle acknowledgments of subscribers and bit donors.</td></tr><tr><td><a href="../episodes/2024-07-15" class="internal alias" data-slug="episodes/2024-07-15">2024-07-15</a></td><td>0:00</td><td>Cold Open &amp; Hype Train Surge: Case opens solo, discovers active Hype Train at level 7 with 54% community participation; thanks subs/bits while Hype Train freestyles through multiple levels before expiring.</td></tr><tr><td><a href="../episodes/2024-07-20" class="internal alias" data-slug="episodes/2024-07-20">2024-07-20</a></td><td>10:37</td><td>Pre-Show Chat &amp; Golden Kappa Hype Train: Kendall appears on couch cam; King Capitaran (golden kappa hype train persona) debuts with ‘ass turns to gold’ bit; early subs and bits trigger golden hype train; Case debates King Capitaran on monarchy vs democracy and best cartoon character smoking a spliff (Bugs Bunny wins).</td></tr><tr><td><a href="../episodes/2024-07-22" class="internal alias" data-slug="episodes/2024-07-22">2024-07-22</a></td><td>0:04</td><td>Cold Open: Pepito Sign-On &amp; Hype Train Derailment: Pepito delivers station sign-on as Papita; Hype Train triggers early, freestyles over 90s beats while acknowledging 21-month subscriber milestones; Kendall appears on-set with eye irritation treated via warm compress and eye patch.</td></tr><tr><td><a href="../episodes/2024-07-30" class="internal alias" data-slug="episodes/2024-07-30">2024-07-30</a></td><td>12:02</td><td>Hype Train Derailment: JD Vance Dolphin Post: Hype Train commandeers the feed with freestyle raps over dolphin beats while covering JD Vance’s ridiculed social media post featuring dolphin sexual content; includes subscriber shoutouts.</td></tr><tr><td><a href="../episodes/2024-07-31" class="internal alias" data-slug="episodes/2024-07-31">2024-07-31</a></td><td>0:02</td><td>Cold Open &amp; Hype Train ‘Club Girl’ Debut: Pepito delivers station sign-on; Hype Train commandeers broadcast for freestyle debut of ‘Club Girl’ track recorded months prior, then delivers acapella report on 26-inch eel removed from man’s anus in Vietnam alongside a lemon.</td></tr><tr><td><a href="../episodes/2024-08-07-w0-O6PkI7ZA" class="internal alias" data-slug="episodes/2024-08-07-w0-O6PkI7ZA">2024-08-07</a></td><td>0:04</td><td>Cold Open &amp; Hype Train Subscriber Alerts: Pepito delivers station sign-on; Hype Train runs chaotic subscriber acknowledgments with broken month counters after Streamer.bot migration; Case and Hype Train riff on Tim Walz VP announcement and Streets of Rage 2.</td></tr><tr><td><a href="../episodes/2024-08-22-oDSuSzbumUs" class="internal alias" data-slug="episodes/2024-08-22-oDSuSzbumUs">2024-08-22</a></td><td>0:00</td><td>Hype Train Freestyle Opening: Hype Train commandeers the cold open with a high-tempo freestyle rap over a Democratic trap beat, thanking subscribers and derailing into surreal culinary and bodily-fluid musings before being banished back to hell.</td></tr><tr><td><a href="../episodes/2024-08-27" class="internal alias" data-slug="episodes/2024-08-27">2024-08-27</a></td><td>3:57</td><td>Hype Train Derailment: Hype Train commandeers the feed for subscriber acknowledgments and a freestyle rap over a ‘sensual’ beat, thanking resubs and followers.</td></tr><tr><td><a href="../episodes/2024-09-06" class="internal alias" data-slug="episodes/2024-09-06">2024-09-06</a></td><td>10:32</td><td>Hype Train Freestyle: Hype Train commandeers the feed with a high-tempo Dragon Ball Z-themed freestyle rap, reaching level 5 and declaring himself a ‘balling girl’ before signing off.</td></tr><tr><td><a href="../episodes/2024-09-12" class="internal alias" data-slug="episodes/2024-09-12">2024-09-12</a></td><td>0:04</td><td>Hype Train Cold Open: Pepito delivers station sign-on as ‘Papita’; Hype Train commandeers feed with surreal freestyle about Bugs Bunny, Slender Man, and Daffy Duck.</td></tr><tr><td><a href="../episodes/2024-09-18" class="internal alias" data-slug="episodes/2024-09-18">2024-09-18</a></td><td>26:02</td><td>Austin Powers Trap Beat Freestyle: Hype Train commandeers feed with freestyle raps over Austin Powers trap beats, thanks bits/subs (Uncle Phil 2800, <a href="../fans/giggle-trash" class="internal alias" data-slug="fans/giggle-trash">Giggle Trash</a> 100), declares ‘I do sex crimes not rhymes’.</td></tr><tr><td><a href="../episodes/2024-09-19" class="internal alias" data-slug="episodes/2024-09-19">2024-09-19</a></td><td>0:06</td><td>Hype Train Freestyle &amp; Subscriber Milestone: Pepito delivers cold open as ‘Papita’; Hype Train performs extended freestyle rap over trap beats while acknowledging Level 3 hype train, 16-month and 20-month subscribers, and approaching two-year stream anniversary.</td></tr><tr><td><a href="../episodes/2024-09-20" class="internal alias" data-slug="episodes/2024-09-20">2024-09-20</a></td><td>16:00</td><td>Hype Train Sub Acknowledgments: Hype Train appears during news segment, acknowledges subscribers and bits, claims molting ability, freestyles about bodily fluids.</td></tr><tr><td><a href="../episodes/2024-09-25-tt3qCDlQkDs" class="internal alias" data-slug="episodes/2024-09-25-tt3qCDlQkDs">2024-09-25</a></td><td>12:07</td><td>Hype Train: Gooning Freestyle: Hype Train commandeers the feed with a high-tempo gooning-themed freestyle rap over eclectic beats, acknowledging subscriber milestones.</td></tr><tr><td><a href="../episodes/2024-10-01" class="internal alias" data-slug="episodes/2024-10-01">2024-10-01</a></td><td>0:04</td><td>Hype Train: Donkey Kong Drive-By &amp; Diddy Kong Party: Pepito delivers cold open sign-on; Hype Train commandeers broadcast with surreal Donkey Kong/Diddy Kong freestyle rap, claims to have killed Donkey Kong in drive-by shooting with RFK Jr.</td></tr><tr><td><a href="../episodes/2024-10-08" class="internal alias" data-slug="episodes/2024-10-08">2024-10-08</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Surge: Pepito delivers the sign-on as ‘Papita’; Hype Train acknowledges bits and subs, births a ‘little train’, raps over a Bart Simpson instrumental, and derails into apathy toward donor recognition.</td></tr><tr><td><a href="../episodes/2024-10-10" class="internal alias" data-slug="episodes/2024-10-10">2024-10-10</a></td><td>2:39:09</td><td>Rennerton Town Hall: Pepito, September, Hype Train, Kendall, Shamrock Johnson Take Questions: Five candidates field chat questions: Pepito proposes gun farms and execution policy; September hides from Godzilla and gives everyone harems; Hype Train prefers blue cheese on bat wings; Kendall accepts all payment forms and identifies Pop-Tarts as calzones; incumbent Mayor Shamrock Johnson defends Jack in the Box sponsorship and Shamrock Shake spill cleanup.</td></tr><tr><td><a href="../episodes/2024-10-30-iCCqpvNIlFY" class="internal alias" data-slug="episodes/2024-10-30-iCCqpvNIlFY">2024-10-30</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Derailment: Pepito delivers sign-on; Hype Train commandeers broadcast with freestyle raps about panther girlfriend and bodily fluids; sub/raid acknowledgments for Waco’s Art (24 months), Funnel Web (24 months), Bruce Green (345 raid), High Worship Shadow (5 subs), Tram Tran (10 subs), Microphone and 100 (500 bits), Ionic Storm (follow), Timmy the Brain (19 months), Loach Here Tyler (22 months), Bevek (follow), <a href="../fans/propaganda" class="internal alias" data-slug="fans/propaganda">Propaganda</a> (Discord art shoutout).</td></tr><tr><td><a href="../episodes/2024-11-06" class="internal alias" data-slug="episodes/2024-11-06">2024-11-06</a></td><td>32:26</td><td>Hype Train Interlude During Technical Failure: Hype Train commandeers the feed while Case attempts to patch the Rogan segment; the Rogans are lost to the void.</td></tr><tr><td><a href="../episodes/2024-11-26" class="internal alias" data-slug="episodes/2024-11-26">2024-11-26</a></td><td>0:09:27</td><td>Hype Train Derails Into Eminem Freestyle: Hype Train acknowledges subscribers then abandons registry for high-tempo Eminem-style rap over Groundhog Day instrumental, claiming Chinese high-speed rail origins.</td></tr><tr><td><a href="../episodes/2024-12-23" class="internal alias" data-slug="episodes/2024-12-23">2024-12-23</a></td><td>9:26</td><td>Hype Train Summoning &amp; Subscriber Roll: Grunch summons Hype Train to the scrying cave; Hype Train hits level 10 hype with a Christmas trap beat freestyle while processing a massive sub influx including 5 community subs from Cycorp and 300 bits from <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a></td></tr><tr><td><a href="../episodes/2025-01-06" class="internal alias" data-slug="episodes/2025-01-06">2025-01-06</a></td><td>0:06</td><td>Cold Open: Cat Cam Debut &amp; Hype Train Subs: Case returns from month-long hiatus; introduces new cats Ms. Zorro (one-eyed) and Tony Tony via under-bed Cat Cam; Pepito argues about studio vs house; Hype Train runs New Year’s trap beat thanking 25+ months of subs.</td></tr><tr><td><a href="../episodes/2025-01-17" class="internal alias" data-slug="episodes/2025-01-17">2025-01-17</a></td><td>1:08:21</td><td>Hype Train Derailment &amp; Community Subs: Hype Train triggers on community subs from Tam (10 months), delivers freestyle raps, declares himself a ‘cosmic baby train’, and interacts with Kendall.</td></tr><tr><td><a href="../episodes/2025-01-24" class="internal alias" data-slug="episodes/2025-01-24">2025-01-24</a></td><td>0:06</td><td>Hype Train Theme Recording Session: Pepito delivers cold open; Case oversees Hype Train’s creation of new official theme ‘Training Montage’ over Eye of the Tiger instrumental, with Mick from Rocky consulted.</td></tr><tr><td><a href="../episodes/2025-01-27" class="internal alias" data-slug="episodes/2025-01-27">2025-01-27</a></td><td>1:48:30</td><td>Hype Train: New Theme Debut: Hype Train appears with a new theme based on Quad City DJs’ ‘Come On Ride the Train,’ briefly interacts with the DJs before the segment ends abruptly.</td></tr><tr><td><a href="../episodes/2025-01-31" class="internal alias" data-slug="episodes/2025-01-31">2025-01-31</a></td><td></td><td>Cold Open &amp; Hype Train Marathon: Pepito delivers station sign-on; Hype Train commandeers broadcast for extended train game, sub/bit frenzy, Shack’s Manager bit, and level 11 graphics showcase.</td></tr><tr><td><a href="../episodes/2025-02-03" class="internal alias" data-slug="episodes/2025-02-03">2025-02-03</a></td><td>0:06</td><td>Cold Open &amp; Sub Goal Freestyle: Pepito delivers sign-on as Papita; Hype Train runs sub goal freestyle, debates Hamtaro stream and workout stream goals, discusses new part-time job.</td></tr><tr><td><a href="../episodes/2025-02-06" class="internal alias" data-slug="episodes/2025-02-06">2025-02-06</a></td><td>1:08:27</td><td>Hype Train Derailment: Anti-Music Freestyle: Triggered by Uncle Phil 2K’s bits; Hype Train abandons donor acknowledgments for a freestyle rap declaring music causes testicular cancer and demanding AI replace all music with Bitcoin.</td></tr><tr><td><a href="../episodes/2025-02-08" class="internal alias" data-slug="episodes/2025-02-08">2025-02-08</a></td><td>0:00:08</td><td>Cold Open &amp; Hype Train Surge: Pepito delivers sign-on; Hype Train hijacks feed for freestyle over channel-point redemptions and UFO/dino attack confusion.</td></tr><tr><td><a href="../episodes/2025-02-25" class="internal alias" data-slug="episodes/2025-02-25">2025-02-25</a></td><td>8:09</td><td>Opening Monologue: Mass Staff Layoffs &amp; Hype Train: Case Blackwell returns from illness to announce half the staff (Jeff Ripple, Rick, Tyler, Sammy, Salazar, Garf) have been ‘doged’ and quit; Pepito is incapacitated on Jolt Cola; Hype Train dominates the broadcast with a 25-minute freestyle rap over subscriber alerts.</td></tr><tr><td><a href="../episodes/2025-03-04" class="internal alias" data-slug="episodes/2025-03-04">2025-03-04</a></td><td>8:33</td><td>Opening Banter: Kendall’s Ears and Hype Train Sub Thanking: Case and Kendall discuss Orlando trip and Disney ears; Case performs Hype Train-style rap to thank subscribers after the train ends early.</td></tr><tr><td><a href="../episodes/2025-03-07" class="internal alias" data-slug="episodes/2025-03-07">2025-03-07</a></td><td>0:06</td><td>Station Sign-On and Hype Train Surge: Pepito delivers the cold open countdown; a Hype Train event triggers with subscriber shoutouts and freestyle rapping before Case takes the desk.</td></tr><tr><td><a href="../episodes/2025-04-04" class="internal alias" data-slug="episodes/2025-04-04">2025-04-04</a></td><td>8:24</td><td>Hype Train Subscriber Acknowledgments: Hype Train acknowledges subscribers (Uncle Phil 24 months, dad leprechaun, Gay K Fellows, Cytrix 26 months) with freestyle raps; Case accidentally says slur-adjacent names and gets timed out by own mods.</td></tr><tr><td><a href="../episodes/2025-04-23" class="internal alias" data-slug="episodes/2025-04-23">2025-04-23</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Acknowledgments: Pepito delivers station sign-on, processes gifted subs and hype train; Case Blackwell takes anchor desk after hype train ends.</td></tr><tr><td><a href="../episodes/2025-05-01" class="internal alias" data-slug="episodes/2025-05-01">2025-05-01</a></td><td>0:08</td><td>Hype Train Cold Open: Aladdin and DuckTales Beat Freestyle: Pepito delivers sign-on; Hype Train commandeers feed for 18 minutes of Aladdin/DuckTales trap beat freestyles, thanking subscribers Apple Daffol, Bundlesprout, Sporify, and others while riffing on ‘getting blown inside himself’ and demanding beat switches.</td></tr><tr><td><a href="../episodes/2025-05-08" class="internal alias" data-slug="episodes/2025-05-08">2025-05-08</a></td><td>9:24</td><td>Hype Train Derailment: Hype Train performs a trap remix freestyle, acknowledges subscriber milestones, and discourses on train biology including exhaust plates and genital multiplicity.</td></tr><tr><td><a href="../episodes/2025-05-14" class="internal alias" data-slug="episodes/2025-05-14">2025-05-14</a></td><td>13:02</td><td>Hype Train: Papito Cult Lore &amp; Subscriber Freestyle: Hype Train returns from hell, establishes Papito as deity of a piss-centric underworld religion, and freestyles thanks for bits/subs over shifting beats.</td></tr><tr><td><a href="../episodes/2025-05-21" class="internal alias" data-slug="episodes/2025-05-21">2025-05-21</a></td><td>0:00</td><td>Hype Train Freestyle &amp; Sonic Syndrome Test: Hype Train delivers extended freestyle raps over doom trap beats, thanks subscribers, and takes a ‘Sonic Syndrome Test’ personality quiz, scoring Shadow/Sonic/Metal Sonic/Knuckles. Case takes the same quiz and gets Dr. Eggman/Sonic/Amy Rose.</td></tr><tr><td><a href="../episodes/2025-05-27" class="internal alias" data-slug="episodes/2025-05-27">2025-05-27</a></td><td>12:05</td><td>Subscriber &amp; Bit Acknowledgments: Hype Train delivers a brief freestyle thank-you for sub milestones and bit donations before being ‘slain’; Pepito claims canine multiverse awareness and completes the acknowledgments.</td></tr><tr><td><a href="../episodes/2025-05-30-QRN1ZIHDHG8" class="internal alias" data-slug="episodes/2025-05-30-QRN1ZIHDHG8">2025-05-30</a></td><td>21:02</td><td>Jeff Ripple as Hype Train: Jeff Ripple commandeers the hype train role, delivering freestyle raps over subscriber alerts and bit donations while riffing on mortality and roof damage.</td></tr><tr><td><a href="../episodes/2025-05-30" class="internal alias" data-slug="episodes/2025-05-30">2025-05-30</a></td><td>7:49</td><td>Opening Banter &amp; Hype Train Confusion: Case and Pepito discuss the 30-minute pre-Patreon window; Hype Train is active but Case refuses to acknowledge it; Pepito goes missing from his seat.</td></tr><tr><td><a href="../episodes/2025-06-02" class="internal alias" data-slug="episodes/2025-06-02">2025-06-02</a></td><td>0:05</td><td>Pride Month Kickoff and Fish Tie Frenzy: Hype Train commandeers the open with a Pride month greeting, then derails into a prolonged fish-tie shopping tangent and a surreal ‘fish vs chat’ war monologue before Pepito restores order.</td></tr><tr><td><a href="../episodes/2025-06-05" class="internal alias" data-slug="episodes/2025-06-05">2025-06-05</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Love Mathematics: Pepito delivers sign-on as ‘Papita the dog’; Hype Train performs freestyle love/hype equations (love = hype + 2), daily prayer about eating a snail whole.</td></tr><tr><td><a href="../episodes/2025-06-11" class="internal alias" data-slug="episodes/2025-06-11">2025-06-11</a></td><td>0:06</td><td>Birthday Hype Train Marathon: Pepito opens the broadcast; Case celebrates his baptism-day birthday with a massive Hype Train level 13, fending off Crum’s competing birthday claim and an onslaught of birthday beats.</td></tr><tr><td><a href="../episodes/2025-06-26" class="internal alias" data-slug="episodes/2025-06-26">2025-06-26</a></td><td>0:00</td><td>Hype Train Returns from Hell: Hype Train reappears after extended absence, describes hell’s new middle management and permeable membrane; mentions wall insurance and hot dog string procurement.</td></tr><tr><td><a href="../episodes/2025-06-28" class="internal alias" data-slug="episodes/2025-06-28">2025-06-28</a></td><td>40:19</td><td>Hate Sock on Birthright Citizenship: Hate Sock delivers a hate-fueled monologue against the Supreme Court; reveals he is Sammy Seven Elbows in sock form.</td></tr><tr><td><a href="../episodes/2025-07-10" class="internal alias" data-slug="episodes/2025-07-10">2025-07-10</a></td><td>0:06</td><td>Cold Open: Pepito Sign-On and Hype Train Freestyle: Pepito delivers station ID; Hype Train commandeers broadcast with freestyle raps over meditation beats, thanks subscribers and bit donors including Delima01 (1000 bits), John Michael (27 months), <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a> (32 months), and others.</td></tr><tr><td><a href="../episodes/2025-07-12" class="internal alias" data-slug="episodes/2025-07-12">2025-07-12</a></td><td>0:01</td><td>Hype Train Cold Open Freestyle: Hype Train delivers a surreal, auto-tuned freestyle rap over eclectic beats, referencing Queen Elizabeth II, ‘pee’, and Jeff Ripple before the news desk begins.</td></tr><tr><td><a href="../episodes/2025-07-15" class="internal alias" data-slug="episodes/2025-07-15">2025-07-15</a></td><td>11:47</td><td>Hype Train Derailment &amp; Subscriber Freestyle: Hype Train commandeers the broadcast for an extended freestyle over a Pop-Tart beat, thanking subscribers (Storn Lack, Uncle Phil, Jackpug1, Sporify, Cardkeena, <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a>) and attacking Jeff Ripple with targeted bars.</td></tr><tr><td><a href="../episodes/2025-07-19" class="internal alias" data-slug="episodes/2025-07-19">2025-07-19</a></td><td>0:03</td><td>Hype Train Freestyle Cold Open: Hype Train delivers surreal freestyle rap over eclectic beats, referencing zombies, debates, and cryptic imagery before yielding to late-night broadcast.</td></tr><tr><td><a href="../episodes/2025-07-24" class="internal alias" data-slug="episodes/2025-07-24">2025-07-24</a></td><td>0:08</td><td>Cold Open &amp; Hype Train Derailment: Pepito opens broadcast; Hype Train commandeers feed with freestyle raps over washing machine beat, discusses hell politics, then dies off-camera when Case cuts to AI slop videos.</td></tr><tr><td><a href="../episodes/2025-07-30" class="internal alias" data-slug="episodes/2025-07-30">2025-07-30</a></td><td>0:06</td><td>Cold Open &amp; Reverse Hype Train: Pepito delivers the cold open as Papito; Hype Train hijacks the feed for a backwards freestyle rap session, thanking subscribers in reverse and debating reversed-word semantics with Case.</td></tr><tr><td><a href="../episodes/2025-08-11" class="internal alias" data-slug="episodes/2025-08-11">2025-08-11</a></td><td>3:58</td><td>Hype Train Piss Freestyle &amp; Subscriber Thanks: Hype Train commandeers the return broadcast with a ten-minute piss-themed freestyle rap, thanking subscribers while advancing the theory that urine is stored in the balls via ghost artists painting it into Tupperware.</td></tr><tr><td><a href="../episodes/2025-08-16" class="internal alias" data-slug="episodes/2025-08-16">2025-08-16</a></td><td>8:46</td><td>Hype Train Freestyle Derailment: Hype Train commandeers the feed for a 25-month freestyle rap cycle, acknowledges subs, and expands his ‘piss’ mythology while Case attempts to enable discounted subscriptions.</td></tr><tr><td><a href="../episodes/2025-08-21" class="internal alias" data-slug="episodes/2025-08-21">2025-08-21</a></td><td>1:00:09</td><td>Hype Train Rap Tutorial &amp; Subscriber Shoutouts: Hype Train commandeers Jeb’s segment to teach rapping fundamentals and read subscriber names over a beat.</td></tr><tr><td><a href="../episodes/2025-08-23" class="internal alias" data-slug="episodes/2025-08-23">2025-08-23</a></td><td>0:00</td><td>Hype Train Cold Open &amp; Subscriber Acknowledgments: Hype Train opens the broadcast with freestyle rapping over instrumental, reluctantly reads subscriber names while resisting musical thank-yous, claims grave worms are the ultimate arbiters of organic material.</td></tr><tr><td><a href="../episodes/2025-08-26" class="internal alias" data-slug="episodes/2025-08-26">2025-08-26</a></td><td>17:03</td><td>Hype Train Freestyle Takeover: Hype Train commandeers the feed with freestyle raps about tacos, trash pizza, metal dogs, and alphabet-shaped ladies; Bonesprout gifts five community subs.</td></tr><tr><td><a href="../episodes/2025-09-02" class="internal alias" data-slug="episodes/2025-09-02">2025-09-02</a></td><td>0:00</td><td>Hype Train Derails Into Freestyle Subscriber Raps: Hype Train refuses standard subscriber acknowledgments, delivers surreal freestyle raps over shifting beats, claims to speak racist gibberish in alternate realities, reads fake credit card numbers, and boops for three minutes straight.</td></tr><tr><td><a href="../episodes/2025-09-05" class="internal alias" data-slug="episodes/2025-09-05">2025-09-05</a></td><td>15:51</td><td>Hype Train: ‘Under the Piss’ Freestyle: Hype Train delivers a surreal freestyle about living under the ocean as a ‘sea train’ drinking train piss, acknowledging subscriber milestones.</td></tr><tr><td><a href="../episodes/2025-09-10-Brt1etBYVyg" class="internal alias" data-slug="episodes/2025-09-10-Brt1etBYVyg">2025-09-10</a></td><td>10:10</td><td>Extended Hype Train Derailment: Cheetos, Piss, and Horses: Hype Train commandeers the broadcast for 25 minutes of freestyle raps over medium, average, Cheeto, and rat type beats, covering bodily fluids, Chester Cheetah lore, Bart Simpson face tattoos, and a metaphysical explanation for why trains are attracted to horses (both carry passengers). Subscriber and bit acknowledgments are intermittently delivered at a ‘medium pace.‘</td></tr><tr><td><a href="../episodes/2025-09-15" class="internal alias" data-slug="episodes/2025-09-15">2025-09-15</a></td><td>1:35:46</td><td>Hype Train Subscriber Shoutouts: Hype Train appears outside the window, delivers Garfield-type beat rap for subs (Bruiser St. George 12 months, <a href="../fans/card-king" class="internal alias" data-slug="fans/card-king">Card King</a>, etc.), claims curing-cancer kisses for his panther girlfriend.</td></tr><tr><td><a href="../episodes/2025-09-26" class="internal alias" data-slug="episodes/2025-09-26">2025-09-26</a></td><td>8:54</td><td>Hype Train Sub Acknowledgments &amp; Derailment: Hype Train acknowledges subscribers with freestyle raps over ‘limp tight beats’; discusses hell metaphysics, constipation as consummation, and denies having sex; Jeb interrupts looking for glasses.</td></tr><tr><td><a href="../episodes/2025-09-29" class="internal alias" data-slug="episodes/2025-09-29">2025-09-29</a></td><td>15:31</td><td>Destruction Type Beat Derailment: Hype Train abandons subscriber acknowledgments for a 15-minute freestyle rap cycle about crack, piss, and city hall insurrection.</td></tr><tr><td><a href="../episodes/2025-10-04" class="internal alias" data-slug="episodes/2025-10-04">2025-10-04</a></td><td>2:31:43</td><td>Hype Train Subscriber Acknowledgments: Hype Train appears for sub readings; Case deflects Hype Train’s advances; brief exchange about Hype Train’s nationality.</td></tr><tr><td><a href="../episodes/2025-10-06" class="internal alias" data-slug="episodes/2025-10-06">2025-10-06</a></td><td>25:25</td><td>Hype Train Freestyle Interruption: Hype Train commandeers the feed with a high-tempo freestyle over eclectic beats before departing.</td></tr><tr><td><a href="../episodes/2025-10-09" class="internal alias" data-slug="episodes/2025-10-09">2025-10-09</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Derailment: Pepito delivers station sign-on; Hype Train commandeers broadcast with extended freestyle rap about piss, shit, crack, diapers, and toilets being adult diapers.</td></tr><tr><td><a href="../episodes/2025-10-16" class="internal alias" data-slug="episodes/2025-10-16">2025-10-16</a></td><td>0:08</td><td>Hype Train Derails Into Cigarette Rat Lore: Hype Train opens the broadcast with a mournful trap beat, freestyle-rhyming about the passage of time, cigarettes, and the invented history of ‘crats’ (cigarette rats) while acknowledging subscribers.</td></tr><tr><td><a href="../episodes/2025-10-31" class="internal alias" data-slug="episodes/2025-10-31">2025-10-31</a></td><td>17:34</td><td>Hype Train Freestyle: Piss Webs: Hype Train commandeers the feed for a surreal Halloween rap about webs made of piss and spiders made of piss, derailing the pre-show flow.</td></tr><tr><td><a href="../episodes/2025-11-13" class="internal alias" data-slug="episodes/2025-11-13">2025-11-13</a></td><td>0:06</td><td>Hype Train Burp-Pole Lore &amp; Intern Auditions: Pepito opens broadcast; Hype Train delivers extended freestyle about burping from a ‘burp pole’ (train penis/throat); three interns audition for town hall duty, introducing Blark as third intern.</td></tr><tr><td><a href="../episodes/2025-11-25" class="internal alias" data-slug="episodes/2025-11-25">2025-11-25</a></td><td>9:10</td><td>Hype Train Subscriber Acknowledgments &amp; Freestyle: Hype Train acknowledges subscribers and launches into extended freestyle raps about piss, shit, and Homer Simpson; claims never to have lied.</td></tr><tr><td><a href="../episodes/2025-12-06" class="internal alias" data-slug="episodes/2025-12-06">2025-12-06</a></td><td>0:08</td><td>Hype Train Cold Open &amp; Subscriber Freestyle: Pepito delivers station sign-on; Hype Train performs extended freestyle rap over ‘bald type beat’ while thanking subscribers, riffing on baldness, minions, and translucent train jaundice.</td></tr><tr><td><a href="../episodes/2025-12-09" class="internal alias" data-slug="episodes/2025-12-09">2025-12-09</a></td><td>17:57</td><td>Hype Train Subscriber Freestyle: Hype Train acknowledges 37-month sub Exterminator and other supporters while delivering a slime-themed freestyle rap about sheets, volcanoes, and stuntman slime.</td></tr><tr><td><a href="../episodes/2025-12-11" class="internal alias" data-slug="episodes/2025-12-11">2025-12-11</a></td><td>0:00</td><td>Cold Open: Copyright Strike Crisis &amp; Hype Train Derailment: Case battles nine YouTube copyright strikes on recent VODs while Pepito runs cold open; Hype Train appears for a bird-themed freestyle that spirals into toe-licking surrealism before being dismissed.</td></tr><tr><td><a href="../episodes/2025-12-13" class="internal alias" data-slug="episodes/2025-12-13">2025-12-13</a></td><td>0:01</td><td>Frane Day Hype Train Derailment: Pepito delivers cold open as ‘Papita’; Hype Train declares ‘Frane Day’ (Friday + Train), freestyle raps over AI-generated beats, acknowledges subs and bits while spiraling into surreal culinary and bodily-fluid rhymes.</td></tr><tr><td><a href="../episodes/2025-12-18" class="internal alias" data-slug="episodes/2025-12-18">2025-12-18</a></td><td>8:09</td><td>News Desk Opening &amp; Hype Train Emergence: Case Blackwell opens the broadcast solo, discusses holiday plans and hair, then Hype Train materializes to freestyle about cloacas and cocaine excrement.</td></tr><tr><td><a href="../episodes/2025-12-24" class="internal alias" data-slug="episodes/2025-12-24">2025-12-24</a></td><td>0:08</td><td>Pissmas Sub-A-Thon Celebration: Hype Train commandeers the broadcast for an hour-long Pissmas celebration, freestyling about the pantheon of piss gods while thanking a massive influx of subs and bits from tamtran, bundle sprout, <a href="../fans/card-king" class="internal alias" data-slug="fans/card-king">Card King</a>, and others. Pepito’s voice is glitched by the cosmic energy. Case refuses to participate in the piss-themed festivities.</td></tr><tr><td><a href="../episodes/2026-01-06" class="internal alias" data-slug="episodes/2026-01-06">2026-01-06</a></td><td>0:08</td><td>Hype Train Cold Open: Train Puberty &amp; Sub Marathon: Hype Train delivers an extended freestyle on ‘train puberty’ involving self-penetration metaphysics, estrogen/testosterone, and hellish freedom while thanking a massive sub wave from Tam Tran; Pepito and Peter Gibbon interject.</td></tr><tr><td><a href="../episodes/2026-01-17" class="internal alias" data-slug="episodes/2026-01-17">2026-01-17</a></td><td>14:25</td><td>Hype Train: Kevin Pereira Freestyle &amp; Subscriber Shoutouts: Hype Train derails into a Kevin Pereira rap over an Alex Pereira type beat, claims Kevin Pereira and Ryan Reynolds are the same person, processes 38-month and 35-month subs.</td></tr><tr><td><a href="../episodes/2026-01-22" class="internal alias" data-slug="episodes/2026-01-22">2026-01-22</a></td><td>26:16</td><td>Sleepy Hype Train Subscriber Freestyle: Hype Train appears exhausted, delivers a rambling freestyle over Radiohead-type beats covering foot fetishes, sheep, cliffs, and Pokemon Battle Revolution while acknowledging 36–39 month subscribers.</td></tr><tr><td><a href="../episodes/2026-01-27" class="internal alias" data-slug="episodes/2026-01-27">2026-01-27</a></td><td>24:45</td><td>Hype Train Derailment: Freestyle Over Subscriber Acknowledgments: Hype Train commandeers the feed during political coverage, delivering a high-tempo freestyle rap over bouncy cartoon beats, pivoting to bodily fluid topics and ignoring the somber news context.</td></tr><tr><td><a href="../episodes/2026-02-04" class="internal alias" data-slug="episodes/2026-02-04">2026-02-04</a></td><td>0:06</td><td>Hype Train Cold Open: Sick Return &amp; Groundhog Day: Hype Train opens the broadcast solo while Case recovers from illness; riffs on Groundhog Day, Epstein files, and double-fisting spirituality before Case joins.</td></tr><tr><td><a href="../episodes/2026-02-10" class="internal alias" data-slug="episodes/2026-02-10">2026-02-10</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Derailment: Pepito delivers sign-on countdown; Hype Train commandeers feed with freestyle rap before Case Blackwell assumes anchor desk.</td></tr><tr><td><a href="../episodes/2026-02-26" class="internal alias" data-slug="episodes/2026-02-26">2026-02-26</a></td><td>14:52</td><td>Hype Train’s Original Thong Song Recreation: Hype Train delivers a freestyle ‘perfect recreation’ of the Cisco thong song, weaving in MTV Warriors remake lore, alien abduction canon, and subscriber acknowledgments.</td></tr><tr><td><a href="../episodes/2026-02-28" class="internal alias" data-slug="episodes/2026-02-28">2026-02-28</a></td><td>9:16</td><td>Hype Train Derailment: Bart Simpson Massacre: Hype Train commandeers the broadcast for an extended freestyle rap, claiming to have nuked Springfield, killed Bart Simpson, and fucked all of Thomas the Tank Engine’s spouses while declaring himself King of the Trains.</td></tr><tr><td><a href="../episodes/2026-03-03" class="internal alias" data-slug="episodes/2026-03-03">2026-03-03</a></td><td>56:18</td><td>Hype Train Derailment: Bugs Bunny &amp; Bart Simpson Lore: Hype Train commandeers the feed with a freestyle rap asserting Bugs Bunny and Bart Simpson are in a mafia-powered sexual union that threatens reality; Case and Rick react with bafflement.</td></tr><tr><td><a href="../episodes/2026-03-06" class="internal alias" data-slug="episodes/2026-03-06">2026-03-06</a></td><td>0:00</td><td>Hype Train Derailment: Sweater Fetish &amp; Sub Thank-Yous: Hype Train opens with a freestyle about sweaters being ‘the most fuckable clothes’ and penis-in-hose imagery, then runs through subscriber acknowledgments at maximum speed before Pepito refuses to thank subs.</td></tr><tr><td><a href="../episodes/2026-03-07" class="internal alias" data-slug="episodes/2026-03-07">2026-03-07</a></td><td>2:01:13</td><td>Hype Train Courtroom Takeover: Hype Train interrupts the trial with an extended freestyle rap session, derailing proceedings. Crum attempts a rebuttal rap but is cut off by objection. Hype Train acknowledges a 1,000-bit donation from viewer <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a> and references an Obama appearance.</td></tr><tr><td><a href="../episodes/2026-03-10" class="internal alias" data-slug="episodes/2026-03-10">2026-03-10</a></td><td>9:59</td><td>Hype Train Subscriber Freestyle: Hype Train acknowledges subscribers and bits, then derails into a freestyle rap about Case’s alleged changes, beard loss, and girlfriend, while demanding trap beats.</td></tr><tr><td><a href="../episodes/2026-03-24" class="internal alias" data-slug="episodes/2026-03-24">2026-03-24</a></td><td>0:08</td><td>Hot Salad Freestyle &amp; Sub Marathon: Hype Train opens with an extended freestyle about hot salad, acknowledges a wave of gifted subs (41-month streaks), and derails into culinary metaphysics before yielding to the news desk.</td></tr><tr><td><a href="../episodes/2026-03-25" class="internal alias" data-slug="episodes/2026-03-25">2026-03-25</a></td><td>21:56</td><td>Hype Train Freestyle Derailment: Hype Train abandons subscriber acknowledgments for an extended freestyle rap about being a skeleton, not receiving texts, and metaphysical musings, eventually declaring he is done talking forever.</td></tr><tr><td><a href="../episodes/2026-03-27" class="internal alias" data-slug="episodes/2026-03-27">2026-03-27</a></td><td>26:49</td><td>Hype Train Asshole Residency Freestyle: Hype Train derails subscriber acknowledgments into a rap about living inside an anus and eating butt acne cream.</td></tr><tr><td><a href="../episodes/2026-04-01" class="internal alias" data-slug="episodes/2026-04-01">2026-04-01</a></td><td>23:25</td><td>Hype Train April Fools Prank: Hype Train appears claiming to be a normal human guy as an April Fools prank, delivers freestyle rap about flesh lights and jelqing rods, reveals he’s still a train at the end.</td></tr><tr><td><a href="../episodes/2026-04-06" class="internal alias" data-slug="episodes/2026-04-06">2026-04-06</a></td><td>12:17</td><td>Hype Train Sub Thank-You &amp; Piss Rap: Hype Train derails sub acknowledgments into a high-tempo piss freestyle; Case eventually forces a beat change and Hype Train reads sub names.</td></tr><tr><td><a href="../episodes/2026-04-09" class="internal alias" data-slug="episodes/2026-04-09">2026-04-09</a></td><td>34:32</td><td>Hype Train: Ceasefire Type Beat &amp; CIA Sub Thank-You: Hype Train commandeers the feed for a freestyle session over ‘ceasefire type beat’ and ‘CIA type beat,’ thanking subs and bits donors including <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a>, Unfamous Amos, and Mighty Oz while riffing on bodily functions.</td></tr><tr><td><a href="../episodes/2026-04-11" class="internal alias" data-slug="episodes/2026-04-11">2026-04-11</a></td><td>0:00</td><td>Hype Train Friday Freestyle: Hype Train delivers an extended freestyle rap over trap beats, acknowledging subs and bits while riffing on long-ass anatomy, snack orgies, and bodily fluids; Chet interrupts for a duet about nachos, fries, brownies, and fruit roll-ups.</td></tr><tr><td><a href="../episodes/2026-04-14" class="internal alias" data-slug="episodes/2026-04-14">2026-04-14</a></td><td>0:06</td><td>Hype Train Subscriber Freestyle &amp; Butt Chip Beat: Pepito cold-opens; Hype Train arrives early, raps over trap beats about butt chips, thanks subscribers including <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a> (300 bits), <a href="../fans/giggle-trash" class="internal alias" data-slug="fans/giggle-trash">Giggle Trash</a>, Superbeast (39 months), and others; discusses Cerberus’s YouTube Shorts algorithm as hellgate.</td></tr><tr><td><a href="../episodes/2026-04-21" class="internal alias" data-slug="episodes/2026-04-21">2026-04-21</a></td><td>38:49</td><td>Hype Train Derailment: Piss Freestyle &amp; Lore Drops: Hype Train commandeers the feed for a 20-minute freestyle rap about piss commerce, methamphetamine use, open-mic stand-up, and fabricated lore about Case, ignoring subscriber acknowledgments entirely.</td></tr><tr><td><a href="../episodes/2026-04-22" class="internal alias" data-slug="episodes/2026-04-22">2026-04-22</a></td><td>7:53</td><td>News Desk: Iran Blockade &amp; Hype Train Interruption: Case Blackwell anchors breaking coverage of US interception of Iranian oil tankers in Asian waters and the extended ceasefire; Hype Train commandeers the feed for a freestyle rap over a yodeling trap beat, acknowledging bits and subs while riffing on vampire lore and blood consumption.</td></tr><tr><td><a href="../episodes/2026-04-24" class="internal alias" data-slug="episodes/2026-04-24">2026-04-24</a></td><td>0:06</td><td>Cold Open &amp; Hype Train Freestyle: Pepito delivers sign-on; Hype Train derails subscriber shoutouts into surreal skeleton-themed freestyle rap over dark trap beats.</td></tr><tr><td><a href="../episodes/2026-05-14" class="internal alias" data-slug="episodes/2026-05-14">2026-05-14</a></td><td>0:19:27</td><td>Hospital Type Beat Derailment: <a href="../fans/card-king" class="internal alias" data-slug="fans/card-king">Card King</a>’s 300-bit donation triggers Hype Train, who abandons sub acknowledgments for a surreal freestyle session over hospital-themed beats.</td></tr><tr><td><a href="../episodes/2026-05-18" class="internal alias" data-slug="episodes/2026-05-18">2026-05-18</a></td><td>0:00</td><td>Hype Train Cold Open: Bugs Bunny Voice &amp; Freestyle Derailment: Pepito signs on; Hype Train commandeers feed with Bugs Bunny impression, Lucha Libre beat, and freestyle about housing bugs in Tupperware and running for governor.</td></tr><tr><td><a href="../episodes/2026-05-21" class="internal alias" data-slug="episodes/2026-05-21">2026-05-21</a></td><td>49:07</td><td>Hype Train Interruption Attempt: Hype Train triggers over Westside Gunn beats but fails to drop a beat; talked over by anchor and EP.</td></tr><tr><td><a href="../episodes/2026-05-22" class="internal alias" data-slug="episodes/2026-05-22">2026-05-22</a></td><td>16:38</td><td>Creature Horror Freestyle: Hype Train commandeers the feed for an extended improvised rap about knife-wielding clowns, hatchet bunnies, knife bears, and a multicolored-toothed specter while processing subs and bits.</td></tr><tr><td><a href="../episodes/2026-05-26" class="internal alias" data-slug="episodes/2026-05-26">2026-05-26</a></td><td>4:30</td><td>Broadband Surge Interruption: A high-energy musical interruption triggered by viewer engagement spikes, featuring retro synthwave graphics and the Hype Train correspondent’s energetic delivery about the ‘couch’ phenomenon.</td></tr><tr><td><a href="../episodes/2026-05-29" class="internal alias" data-slug="episodes/2026-05-29">2026-05-29</a></td><td>33:27</td><td>Milk Feet, Fish Eyes, and Guitar Cars: Hype Train launches into an extended rap about his body parts being milk, fish eyes, and a guitar car, escalating into time travel and universe rebirth themes. The segment includes a duet with Case and ends with a level 7 hype surge.</td></tr><tr><td><a href="../episodes/2026-06-01" class="internal alias" data-slug="episodes/2026-06-01">2026-06-01</a></td><td>16:00</td><td>Hype Train Level-Up &amp; Fundraiser: Hype Train interrupts with synthwave graphics, a ‘revolutionary war’ beat, and a ‘Blackwell Jan 6 fund’ promotion featuring ‘massive bunny breasts’ and ‘lactating gold coins.‘</td></tr><tr><td><a href="../episodes/2026-06-03" class="internal alias" data-slug="episodes/2026-06-03">2026-06-03</a></td><td>40:09</td><td>Hype Train: Human Dog Shit Rap &amp; Sub Thank-Yous: Hype Train interrupts for hype train surge. Delivers extended freestyle about eating ‘human dog shit’ (humans defecating on dog walks), thanks subs: Jack ($300), <a href="../fans/matt-liddell" class="internal alias" data-slug="fans/matt-liddell">Matt Liddell</a>, Apple WS, <a href="../fans/giggle-trash" class="internal alias" data-slug="fans/giggle-trash">Giggle Trash</a> (5 subs), Reverie Wolf (500 bits). Reveals second job as bassoonist. Discusses ‘best flavor for human dog shit’.</td></tr><tr><td><a href="../episodes/2026-06-05" class="internal alias" data-slug="episodes/2026-06-05">2026-06-05</a></td><td>17:14</td><td>Musical Cultural Surge: A spontaneous Hype Train musical interruption erupts mid-segment, featuring retro synthwave beats, hamster-themed rhythms, and chaotic crowd reactions as the studio responds to the unexpected surge.</td></tr><tr><td><a href="../episodes/2026-06-08" class="internal alias" data-slug="episodes/2026-06-08">2026-06-08</a></td><td>0:00:01</td><td>Pepito Intro, Hype Train Machete Freestyle &amp; Studio Banter: Pepito opens broadcast; Hype Train appears in starry liminal space and delivers extended freestyle about sharpening a toy machete with urine, joined by Case and Kendelle discussing home defense (machete, stun gun). Case shows off machete, Kendall does laundry on camera. Hype Train eventually ‘dies’ and Case hard-transitions to news.</td></tr><tr><td><a href="../episodes/2026-06-15" class="internal alias" data-slug="episodes/2026-06-15">2026-06-15</a></td><td>8:38</td><td>Hype Train’s 40th Birthday Freestyle: Hype Train and Panther engage in a freestyle rap battle with Case, discussing aging, Captain Crunch, and dinosaurs.</td></tr><tr><td><a href="../episodes/2026-06-18" class="internal alias" data-slug="episodes/2026-06-18">2026-06-18</a></td><td>0:10</td><td>Pepito Intro, Hype Train Lawn Dispute &amp; Bart Inventory: Executive producer Pepito opens from Case’s house after a mover error. Hype Train triggers early, debating lawn maintenance philosophy involving oil, urine, and intercourse. Case reviews viewer-submitted ‘Bart’ sticker designs ahead of Friday print deadline.</td></tr><tr><td><a href="../episodes/2026-06-19" class="internal alias" data-slug="episodes/2026-06-19">2026-06-19</a></td><td>21:00</td><td>Musical &amp; Cultural Interruption: High-energy musical performance by Hype Train accompanied by propane-powered visual effects. The segment includes rap verses, cultural commentary, and cryptocurrency-themed commentary.</td></tr><tr><td><a href="../episodes/2026-06-22" class="internal alias" data-slug="episodes/2026-06-22">2026-06-22</a></td><td>0:08</td><td>Pepito Intro &amp; Phantom Hype Crane: Pepito opens the show from the producer cam, rambles about subs, time travel, and a phantom ‘hype crane’ that may or may not exist. Features cat projections, merch discussion, and a brief mention of Operation Epic Furious Straight.</td></tr><tr><td><a href="../episodes/2026-06-27" class="internal alias" data-slug="episodes/2026-06-27">2026-06-27</a></td><td>8:42</td><td>The Level 10 Emo Hype Train Siege: A massive hype train surge hits the network. Hype Train freestyles over increasingly chaotic emo beats (‘I miss my eggs’, ‘I told my parents to blow up their eggs with the nuclear’). Crum unexpectedly inserts himself from the satellite room to defend the train’s lyrical style. Hype Train achieves a rare Level 10 status, prompting a swirling vortex skeleton animation and a mariachi trap beat. The segment ends with Hype Train attempting to serenade ‘Belulia’ and Crum playfully roasting him.</td></tr><tr><td><a href="../episodes/2026-06-29" class="internal alias" data-slug="episodes/2026-06-29">2026-06-29</a></td><td>20:25</td><td>Ice Fair Rap Type Beats: Hype Train takes over the broadcast with an extended freestyle rap about ice, piss, frozen National Mall, ferret wheels, connectors, furry taxonomy (birds are furry, lizards are scallies), the wrestler Ice Train RIP, Kassim’s AI slop shop, and disturbing new Minions movie marketing. Case repeatedly attempts to regain control of the feed.</td></tr><tr><td><a href="../episodes/2026-07-11" class="internal alias" data-slug="episodes/2026-07-11">2026-07-11</a></td><td>12:50</td><td>Hype Train Podcast Freestyle: The Hype Train correspondent commandeers the broadcast to deliver a freestyle rap proposing a ‘podcast type beat,’ complaining about Case’s haircut, and vowing to move his broadcast operations to the moon. The segment concludes with an off-screen glitch as the correspondent exits.</td></tr><tr><td><a href="../episodes/2026-07-13" class="internal alias" data-slug="episodes/2026-07-13">2026-07-13</a></td><td>38:40</td><td>Hype Train Sock-Filled-with-Ass Rap: Hype Train crashes the news for a hype train surge, attempting to rap about a sock filled with ‘ass’ rather than his usual ‘piss’ topic. Blackwell repeatedly tries to silence him to get back to Iran war coverage. The segment concludes with Hype Train lamenting the loss of his segment time.</td></tr><tr><td><a href="../episodes/2026-07-17" class="internal alias" data-slug="episodes/2026-07-17">2026-07-17</a></td><td>32:54</td><td>Hype Train Cascade: Piss Hunters, George Carlin &amp; Spanish Guitar: Triggered by bits and subs. Hype Train declares a sub-goal of ‘piss hunters’ because ‘big game hunters want my valuable piss to key with Planet’s Rewards.’ Raps about his piss keeping viewers alive, gives a shoutout to ‘shiny tasty corn’, and name-drops George Carlin as a former train station companion. Returns later with a Spanish guitar house beat, declaring ‘In the lattice fucking piss’ the new stream tag.</td></tr><tr><td><a href="../episodes/2026-07-20" class="internal alias" data-slug="episodes/2026-07-20">2026-07-20</a></td><td>28:31</td><td>Lincoln vs Hype Train Battle Rap: Triggered by chat demand, Abraham Lincoln challenges Hype Train to a freestyle rap battle over a presidential trap beat. Hype Train raps about meteor dirt and bodily fluids, while Lincoln awkwardly responds with hot dog bars. Chat votes Lincoln as the winner, forcing Hype Train to thank the subs.</td></tr><tr><td><a href="../episodes/2026-08-04" class="internal alias" data-slug="episodes/2026-08-04">2026-08-04</a></td><td>0:08</td><td>Pepito Pre-show, Blackwell Ankle Confessional &amp; Hype Train Caboose Bit: Pepito (referred to by ASR as ‘Papita’) opens the broadcast while Blackwell explains his absence (Monday blackout, Wednesday internet outage, accumulated power/work tasks) and refuses medical treatment for his visibly swollen ankle. Blackwell repeatedly deflects viewer prompts to ice and elevate the injury. The Hype Train interrupts to deliver subscriber acknowledgements and an extended freestyle rap about losing his caboose.</td></tr><tr><td><a href="../episodes/2026-08-06" class="internal alias" data-slug="episodes/2026-08-06">2026-08-06</a></td><td>0:00</td><td>Pepito Cold Open &amp; Hype Train Troubleshooting: Executive Producer Pepito opens the broadcast with his signature canine intro. Hype Train commandeers the desk early but battles a malfunctioning synthwave visualization widget. Discussion meanders through subscriber acknowledgements, Danny Phantom cultural literacy, and the dangers of ghosts before the anchor can transition to news.</td></tr><tr><td><a href="../episodes/2026-08-08" class="internal alias" data-slug="episodes/2026-08-08">2026-08-08</a></td><td>41:04</td><td>Hype Train on Living Piss &amp; The Power of Love: Triggered by the word ‘science’, Hype Train hijacks the broadcast. He delivers a freestyle rap arguing that urine is a living organism oppressed by humanity, then transitions into a rap about love existing in stars, bars, and explosions. He rejects Case’s attempts to force the segment to wrap up.</td></tr><tr><td><a href="../episodes/2026-08-13" class="internal alias" data-slug="episodes/2026-08-13">2026-08-13</a></td><td>0:08</td><td>Money Flossing, Cheeto Golf Tee &amp; Turd Freestyle: Hype Train delivers an extended high-velocity freestyle session dominated by the ‘turd’ theme, ‘money flossing’ dance tutorial, ‘Cheeto golf tee’ concept, and hot money piss wordplay. Chat votes 99.9% ‘it’s piss.’ Pepito remains unimpressed throughout.</td></tr><tr><td><a href="../episodes/2026-08-19" class="internal alias" data-slug="episodes/2026-08-19">2026-08-19</a></td><td>8:47</td><td>Cereal Mascot Hype Train Raps: A hype train surge occurs early in the broadcast. Hype Train launches into an extended freestyle rap ranking cereal mascots, refusing to properly thank subs until pressured by the anchor.</td></tr><tr><td><a href="../episodes/2026-08-26" class="internal alias" data-slug="episodes/2026-08-26">2026-08-26</a></td><td>15:33</td><td>Hijacks the feed with rapid-fire film critiques of one-word titles before presenting an ancient mythological language pre-dating Homer.</td></tr><tr><td><a href="../episodes/2026-09-01" class="internal alias" data-slug="episodes/2026-09-01">2026-09-01</a></td><td>12:42</td><td>Active momentum surge; delivers an extended rap regarding locomotive reproduction and rail safety standards while abstaining from fluidic topics.</td></tr><tr><td><a href="../episodes/2026-09-02" class="internal alias" data-slug="episodes/2026-09-02">2026-09-02</a></td><td>17:13</td><td>Intercepts the broadcast to promote <em>Piss Fruit Ninja</em>, commands a vaudeville tempo, and outlines his crypto-universe background.</td></tr><tr><td><a href="../episodes/2026-09-04" class="internal alias" data-slug="episodes/2026-09-04">2026-09-04</a></td><td>1:11:00</td><td>Derails subscriber acknowledgments with Dr. Seuss-style egg-sauce raps and CIA operational anecdotes.</td></tr><tr><td><a href="../episodes/2026-09-07" class="internal alias" data-slug="episodes/2026-09-07">2026-09-07</a></td><td>36:43</td><td>Jeans Rap &amp; Tombstone Last Words: Hype Train intercepts the broadcast on a futuristic synthwave beat, delivering an impassioned freestyle about wearing denim jeans with his girls, Roman urine laundering, and debating what his final words on a tombstone would be.</td></tr><tr><td><a href="../episodes/2026-09-23" class="internal alias" data-slug="episodes/2026-09-23">2026-09-23</a></td><td>14:33</td><td>Hype Train Derails Subs with Fart Beats and Prince Albert Reveal: Hype Train appears late, abandons donor registry for freestyle raps over fart-type beats, discovers Ice Spice’s ‘You Ain’t Shit’ track, and reveals a Prince Albert piercing as commitment to self.</td></tr><tr><td><a href="../episodes/2026-09-25" class="internal alias" data-slug="episodes/2026-09-25">2026-09-25</a></td><td>13:26</td><td>Hype Train Derailment: Grandma Piss Freestyle: Hype Train commandeers the broadcast for a freestyle rap about generational piss knowledge, thanks subscribers, and claims fusion with Kendall.</td></tr><tr><td><a href="../episodes/2026-09-28" class="internal alias" data-slug="episodes/2026-09-28">2026-09-28</a></td><td>13:11</td><td>Hype Train Social Studies Derailment: Hype Train commandeers the broadcast as a ‘social studies teacher’ named Chong, delivering freestyle raps about Chinese fates, Macy’s Dark Age, and sub acknowledgments while Case remains uncharacteristically agreeable.</td></tr><tr><td><a href="../episodes/2026-10-08" class="internal alias" data-slug="episodes/2026-10-08">2026-10-08</a></td><td>13:15</td><td>Hype Train Derailment: The Yanking Philosophy: Hype Train hijacks the broadcast for a seventeen-minute freestyle constructing an entire metaphysics of ‘yanking’ — distinguishing it from gooning, introducing ‘yank exception’ and ‘yank fauna’ as transcendent states, and thanking subscribers through yank-themed wordplay.</td></tr><tr><td><a href="../episodes/2026-10-23" class="internal alias" data-slug="episodes/2026-10-23">2026-10-23</a></td><td>55:20</td><td>Hype Train: Reptilian Gorillas &amp; Joe Rogan CIA Guests: Hype Train commandeers broadcast with freestyle about seven-foot scaly gorillas, Joe Rogan interviewing ex-CIA officers, and claims of being silenced by intelligence agencies.</td></tr><tr><td><a href="../episodes/2026-10-26" class="internal alias" data-slug="episodes/2026-10-26">2026-10-26</a></td><td>38:49</td><td>Freestyle Raps, Subscriber Shoutouts, Blame Case Algebra: Hype Train defines ‘ferret in face’ TikTok trend, delivers freestyle blaming Case for all technical failures (X + C = O), acknowledges Commander Gev, ABCP333, Mighty Odds, Bungal Sprout, <a href="../fans/skymer" class="internal alias" data-slug="fans/skymer">Skymer</a>, <a href="../fans/giggle-trash" class="internal alias" data-slug="fans/giggle-trash">Giggle Trash</a>, Shaggy, CK.</td></tr><tr><td><a href="../episodes/2026-11-04" class="internal alias" data-slug="episodes/2026-11-04">2026-11-04</a></td><td>28:41</td><td>Hype Train Freestyles on Hailey Stevens: Hype Train interrupts with a high-tempo freestyle about Michigan Rep. Haley Stevens and her fiancé Jason ‘Turkish’, pivoting to explicit sexual imagery before Jeff Ripple thanks subscribers in 80s synthwave spoken word.</td></tr><tr><td><a href="../episodes/2026-11-13" class="internal alias" data-slug="episodes/2026-11-13">2026-11-13</a></td><td>48:03</td><td>Hype Plane: A Transportation-Themed Takeover: Hype Train seizes the feed as the Hype Plane while the Duffy briefing runs out at 52:23, works through subscriber acknowledgments, then runs dry on fuel and rhymes; Blackwell offers a replacement beat and the feed is revived.</td></tr><tr><td><a href="../episodes/2026-11-16" class="internal alias" data-slug="episodes/2026-11-16">2026-11-16</a></td><td>14:04</td><td>Hype Train x Duffy: Ground Army Freestyle: Hype Train seizes the feed for a pre-recorded military-trap collaboration with Duffy, then evacuates the premises mid-press conference.</td></tr><tr><td><a href="../episodes/2026-11-23" class="internal alias" data-slug="episodes/2026-11-23">2026-11-23</a></td><td>19:17</td><td>Hype Train Wedged Sideways: Hype Train arrives with a camera source knocked out of alignment and lodged in the corner of the frame, claiming a knee injury, and refuses to rap so that Case’s $150 rap incentive stays intact.</td></tr><tr><td><a href="../episodes/2026-11-24" class="internal alias" data-slug="episodes/2026-11-24">2026-11-24</a></td><td>8:50</td><td>Hype Train: Kickstarter Jug Freestyle: Hype Train freestyled about jugs and Kickstarter incentives after the sign-on.</td></tr></tbody></table></div></article><hr/><div class="page-footer"><div class="buymeacoffee-widget "><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="teflonted" data-description="Support me on Buy me a coffee!" data-message="Support the BIN Lore project!" data-color="#dc2626" data-position="Right" data-x_margin="18" data-y_margin="18"></script></div></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-433" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#hype-train" data-for="hype-train">Hype Train</a></li><li class="depth-1"><a href="#format" data-for="format">Format</a></li><li class="depth-1"><a href="#broadcast-lore--tropes" data-for="broadcast-lore--tropes">Broadcast Lore &amp; Tropes</a></li><li class="depth-1"><a href="#known-occurrences" data-for="known-occurrences">Known occurrences</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../characters/sammy-seven-elbows" class="internal">Sammy Seven Elbows</a></li><li><a href="../episodes/2023-12-02" class="internal">ChatGP-War, Young Thug Trial, an End to No Nut, it's NEWZZZ (2023-12-02)</a></li><li><a href="../episodes/2023-12-18" class="internal">Grunchmas Time is Here (2023-12-18)</a></li><li><a href="../episodes/2024-01-05" class="internal">Logan Bought a Cryptozoo, Self Love, Blah Blah Trump, it's NEWS (2024-01-05)</a></li><li><a href="../episodes/2024-02-02" class="internal">BioHacker NFTs, Shrinking Moons, Syphilis, and other diseases that NEWS (2024-02-02)</a></li><li><a href="../episodes/2024-02-07" class="internal">Drake Dicks, Apple Vision Dicks, Gina Carano Dicks? It's NEWS dicks (2024-02-07)</a></li><li><a href="../episodes/2024-02-20" class="internal">Nerualink Mice, Lockbit Lockdown, Nobody Likes Money Shots? At least on is NEWS (2024-02-20)</a></li><li><a href="../episodes/2024-02-26" class="internal">The Cream Team Dream Stream - presented by Hart Audio (2024-02-26)</a></li><li><a href="../episodes/2024-02-29" class="internal">NEWS? NEWS! (2024-02-29)</a></li><li><a href="../episodes/2024-03-14" class="internal">End of the Beast Era? Boeing 187s Informant? Red Hitler Ranger? These are words that are NEWS (2024-03-14)</a></li><li><a href="../episodes/2024-03-18" class="internal">Two Genitals, Two Boyfriends, Tucker Tricked, Trump Stuff Maybe? There's probably NEWS (2024-03-18)</a></li><li><a href="../episodes/2024-03-21" class="internal">Exercise Pills that Work? Kota-K.O.? Apple Bad? It's NUUUS (news) (2024-03-21)</a></li><li><a href="../episodes/2024-03-26" class="internal">Diddy Raids, Neuralink Mario Kart, Twitch SEXIER than ever? That's GOTTA be NEWS (2024-03-26)</a></li><li><a href="../episodes/2024-03-27" class="internal">News and Science Guys who are Chet (2024-03-27)</a></li><li><a href="../episodes/2024-03-28" class="internal">News and Science Guys who are Chet (2024-03-28)</a></li><li><a href="../episodes/2024-04-04" class="internal">Actual Calls for Ceasfire? AI Survivor Contestant? Invisibility Shields? it is NEWS? (2024-04-04)</a></li><li><a href="../episodes/2024-04-16" class="internal">Fountain of Youth is... Salmon Sperm, The Inevitable Wonka 2, Cybertucking Along, it's phrases th… (2024-04-16)</a></li><li><a href="../episodes/2024-04-17" class="internal">Grimey Coachella, Israel Check In, We Can Talk to Whales? It's NEWS and/or SCIENCE? (2024-04-17)</a></li><li><a href="../episodes/2024-04-23" class="internal">Town Hall Tuesday (2024-04-23)</a></li><li><a href="../episodes/2024-04-25" class="internal">Protests, AI, and other words you KNOW are NEWS (2024-04-25)</a></li><li><a href="../episodes/2024-04-29" class="internal">Seinfelding, Porn Solves Mysteries, Monkeys Attack, it's... NEWS? (2024-04-29)</a></li><li><a href="../episodes/2024-05-01" class="internal">Protests, Rock Bottles of Urine, and Schneider Returns, GOD help us it's NEWS (2024-05-01)</a></li><li><a href="../episodes/2024-05-02" class="internal">Biden Says Things, X-Men Mansion For Rent, Armpit Balls, it's NEWZ (news) (2024-05-02)</a></li><li><a href="../episodes/2024-05-10" class="internal">More Weapons or NO More Weapons? NBA Moans, &quot;Package Enhances&quot; - some of it may be NEWS (2024-05-10)</a></li><li><a href="../episodes/2024-05-15" class="internal">Munchcut Finally LOSES? Mass celeb blocking? Epstein Recreates Multiplicity? These are things tha… (2024-05-15)</a></li><li><a href="../episodes/2024-05-23" class="internal">Quick How To Stream Before Patreon (2024-05-23)</a></li><li><a href="../episodes/2024-05-31" class="internal">Felon Gives Rally, WWE Investigated, Ghost Poops Explained - all equally valid NEWS (2024-05-31)</a></li><li><a href="../episodes/2024-06-10" class="internal">Is Birthday News? Or Elden Birthday? or BOTH? (2024-06-10)</a></li><li><a href="../episodes/2024-06-25" class="internal">Elden Skadoooo (2024-06-25)</a></li><li><a href="../episodes/2024-06-28" class="internal">Presidential Recreation Activity Hour (2024-06-28)</a></li><li><a href="../episodes/2024-07-09" class="internal">Biden Time, AI Bullet Vending Machines, Gay Furry Hackers, all words equaling NEWS (2024-07-09)</a></li><li><a href="../episodes/2024-07-22" class="internal">Unburdened  by what has Biden and other things that are NEWS (2024-07-22)</a></li><li><a href="../episodes/2024-07-30" class="internal">Olympic Check In, JD Vamping, and Skibidi Copyrights or SOMETHING that's NEWS (2024-07-30)</a></li><li><a href="../episodes/2024-07-31" class="internal">Trump Tantrums, Eels in Special Places, Boycots Work? It's NEWS MAYBE (2024-07-31)</a></li><li><a href="../episodes/2024-08-22-oDSuSzbumUs" class="internal">DNC Even More, Lindell Watch, Costco Cups and Vance Cups, the Cups of NEWS (2024-08-22)</a></li><li><a href="../episodes/2024-08-27" class="internal">Nightly News (2024-08-27)</a></li><li><a href="../episodes/2024-09-06" class="internal">Weird Interviews, Dis Retrun, Dis Week's NEWS (2024-09-06)</a></li><li><a href="../episodes/2024-09-12" class="internal">No Country for Old Debates, How to Stay Calm, Bone Boners, is NEWS? (2024-09-12)</a></li><li><a href="../episodes/2024-09-18" class="internal">Exploding Pagers, Rate Cuts, Abercrombie and Sex Crimes, is it NEWS? (2024-09-18)</a></li><li><a href="../episodes/2024-09-19" class="internal">Diddy, Drones, and Dicks - the usual NEWS (2024-09-19)</a></li><li><a href="../episodes/2024-09-20" class="internal">Diddy, Drones, and Dicks - the usual NEWS (2024-09-20)</a></li><li><a href="../episodes/2024-09-25-tt3qCDlQkDs" class="internal">Escalations, Nail Conspiracies, New Nazcas, who what where NEWS (2024-09-25)</a></li><li><a href="../episodes/2024-10-01" class="internal">Escalation Minus the De, VP Debate Preview, Fat Bear Delays, all of it IMPORTANT NEWS (2024-10-01)</a></li><li><a href="../episodes/2024-10-08" class="internal">Truth Social Scams, Super Perverts, Snakes Trends, it's curse NEWS (2024-10-08)</a></li><li><a href="../episodes/2024-10-30-iCCqpvNIlFY" class="internal">Tuesday Newsday Catch Up (2024-10-30)</a></li><li><a href="../episodes/2024-11-06" class="internal">Quick Detox Stream (2024-11-06)</a></li><li><a href="../episodes/2024-11-26" class="internal">Post-China, Pre-Move News Grooves (2024-11-26)</a></li><li><a href="../episodes/2024-12-23" class="internal">Grunchmas 2024 (2024-12-23)</a></li><li><a href="../episodes/2025-01-17" class="internal">Tik, Tik, Ban, Ceasfeire Still Hopefully Now, and a Man with No Hole (2025-01-17)</a></li><li><a href="../episodes/2025-01-24" class="internal">Stargate SG5 Billion, Musky Week, Johnson Watch, it's NEWS (maybe) (2025-01-24)</a></li><li><a href="../episodes/2025-01-27" class="internal">Deepseeking a friend, Cabinet Confirmation Bias, Future Dicks, wat is a news? (2025-01-27)</a></li><li><a href="../episodes/2025-02-03" class="internal">Tariff Delays, Nudity Now, Deep Researching the NEWS (2025-02-03)</a></li><li><a href="../episodes/2025-02-06" class="internal">Trump Atrocities, AI Trash, and more things that are Bnd so they're NEWS (2025-02-06)</a></li><li><a href="../episodes/2025-02-08" class="internal">Government Block Off, Elon Harem, and Other Wank Motion NEWS (2025-02-08)</a></li><li><a href="../episodes/2025-04-04" class="internal">A Fully Liberated Decline (2025-04-04)</a></li><li><a href="../episodes/2025-05-01" class="internal">Taking Minerals, Shrinking GPDs, plus Literal Fart Walks, could it be NEWS? (2025-05-01)</a></li><li><a href="../episodes/2025-05-08" class="internal">The Papal Binclave (2025-05-08)</a></li><li><a href="../episodes/2025-05-14" class="internal">Trump Around The World, Biden Burns, Chimp Cleaning, it's all the NEWS (2025-05-14)</a></li><li><a href="../episodes/2025-05-21" class="internal">Habeus Corpsing the NEWS (2025-05-21)</a></li><li><a href="../episodes/2025-05-27" class="internal">Hamtaro Time (news?) (2025-05-27)</a></li><li><a href="../episodes/2025-05-30-QRN1ZIHDHG8" class="internal">Musk of Failure, Toilet Snakes, and Music Maybe, it's NEWS (2025-05-30)</a></li><li><a href="../episodes/2025-06-02" class="internal">Musk of Failure, Toilet Snakes, and Music Maybe, it's NEWS (2025-06-02)</a></li><li><a href="../episodes/2025-06-11" class="internal">One Year Older, Possibly 24 Hours Wiser, it's NEWS (2025-06-11)</a></li><li><a href="../episodes/2025-06-26" class="internal">Positive Political News? Enjoyable Panic? Could it actually be NEWS? (2025-06-26)</a></li><li><a href="../episodes/2025-06-28" class="internal">Friday Newsday Plus Potential Musical Punishment (2025-06-28)</a></li><li><a href="../episodes/2025-07-10" class="internal">Back From the Wet Hot American Party, Time to NEWS (2025-07-10)</a></li><li><a href="../episodes/2025-07-12" class="internal">Quick, Late and Dirty Friday Newsday (2025-07-12)</a></li><li><a href="../episodes/2025-07-15" class="internal">Monday Icey Summer News (2025-07-15)</a></li><li><a href="../episodes/2025-07-19" class="internal">Fast and Late Friday News (2025-07-19)</a></li><li><a href="../episodes/2025-07-24" class="internal">Pedophiles, Starvation, and Hunter Biden, Possibly Not in That Order, it's Unfortunately News (2025-07-24)</a></li><li><a href="../episodes/2025-07-30" class="internal">Stealing Employees and Other Excuses for Atrocities, it's NEWS (2025-07-30)</a></li><li><a href="../episodes/2025-08-11" class="internal">Streamer Returns to Declare Unilateral Control Over News Station (2025-08-11)</a></li><li><a href="../episodes/2025-08-16" class="internal">Friday News To Diplomacy To (2025-08-16)</a></li><li><a href="../episodes/2025-08-21" class="internal">What Happened Wednesday? aka NEWS (2025-08-21)</a></li><li><a href="../episodes/2025-08-23" class="internal">Newsical Fridays (2025-08-23)</a></li><li><a href="../episodes/2025-08-26" class="internal">Extra Guarded Monday News (2025-08-26)</a></li><li><a href="../episodes/2025-09-02" class="internal">Return the Newsosphere (2025-09-02)</a></li><li><a href="../episodes/2025-09-05" class="internal">Surrogate Slander, Pay Packages, and Free AI Luigis, it's NEWS supposedly (2025-09-05)</a></li><li><a href="../episodes/2025-09-10-Brt1etBYVyg" class="internal">More Public Murder, it's Wednesday News (2025-09-10)</a></li><li><a href="../episodes/2025-09-15" class="internal">Kashing Up on the Monday News (2025-09-15)</a></li><li><a href="../episodes/2025-09-26" class="internal">Post Wall and Rapture Clarity (2025-09-26)</a></li><li><a href="../episodes/2025-09-29" class="internal">The Monday News Comedy Festival (2025-09-29)</a></li><li><a href="../episodes/2025-10-04" class="internal">Illegal Raids and Beyblade Days (2025-10-04)</a></li><li><a href="../episodes/2025-10-06" class="internal">Peace Deals? Maybe. Alien DNA? FOR SURE - it's NEWS (2025-10-06)</a></li><li><a href="../episodes/2025-10-16" class="internal">The Hottest Pentagon Reporting, it's Wednesday NEWS (2025-10-16)</a></li><li><a href="../episodes/2025-10-31" class="internal">Banning Refugees, Evicting Princes, Mr Beast Banks, it's unfortunately NEWS (2025-10-31)</a></li><li><a href="../episodes/2025-11-13" class="internal">Return to News Mountain (2025-11-13)</a></li><li><a href="../episodes/2025-11-25" class="internal">Monday News Blast (2025-11-25)</a></li><li><a href="../episodes/2025-12-06" class="internal">Friday News Dump (2025-12-06)</a></li><li><a href="../episodes/2025-12-09" class="internal">Monday News Slop (2025-12-09)</a></li><li><a href="../episodes/2025-12-13" class="internal">Friday Newsend (2025-12-13)</a></li><li><a href="../episodes/2025-12-18" class="internal">Monday News Slam (2025-12-18)</a></li><li><a href="../episodes/2025-12-24" class="internal">Deck the News with Awful Stories (2025-12-24)</a></li><li><a href="../episodes/2026-01-06" class="internal">Happy News Year Redux (2026-01-06)</a></li><li><a href="../episodes/2026-01-17" class="internal">Newsing for the Weekend (2026-01-17)</a></li><li><a href="../episodes/2026-01-22" class="internal">Wentheday Newthday (2026-01-22)</a></li><li><a href="../episodes/2026-01-27" class="internal">Case of the Mondays (2026-01-27)</a></li><li><a href="../episodes/2026-02-04" class="internal">Another Tuesday News Just Dropped (2026-02-04)</a></li><li><a href="../episodes/2026-02-10" class="internal">The All American News Time Show (2026-02-10)</a></li><li><a href="../episodes/2026-02-26" class="internal">State of the Newsing (2026-02-26)</a></li><li><a href="../episodes/2026-02-28" class="internal">Gotta Catch MORE news (2026-02-28)</a></li><li><a href="../episodes/2026-03-06" class="internal">Quick Stream Before Patreon (2026-03-06)</a></li><li><a href="../episodes/2026-03-07" class="internal">A Night of Courts (2026-03-07)</a></li><li><a href="../episodes/2026-03-10" class="internal">A Night of Courts (2026-03-10)</a></li><li><a href="../episodes/2026-03-24" class="internal">Breaking the 48 Hour News Deadline (2026-03-24)</a></li><li><a href="../episodes/2026-03-25" class="internal">Breaking the 48 Hour News Deadline (2026-03-25)</a></li><li><a href="../episodes/2026-03-27" class="internal">Newsing for the Weekend (2026-03-27)</a></li><li><a href="../episodes/2026-04-01" class="internal">Wednesday News Ignition (2026-04-01)</a></li><li><a href="../episodes/2026-04-06" class="internal">Big Time Swear News (2026-04-06)</a></li><li><a href="../episodes/2026-04-09" class="internal">Unceasing News (2026-04-09)</a></li><li><a href="../episodes/2026-04-11" class="internal">Big Friday News Deals (2026-04-11)</a></li><li><a href="../episodes/2026-04-14" class="internal">Unblocking the News (2026-04-14)</a></li><li><a href="../episodes/2026-04-21" class="internal">News Minus 30 Scrum Minutes (2026-04-21)</a></li><li><a href="../episodes/2026-04-24" class="internal">Weekend War-ish News (2026-04-24)</a></li><li><a href="../episodes/2026-05-14" class="internal">China News Maxing (2026-05-14)</a></li><li><a href="../episodes/2026-05-18" class="internal">Another Monday, Another NEWS (2026-05-18)</a></li><li><a href="../episodes/2026-05-21" class="internal">More Massive News Filings (2026-05-21)</a></li><li><a href="../episodes/2026-05-22" class="internal">Resigned to the NEWS (2026-05-22)</a></li><li><a href="../episodes/2026-05-26" class="internal">Tuesday News Slay (2026-05-26)</a></li><li><a href="../episodes/2026-05-29" class="internal">Friday News Burp (2026-05-29)</a></li><li><a href="../episodes/2026-06-01" class="internal">Monday News Weaponization Inquiry (2026-06-01)</a></li><li><a href="../episodes/2026-06-03" class="internal">Quick PrePatreon Things (2026-06-03)</a></li><li><a href="../episodes/2026-06-05" class="internal">Casual Friday News (2026-06-05)</a></li><li><a href="../episodes/2026-06-15" class="internal">40 Years of Mondays (2026-06-15)</a></li><li><a href="../episodes/2026-06-18" class="internal">Quick Stream Before Patreon (2026-06-18)</a></li><li><a href="../episodes/2026-06-19" class="internal">Quick Casual Friday SUPER NEWS (2026-06-19)</a></li><li><a href="../episodes/2026-06-27" class="internal">Lil Friday Newses (2026-06-27)</a></li><li><a href="../episodes/2026-06-29" class="internal">America's Big Boy Birthday Week, it's NEWS (2026-06-29)</a></li><li><a href="../episodes/2026-07-11" class="internal">The News LIVES (2026-07-11)</a></li><li><a href="../episodes/2026-07-13" class="internal">The Brave New News of Gerontocromancy (2026-07-13)</a></li><li><a href="../episodes/2026-07-17" class="internal">Friday News Flops (2026-07-17)</a></li><li><a href="../episodes/2026-07-20" class="internal">Monday News All Blocked Up (2026-07-20)</a></li><li><a href="../episodes/2026-08-08" class="internal">Friday News Slop (2026-08-08)</a></li><li><a href="../episodes/2026-08-13" class="internal">Reflecting the News (2026-08-13)</a></li><li><a href="../episodes/2026-08-19" class="internal">Upsetting Wednesday News (2026-08-19)</a></li><li><a href="../episodes/2026-08-26" class="internal">Expertly Negotiated News (2026-08-26)</a></li><li><a href="../episodes/2026-09-01" class="internal">The Quickest Latest News (2026-09-01)</a></li><li><a href="../episodes/2026-09-02" class="internal">High T Wednesday News (2026-09-02)</a></li><li><a href="../episodes/2026-09-04" class="internal">Artificially General News (2026-09-04)</a></li><li><a href="../episodes/2026-09-07" class="internal">Crum Punch News (2026-09-07)</a></li><li><a href="../episodes/2026-09-23" class="internal">Return of the NEWS (2026-09-23)</a></li><li><a href="../episodes/2026-09-25" class="internal">Quick Friday NEWS (2026-09-25)</a></li><li><a href="../episodes/2026-09-28" class="internal">Newsual Mondays (2026-09-28)</a></li><li><a href="../episodes/2026-10-08" class="internal">Thursday News Way (2026-10-08)</a></li><li><a href="../episodes/2026-10-23" class="internal">Friday Newstravaganza (2026-10-23)</a></li><li><a href="../episodes/2026-10-26" class="internal">Another Week, Another NEWS (2026-10-26)</a></li><li><a href="../episodes/2026-11-04" class="internal">Post Wave Clarity (2026-11-04)</a></li><li><a href="../episodes/2026-11-13" class="internal">Remain Calm and NEWS (2026-11-13)</a></li><li><a href="../episodes/2026-11-16" class="internal">Dreadful Sunday Stream (2026-11-16)</a></li><li><a href="../episodes/2026-11-23" class="internal">Return of the Jacket Guy, it's FREAK NEWS (2026-11-23)</a></li><li><a href="../episodes/2026-11-24" class="internal">Pop Goes the NEWSles (2026-11-24)</a></li><li><a href="../fans/card-king" class="internal">Card King</a></li><li><a href="../fans/giggle-trash" class="internal">Giggle Trash</a></li><li><a href="../fans/matt-liddell" class="internal">Matt Liddell</a></li><li><a href="../fans/skymer" class="internal">Skymer</a></li><li><a href="../segments/" class="internal">Broadcast Segments</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v0.1.0</a> © 2026</p><ul class="footer-links"><li><a href="https://www.twitch.tv/caseblackwell" class="footer-link-twitch" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"></path></svg><span>Barely Informed News</span></a></li><li><a href="https://www.youtube.com/@CaseBlackwellStreams" class="footer-link-youtube" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg><span>YouTube Archive</span></a></li><li><a href="https://www.youtube.com/channel/UCuiEeDV0bv5WS4FlpIdD_5Q/shorts" class="footer-link-youtube" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg><span>BIN Lore Shorts</span></a></li><li><a href="https://www.tiktok.com/@binlore.wiki" class="footer-link-tiktok" target="_blank" rel="noopener noreferrer"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg><span>BIN Lore Clips</span></a></li><li><a href="../disclaimer"><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg><span>Legal Disclaimer</span></a></li></ul><div class="bmac-footer-pill"><a href="https://buymeacoffee.com/teflonted" target="_blank" rel="noopener noreferrer" aria-label="Support the BIN Lore project on Buy Me a Coffee"><span class="bmac-coffee-emoji">☕</span><span>Support BIN Lore development on Buy Me a Coffee</span></a></div><p class="footer-disclaimer"><strong>Fan Site Disclaimer:</strong> BIN Lore is an unofficial, non-commercial fan documentation project. Not affiliated with, endorsed by, or sponsored by Case Blackwell, Barely Informed News, or Twitch. All character names, trademarks, and media assets belong to their respective owners and are referenced under fair use (17 U.S.C. § 107) for commentary, criticism, and archival purposes. Not operated for profit. <a href="../disclaimer">Read full disclaimer</a>.</p></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="../postscript.js" type="module" data-persist="true"></script></html>
